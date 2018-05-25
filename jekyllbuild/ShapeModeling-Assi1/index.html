@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+<title>Gridster - Shape Modeling IGL Library </title>
+
+<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
+<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:500,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" id="color-change" href="">
+<link rel="stylesheet" id="switch-style" href="/css/grid.css">
+<link rel="alternate" type="application/rss+xml" title="Gridster" href="http:/localhost:4000/feed.xml">
+
+    </head>
+
+    <body>
+        <header class="head">
+            <div class="row">
+    <a href="/" class="logo noline">
+        <!-- full logo version with slogan, icon and text, add the class .ts-full if you want to work with some of the existing CSS -->
+   <svg version="1.1" viewBox="0 0 850.61096 179.54858" class="ts-full">
+    <g transform="translate(-49.00717,-350.11674)">
+        <g transform="matrix(0.65068572,0,0,0.65068572,11.104727,118.00494)" class="icon">
+            <path d="m 101.39622,391.43518 191.99569,0 c 5.04555,0 9.10749,46.87698 9.10749,105.10533 0,58.22836 -4.06194,105.10533 -9.10749,105.10533 l -191.99569,0 c -5.045545,0 -9.107486,-46.87697 -9.107486,-105.10533 0,-58.22835 4.061941,-105.10533 9.107486,-105.10533 z" class="rectangle" />
+            <path d="m 165.8125,358.21875 -5.1875,99.21875 -100.875,0 0,7.625 100.46875,0 -3.28125,62.59375 -97.1875,0 0,7.59375 96.78125,0 -5,95.5 7.625,0.40625 5.03125,-95.90625 62.5625,0 -5,95.5 7.59375,0.40625 5.03125,-95.90625 98.28125,0 0,-7.59375 -97.875,0 3.28125,-62.59375 94.59375,0 0,-7.625 -94.1875,0 5.15625,-98.84375 -7.59375,-0.375 -5.1875,99.21875 -62.5625,0 5.15625,-98.84375 -7.625,-0.375 z m 2.0625,106.84375 62.5625,0 -3.28125,62.59375 -62.5625,0 3.28125,-62.59375 z" class="lines" />
+        </g>
+        <text x="235.15662" y="477.12143" class="gridster">
+            <tspan x="235.15662" y="477.12143">VFProjects</tspan>
+        </text>
+        <text x="304.80173" y="512.31683" class="slogan">
+            <tspan x="304.80173" y="512.31683">Personal and professional work</tspan>
+        </text>
+    </g>
+</svg>
+        <!-- logo version without slogan, add the class .ts-no-slogan if you want to work with some of the existing CSS -->
+<svg version="1.1" viewBox="0 0 677.61096 179.54858" class="ts-no-slogan">
+    <g transform="translate(-49.00717,-350.11674)">
+        <g transform="matrix(0.65068572,0,0,0.65068572,11.104727,118.00494)" class="icon">
+            <path d="m 101.39622,391.43518 191.99569,0 c 5.04555,0 9.10749,46.87698 9.10749,105.10533 0,58.22836 -4.06194,105.10533 -9.10749,105.10533 l -191.99569,0 c -5.045545,0 -9.107486,-46.87697 -9.107486,-105.10533 0,-58.22835 4.061941,-105.10533 9.107486,-105.10533 z" class="rectangle" />
+            <path d="m 165.8125,358.21875 -5.1875,99.21875 -100.875,0 0,7.625 100.46875,0 -3.28125,62.59375 -97.1875,0 0,7.59375 96.78125,0 -5,95.5 7.625,0.40625 5.03125,-95.90625 62.5625,0 -5,95.5 7.59375,0.40625 5.03125,-95.90625 98.28125,0 0,-7.59375 -97.875,0 3.28125,-62.59375 94.59375,0 0,-7.625 -94.1875,0 5.15625,-98.84375 -7.59375,-0.375 -5.1875,99.21875 -62.5625,0 5.15625,-98.84375 -7.625,-0.375 z m 2.0625,106.84375 62.5625,0 -3.28125,62.59375 -62.5625,0 3.28125,-62.59375 z" class="lines" />
+        </g>
+        <text x="235.15662" y="477.12143" class="gridster">
+            <tspan x="235.15662" y="477.12143">Projects</tspan>
+        </text>
+    </g>
+</svg>
+        <!-- icon logo version, add the class .ts-icon if you want to work with some of the existing CSS -->
+<svg version="1.1" viewBox="0 0 179.52826 179.54858" class="ts-icon">
+    <g transform="translate(-49.00717,-350.11674)">
+        <g transform="matrix(0.65068572,0,0,0.65068572,11.104727,118.00494)" class="icon">
+            <path d="m 101.39622,391.43518 191.99569,0 c 5.04555,0 9.10749,46.87698 9.10749,105.10533 0,58.22836 -4.06194,105.10533 -9.10749,105.10533 l -191.99569,0 c -5.045545,0 -9.107486,-46.87697 -9.107486,-105.10533 0,-58.22835 4.061941,-105.10533 9.107486,-105.10533 z" class="rectangle" />
+            <path d="m 165.8125,358.21875 -5.1875,99.21875 -100.875,0 0,7.625 100.46875,0 -3.28125,62.59375 -97.1875,0 0,7.59375 96.78125,0 -5,95.5 7.625,0.40625 5.03125,-95.90625 62.5625,0 -5,95.5 7.59375,0.40625 5.03125,-95.90625 98.28125,0 0,-7.59375 -97.875,0 3.28125,-62.59375 94.59375,0 0,-7.625 -94.1875,0 5.15625,-98.84375 -7.59375,-0.375 -5.1875,99.21875 -62.5625,0 5.15625,-98.84375 -7.625,-0.375 z m 2.0625,106.84375 62.5625,0 -3.28125,62.59375 -62.5625,0 3.28125,-62.59375 z" class="lines" />
+        </g>
+    </g>
+</svg>
+    </a>
+</div>
+
+            <!-- menu, we did go with a static one, you can build a dynamic one, just google a little around -->
+<div class="main-menu">
+    <div class="content">
+        <nav id="menu">
+            <a class="toggle-link noline"><i class="fa fa-close fa-lg"></i></a>
+            <ul>
+                <li>
+                    <a class="homelink" href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/archive">Archive</a>
+                </li>
+                <!--
+                <li>
+                    <a href="/typography">Typography</a>
+                </li>
+                <li><a class="dropdown-button" href="#" data-activates='drop-example'>Page Layouts&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
+                </li>
+                <div id="drop-example" class="dropdown-content">
+                    <li>
+                        <a href="/page-full">page-full</a>
+                    </li>
+                    <li>
+                        <a href="/page-classic-sidebar-right">page classic sidebar right</a>
+                    </li>
+                    <li>
+                        <a href="/page-classic-sidebar-left">page classic sidebar left</a>
+                    </li>
+                    <li>
+                        <a href="/page-material-sidebar-right">page material sidebar right</a>
+                    </li>
+                    <li>
+                        <a href="/page-material-sidebar-left">page material sidebar left</a>
+                    </li>
+                </div>
+                <li>
+                    <a href="#colorswitch" class="modal-trigger">Change Colors <i class="fa fa-cog"></i></a>
+                </li>
+                -->
+            </ul>
+        </nav>
+        <nav class="iconnav">
+            <ul>
+                <li class="sicon">
+                    <a href='#search'><i class='fa fa-search'></i></a>
+                </li>
+                <!--
+                
+                <li class="social">
+                    <a href="" class="tumblr"><i class="fa fa-tumblr"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="pinterest"><i class="fa fa-pinterest"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="instagram"><i class="fa fa-instagram"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="twitter"><i class="fa fa-twitter"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="facebook"><i class="fa fa-facebook"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="youtube"><i class="fa fa-youtube"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="vimeo"><i class="fa fa-vimeo-square"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="soundcloud"><i class="fa fa-soundcloud"></i></a>
+                </li>
+                
+                -->
+            </ul>
+        </nav>
+        <a href='#menu' class="toggle-link noline">
+            <i class="fa fa-navicon"></i>
+        </a>
+    </div>
+</div>
+
+
+
+
+<div id="colorswitch" class="modal color-change">
+    <div class="modal-content">
+      <h4>Change Color Palette</h4>
+      <p>
+      <img id="indigo" alt="color palette preview indigo" src="/media/compressed/indigo.jpg">
+      <img id="brown" alt="color palette preview brown" src="/media/compressed/brown.jpg">
+      <img id="green" alt="color palette preview green" src="/media/compressed/green.jpg">
+      <img id="teal" alt="color palette preview teal" src="/media/compressed/teal.jpg">
+      </p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">close</a>
+    </div>
+  </div>
+        </header>
+        <div id="search">
+    <form role="search" id="searchform">
+        <input type="search" placeholder="Search"/>
+    </form>
+</div>
+
+        <div class="margin">
+            <div class="content full">
+                <div class="content-container">
+                    <article>
+                        
+                            
+                                <img class="featimg" src="/media/compressed/StrangeExtrusionCoffee.gif" alt="StrangeExtrusionCoffee.gif">
+                            
+                        
+
+                        <h1 class="post-title">
+                            Shape Modeling IGL Library
+                        </h1>
+                        <div class="meta">
+                            
+
+    <span class="author">Posted by
+        
+        
+            <a href="/author/VF">
+                
+                    Vincent F.
+                
+            </a>
+        
+    </span>
+
+ &bull;
+                            <span class="date">
+                                Published on March 05, 2018
+                            </span>
+                        </div>
+                        
+                        <div class="post-content">
+                            <h5 id="table-of-contents">Table of Contents</h5>
+<p><a href="#Neighboorhood">1. Neighboorhood computations</a>  <br />
+<a href="#Vertex2Face">1.1. Vertex To Face relations</a>  <br />
+<a href="#Vertex2Vertex">1.2. Vertex To Vertex relations</a>  <br />
+<a href="#Connected">2. Connected components</a>  <br />
+<a href="#subdivision">3. A simple subdivision scheme</a>  <br />
+<a href="#extrusion">4. Mesh extrude</a>  <br />
+<a href="#designMaster">5. My wonderful design</a>  <br /></p>
+
+<h2 id="required-results1">Required results1</h2>
+
+<h2 id="tasks">Tasks</h2>
+
+<p><a name="Neighboorhood"></a></p>
+
+<h3 id="1-neighboorhood-computations">1. Neighboorhood computations</h3>
+
+<p><a name="Vertex2Face"></a></p>
+
+<h4 id="1-vertex-to-face-relations">1. Vertex To Face relations</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Given V and F, generate an adjacency list which contains, for each
+vertex, the faces adjacent to it. The ordering of the faces incident on a vertex does not matter. Your
+program should print out the vertex-to-face relations in text form when key ’1’ is pressed.
+</code></pre></div></div>
+
+<h6 id="documentation-informations">Documentation informations</h6>
+<p>We can use the following function : 
+    <b>igl::vertex_triangle_adjacency();</b></p>
+
+<p>This function construct the vertx-face topology of a mesh defined by (V,F) (described below). <br />Informations about the function : https://github.com/libigl/libigl/blob/master/include/igl/vertex_triangle_adjacency.h</p>
+
+<p><strong>Inputs</strong> :</p>
+<ul>
+  <li>(Implicit :  V = a 3-list that represent vertex coordinates)</li>
+  <li>n = number of vertices of V (here, <code class="highlighter-rouge">V.rows()</code>)</li>
+  <li>F = a 3-list that represent mesh faces (has to be triangles)</li>
+</ul>
+
+<p><strong>Outputs</strong> :</p>
+<ul>
+  <li>VF = An adjacency list of incident faces</li>
+  <li>VI = An adjacency list of index of incidence (related by index to VF adajcency list)</li>
+</ul>
+
+<h6 id="usage">Usage</h6>
+<p>We want, for each vertex, the adjacent faces. We call the function that build the adjacent list and print the VF list.</p>
+<pre><code class="language-C++">igl::vertex_triangle_adjacency(V.rows(), F,VF,VFi);
+std::cout (...)
+</code></pre>
+
+<h6 id="result">Result</h6>
+<div style="text-align:center">
+<p align="center">
+  <img height="300" src="/media/compressed/capture1_1.png" />
+  <img height="200" src="/media/compressed/capture1_2.png" />
+</p>
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cube.off
+Vertex ID	 Faces associated
+0		0 1 4 5 10 
+1		0 5 6 7 
+2		0 1 7 8 9 
+3		1 9 10 11 
+4		2 3 4 10 11 
+5		3 4 5 6 
+6		2 3 6 7 8 
+7		2 8 9 11 
+</code></pre></div></div>
+
+<hr />
+
+<p><a name="Vertex2Vertex"></a></p>
+
+<h4 id="2-vertex-to-vertex-relations">2. Vertex To Vertex relations</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Given V and F, generate an adjacency list which contains, for each
+vertex, the vertices connected with it. Two vertices are connected if there exists an edge between them,
+i.e., if the two vertices appear in the same row of F.
+</code></pre></div></div>
+
+<h6 id="documentation-informations-1">Documentation informations</h6>
+<p>We can use the following function : 
+    <b>igl::adjacency list;</b></p>
+
+<p>This function construct the graph adjacency list of a mesh defined by (V,F). <br /> Informations about the function : https://github.com/libigl/libigl/blob/master/include/igl/adjacency_list.h</p>
+
+<p><strong>Inputs</strong> :</p>
+<ul>
+  <li>F = a 3-list that represent mesh faces (has to be triangles)</li>
+</ul>
+
+<p><strong>Outputs</strong> :</p>
+<ul>
+  <li>A = An adjacency list of incident vertices</li>
+</ul>
+
+<h6 id="usage-1">Usage</h6>
+<p>We want, for each vertex, the adjacent vertices. We call the function that build the adjacent list and print the VV list.</p>
+<pre><code class="language-C++">igl::adjacency_list(F,VV);
+std::cout (...)
+</code></pre>
+
+<h6 id="result-1">Result</h6>
+<div style="text-align:center">
+<p align="center">
+  <img height="300" src="/media/compressed/capture2_1.png" />
+  <img height="200" src="/media/compressed/capture2_2.png" />
+</p>
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cube.off
+Vertex ID	 Vertices associated
+0		1 2 3 4 5 
+1		0 2 5 6 
+2		0 1 3 6 7 
+3		0 2 4 7 
+4		0 3 5 6 7 
+5		0 1 4 6 
+6		1 2 4 5 7 
+7		2 3 4 6 
+
+</code></pre></div></div>
+
+<hr />
+
+<p><a name="Connected"></a></p>
+
+<h3 id="2-connected-components">2. Connected components</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Using the neighborhood connectivity, it is possible to separate a mesh into separated connected com-
+ponents, where each mesh face only belongs to a single component. Fill in the appropriate source
+code sections (inside the keyboard callback, key ’3’) of the ex1 cmake project to display the mesh
+with faces of the various connected components colored differently for each component. For coloring
+the components you can use the jet colormap provided with libigl, or you can implement your own
+colormap.
+</code></pre></div></div>
+
+<h6 id="documentation-informations-2">Documentation informations</h6>
+<p>We can use the following function : 
+    <b>igl::facet components();</b>
+This function compute a list of the connected components, based on adjacency of edges.<br />
+Informations about the function : https://github.com/libigl/libigl/blob/master/include/igl/facet_components.h</p>
+
+<p><strong>Inputs</strong> :</p>
+<ul>
+  <li>F = a 3-list that represent mesh faces (has to be triangles)</li>
+</ul>
+
+<p><strong>Outputs</strong> :</p>
+<ul>
+  <li>C = A list of connected component ids</li>
+  <li>(overload : Cnb = A list of number of facets in each components )</li>
+</ul>
+
+<p>We can also use the following function : 
+<b>igl::jet();</b>
+This function compute a list colors [r,g,b] from a list of factor [0-1]. <br />
+Informations about the function : https://github.com/libigl/libigl/blob/master/include/igl/jet.h</p>
+
+<p><strong>Inputs</strong> :</p>
+<ul>
+  <li>Z  = list of factors</li>
+  <li>const bool normalize = jet normalize Z to fit into [0-1]</li>
+</ul>
+
+<p><strong>Outputs</strong> :</p>
+<ul>
+  <li>C = A 3-list of colors as [r,g,b]</li>
+</ul>
+
+<h6 id="usage-2">Usage</h6>
+<p>We compute each component. Then we compute a color for each component. Then we extract the number of component. Then we calcul the number of faces for each component.</p>
+<pre><code class="language-C++">igl::facet_components(F,cid);
+igl::jet(cid,true,colors_per_face);
+
+//Calcul of nb of faces per component
+long long nbOfFacesPerComp[max];
+for(int i =0 ; i&lt;=max ; i++){
+  nbOfFacesPerComp[i]=0;
+}
+for(int i =0 ; i&lt;cid.size() ; i++){
+  nbOfFacesPerComp[cid[i]]++;
+}
+
+std::cout (...)
+</code></pre>
+
+<h6 id="result-2">Result</h6>
+<div style="text-align:center">
+<p align="center">
+  <img width="250" src="/media/compressed/cube_1.png" />
+  <img width="300" src="/media/compressed/cube_2.png" />
+</p>
+</div>
+
+<div style="text-align:center">
+<p align="center">
+  <img width="250" src="/media/compressed/coffe_1.png" />
+  <img width="300" src="/media/compressed/coffe_2.png" />
+</p>
+</div>
+
+<div style="text-align:center">
+<p align="center">
+  <img width="250" src="/media/compressed/honda_1.png" />
+  <img width="300" src="/media/compressed/honda_2.png" />
+</p>
+</div>
+
+<hr />
+
+<p><a name="subdivision"></a></p>
+
+<h3 id="3-a-simple-subdivision-scheme">3. A simple subdivision scheme</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>For this task you will implement the subdivision scheme described in [1] (https://www.graphics.
+rwth-aachen.de/media/papers/sqrt31.pdf) to iterative create
+√ finer meshes from a given, coarse
+one. According to the paper, given a given mesh (V,F), the 3-subdivision scheme creates a new
+meshes (V’,F’) by using the following rules (...)
+</code></pre></div></div>
+
+<h6 id="documentation-informations-3">Documentation informations</h6>
+<p>We can use the following function : 
+igl::adjacency list : give adjacent vertices <br />
+See : https://github.com/libigl/libigl/blob/master/include/igl/adjacency_list.h</p>
+
+<p>igl::triangle triangle adjacency : give a list for topological adjacency of triangles <br />
+See : https://github.com/libigl/libigl/blob/master/include/igl/triangle_triangle_adjacency.h</p>
+
+<p>igl::edge topology : give topological relations of edges <br />
+See : https://github.com/libigl/libigl/blob/master/include/igl/edge_topology.h</p>
+
+<p>igl::barycenter : Computes the barycenter of every simplex <br />
+See : https://github.com/libigl/libigl/blob/master/include/igl/barycenter.h</p>
+
+<p>igl::viewer.data.clear() : already implemented,
+viewer.data.set mesh(.,.) : idem</p>
+
+<p>The implementation follow exactly the instructions. Thanks to Rabinovich Michael for his help, as I was trying to implement my own (wrong? We’ll never know) solution.</p>
+
+<p>If you want to see what was this solution, explanation are available there : “/media/compressed/Logic_Vertices.png” and “/media/compressed/Logic_Faces.png”</p>
+
+<h6 id="usage-3">Usage</h6>
+<p>We create new vertices, we create new faces, we put these new data in the final V,F.
+(Only essentials parts are displayed, such code doesn’t compile)</p>
+
+<pre><code class="language-C++">    // CREATION OF NEW VERTICES (BARYCENTERS)
+    igl::barycenter(V,F,BC);
+
+    // CREATION OF NEW POSITIONS OF OLD VERTICES
+    igl::adjacency_list(Fout, A, true);
+
+    //Calculate for each old vertex, his new coordinates
+    for(int i=0; i&lt;A.size(); i++){
+
+        //calculate n &amp; An
+        int n = A[i].size();
+        double an = (4-2*(std::cos((2*pi)/n)))/9;
+       
+        //calculate Sum of coord neighboor (matrix style)
+        for(int j = 0 ; j&lt; n ; j++){
+          VTMP.row(0) = VTMP.row(0) + Vout.row(A[i][j]); //sum
+        }
+
+        //Calculate new coordinate (matrix style) = Final calculus
+        VTMP.row(0) = (1-an)*Vout.row(i) + (an/n)*VTMP.row(0);
+
+        //Replace in the new Vertice list
+        Vout.row(i) = VTMP.row(0);
+    }
+
+    // CONCATENATE RESULT TO HAVE FINAL VERTICES LIST
+  ...
+
+    //** CREATION OF THE NEWS FACES */
+    igl::triangle_triangle_adjacency(F,TT,TTi);
+    
+    long nbOfNewFaces = 0 ;
+    Fout.conservativeResize(3*F.rows(), Eigen::NoChange);
+
+    for(int i = 0 ; i&lt;F.rows(); i++){
+        for(int j = 0 ; j&lt;3 ; j ++){
+            //In ordier : current vertex, newVertexOfTheFace, newVertexOfAdjacentFace
+            Fout.row(nbOfNewFaces) &lt;&lt; F.row(i)[j], oldSizeV+TT.row(i)[j], oldSizeV+i;
+            nbOfNewFaces++;
+        }
+    }
+
+    Fout.conservativeResize(nbOfNewFaces, Eigen::NoChange);
+    
+    V = Vout; 
+    F = Fout;
+
+    update_display(viewer);
+    }
+    
+</code></pre>
+
+<h6 id="result-3">Result</h6>
+<div style="text-align:center">
+<p align="center">
+  <img height="300" src="/media/compressed/CubeSpeed.gif" />
+  <img height="300" src="/media/compressed/CoffeSpeed.gif" />
+  <img height="300" src="/media/compressed/hondaSpeed.gif" />
+</p>
+</div>
+
+<hr />
+
+<p><a name="extrusion"></a></p>
+
+<h3 id="4-mesh-extrude">4. Mesh extrude</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In this task you will implement a basic mesh editing operation. The code supplied already has a built-in
+support for a few operations: selecting faces, translating faces, and selecting/translating a single vertex (...)
+</code></pre></div></div>
+
+<h6 id="documentation-informations-4">Documentation informations</h6>
+<p>We can use the following function : 
+igl::vertex triangle adjacency : constructs the vertex-face topology of a given mesh <br />
+See : https://github.com/libigl/libigl/blob/master/include/igl/vertex_triangle_adjacency.h</p>
+
+<p>igl::is edge manifold : return if mesh is edge manifold <br />
+See : https://github.com/libigl/libigl/blob/master/include/igl/is_edge_manifold.h</p>
+
+<p>igl::is vertex manifold : checks whether the faces incident on each vertex form exactly one connected component.<br />
+See : https://github.com/libigl/libigl/blob/master/include/igl/is_vertex_manifold.h</p>
+
+<p>std::set, std::set difference are part of the STL lib.<br /></p>
+
+<h6 id="usage-4">Usage</h6>
+<p>The first steps of the work are already implemented. 
+We get the faces containing old boundary vertices, without considering the selected faces, and we update their vertices with the new created ones.
+We then create the new faces generated due to the extrusion, that we link in a consistent way.
+(Only essentials parts are displayed, such code doesn’t compile)</p>
+
+<pre><code class="language-C++">    // 5) Update Fout 
+    ...
+
+    // 5.1) Get the set of faces containing the old boundary vertices 
+    igl::vertex_triangle_adjacency(V.rows(),F,VF,VI);
+
+    // 5.2) Get the "outer" set of faces containing the boundary vertices 
+    for(int i=0 ; i&lt;bnd_loop.size(); i++){
+        //Add this list of faces to the global set
+        allAdjacentFacesOfBoundaries.insert(VF.at(bnd_loop.at(i)).begin(), VF.at(bnd_loop.at(i)).end());
+    }
+
+    ...
+    std::set_difference(allAdjacentFacesOfBoundaries.begin(), allAdjacentFacesOfBoundaries.end(), selected_faces.begin(), selected_faces.end(),std::inserter(diff, diff.begin()));
+
+    // 5.3) Edit old outer faces indices, replacing the old vertices with the indices of the duplicated boundary vertices
+    for(int i=0 ; i &lt; Fout.rows() ; i++){
+
+        //For each colums of F
+        for(int j = 0 ; j &lt;3 ; j++){
+            it = find (bnd_loop.begin(), bnd_loop.end(), Fout.row(i)[j]);
+
+            //Changement : Only if we have found that the current value of Fout (in one column) is in the boundary
+            if (it != bnd_loop.end()){
+                int posInTheBoundaryList = std::distance(bnd_loop.begin(), it);
+                isToChange = find (diff.begin(), diff.end(), i);
+
+                //and the current Face number is not part of the selected area
+                if (isToChange != diff.end()){  
+                    //We change the value, with the new one : 
+                    Fout.row(i)[j] = posInTheBoundaryList + V.rows();//where it is in the boundary list + offset due to non-changed initial vertices of V
+                }
+              }
+        }
+    }
+
+
+    // 5.4) Add new faces, 2 per edge
+    int f_idx = F.rows();
+
+    for (int i = 0; i &lt; bnd_loop.size(); i++) {
+        int v1 = bnd_loop.at(i);
+        int v2 = bnd_loop.at((i+1)%(bnd_loop.size()));
+        int v3 = V.rows()+i;
+        int v4 = V.rows()+ ((i+1)%(bnd_loop.size()));
+
+        // set v1,v2,v3,v4 correctly
+        Fout.row(f_idx++) &lt;&lt; v3,v2,v1;
+        Fout.row(f_idx++) &lt;&lt; v2,v3,v4;
+    }
+
+    // 6) Check that the new mesh is a manifold (call is_edge_manifold, is_vertex_manifold on Vout,Fout)
+    bool isEdgeManifold = igl::is_edge_manifold(Fout);
+    bool isVertexManifold = igl::is_vertex_manifold(Fout,Vide);
+
+    std::cout&lt;&lt; "isEdgeManifold :" &lt;&lt; isEdgeManifold &lt;&lt; endl;
+    std::cout&lt;&lt; "isVertexManifold :" &lt;&lt; isVertexManifold &lt;&lt; endl;
+
+    // 7) Update V,F
+    V = Vout; // uncomment for your code to take effect
+    F = Fout; // uncomment for your code to take effect
+  ...
+    
+</code></pre>
+
+<h6 id="result-4">Result</h6>
+<div style="text-align:center">
+<p align="center">
+  <img width="250" src="/media/compressed/EasyExtrusionCoffe.gif" />
+  <img width="250" src="/media/compressed/EasyExtrusionCube.gif" />
+</p>
+</div>
+<div style="text-align:center">
+<p align="center">
+  <img width="250" src="/media/compressed/HardExtrusionCoffee.gif" />
+  <img width="250" src="/media/compressed/HardExtrusionCube.gif" />
+</p>
+</div>
+<div style="text-align:center">
+<p align="center">
+  <img width="250" src="/media/compressed/HondaExtrusion.gif" />
+</p>
+</div>
+
+<hr />
+
+<p><a name="designMaster"></a></p>
+
+<h3 id="5-my-wonderful-design">5. My wonderful design</h3>
+
+<div style="text-align:center">
+<p align="center">
+  <img height="300" src="/media/compressed/design.gif" />
+  <img height="300" src="/media/compressed/design.png" />
+</p>
+</div>
+
+<p>Thanks ! (for this time intensive, but interesting work)</p>
+
+<p>For more information, see : https://github.com/VincentFalc/ShapeModeling_1_BasicIGL
+Note that the code is not optimized by thoughtful laziness: this code is not made to be reused as is in other applications, and if this is the case, the code will be reviewed and optimized. Thanks for your understanding.</p>
+
+                        </div>
+                        
+                        <div class="catsandtags">
+                            
+                            <span class="category">
+                                <span class="name">categories:</span>
+                                Shape Modeling
+                            </span>
+                            
+                            
+                                &bull;
+                            
+                            
+                            <span class="tags">
+                                <span class="name">tags:</span>
+                                
+                                    <a href="/tag/Shape">Shape</a>
+                                
+                                    <a href="/tag/Modeling">Modeling</a>
+                                
+                            </span>
+                            
+                        </div>
+                        
+                    </article>
+                    <div class="post-nav">
+                        
+                        <a class="btn prev" href="/standard/"><i class="fa fa-angle-left"></i><span class="short"> prev</span><span class="long">ious post</span></a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+    <div class="content">
+        <span>Vincent F. powered by &copy; gridster</span>
+        <span class="backtotop">Back to top</span>
+    </div>
+</footer>
+<script src="/js/build/global.min.js"></script>
+<!-- analytics -->
+<script>
+
+  ga('create', 'UA-50358022-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+        
+    </body>
+</html>

@@ -1,0 +1,17 @@
+npm install
+npm audit
+npm audit fix
+
+// Gridster informations : 
+http://gridster.digitalmind.ch/documentation/
+
+// To edit, launch in the root folder : 
+grunt serve
+
+//To regenerate pictures (compressed) : 
+grunt
+
+// If problem during the grunt command : 
+npm install grunt@~0.4.0
+
+

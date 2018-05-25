@@ -40,6 +40,24 @@ module.exports = function (grunt) {
                         ext: '.jpg'
                     }
                 ]
+            },
+            gif: {
+                options: {
+                    progressive: true
+                },
+                files: [
+                    {
+                        // Set to true to enable the following options…
+                        expand: true,
+                        // cwd is 'current working directory'
+                        cwd: '',
+                        src: ['img/*.gif', 'img/**/*.gif', 'img/**/**/*.gif', 'img/*.gif', 'img/**/*.gif', 'img/**/**/*.gif'],
+                        // Could also match cwd. i.e. project-directory/img/
+                        dest: 'media/compressed/',
+                        flatten: true,
+                        ext: '.gif'
+                    }
+                ]
             }
         },
 
