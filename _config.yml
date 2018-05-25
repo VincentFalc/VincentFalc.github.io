@@ -2,8 +2,8 @@ full_rebuild: true
 name: Gridster
 description: the material experience for jekyll
 destination: jekyllbuild
-url: #place url
-baseurl: #place folder name if site is served in subfolder
+url: http://VincentFalc.github.io
+baseurl: 
 permalink: /:title/
 paginate: 8
 paginate_path: /page/:num/
@@ -15,14 +15,14 @@ author_dir: /author
 author_title_prefix: 'Posted by '
 media_folder: /media/compressed
 author_default_avatar: /profile-pic.jpg
-tumblr: "#"
-pinterest: "#"
-instagram: "#"
-twitter: "#"
-facebook: "#"
-youtube: "#"
-vimeo: "#"
-soundcloud: "#"
+tumblr: ""
+pinterest: ""
+instagram: ""
+twitter: ""
+facebook: ""
+youtube: ""
+vimeo: ""
+soundcloud: ""
 
 encoding: utf-8
 defaults:
