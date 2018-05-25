@@ -17,9 +17,6 @@ category: [Shape Modeling]
 [4. Mesh extrude](#extrusion)  <br/>
 [5. My wonderful design](#designMaster)  <br/>
 
-## Required results1
- 
-## Tasks
 
 <a name="Neighboorhood"/>
 
@@ -424,22 +421,6 @@ We then create the new faces generated due to the extrusion, that we link in a c
   <img width="250" src="/media/compressed/HondaExtrusion.gif">
 </p>
 </div>
-
-__________________________________
-
-<a name="designMaster"/>
-
-### 5. My wonderful design
-
-<div style="text-align:center">
-<p align="center">
-  <img height="300" src="/media/compressed/design.gif">
-  <img height="300" src="/media/compressed/design.png">
-</p>
-</div>
-
-
-Thanks ! (for this time intensive, but interesting work)
 
 
 For more information, see : https://github.com/VincentFalc/ShapeModeling_1_BasicIGL
