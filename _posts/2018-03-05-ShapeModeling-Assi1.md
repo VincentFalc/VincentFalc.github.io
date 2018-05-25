@@ -2,7 +2,7 @@
 author: VF
 layout: post-full
 type: image
-featimg: StrangeExtrusionCoffee.gif
+featimg: HardExtrusionCoffee.gif
 title: Shape Modeling IGL Library
 tags: [Shape, Modeling]
 category: [Shape Modeling]
@@ -16,7 +16,6 @@ category: [Shape Modeling]
 [3. A simple subdivision scheme](#subdivision)  <br/>
 [4. Mesh extrude](#extrusion)  <br/>
 [5. My wonderful design](#designMaster)  <br/>
-
 
 <a name="Neighboorhood"/>
 
@@ -182,7 +181,7 @@ for(int i =0 ; i<cid.size() ; i++){
   nbOfFacesPerComp[cid[i]]++;
 }
 
-std::cout (...)
+(...)
 ```
 
 ###### Result
@@ -214,8 +213,7 @@ __________________________________
 ### 3. A simple subdivision scheme
 ```
 For this task you will implement the subdivision scheme described in [1] (https://www.graphics.
-rwth-aachen.de/media/papers/sqrt31.pdf) to iterative create
-√ finer meshes from a given, coarse
+rwth-aachen.de/media/papers/sqrt31.pdf) to iterative create √ finer meshes from a given, coarse
 one. According to the paper, given a given mesh (V,F), the 3-subdivision scheme creates a new
 meshes (V’,F’) by using the following rules (...)
 ```
@@ -397,8 +395,8 @@ We then create the new faces generated due to the extrusion, that we link in a c
     std::cout<< "isVertexManifold :" << isVertexManifold << endl;
 
     // 7) Update V,F
-    V = Vout; // uncomment for your code to take effect
-    F = Fout; // uncomment for your code to take effect
+    V = Vout;
+    F = Fout;
   ...
     
 ```
@@ -421,7 +419,6 @@ We then create the new faces generated due to the extrusion, that we link in a c
   <img style="width : 250px;" src="/media/compressed/HondaExtrusion.gif">
 </p>
 </div>
-
 
 For more information, see : https://github.com/VincentFalc/ShapeModeling_1_BasicIGL
 Note that the code is not optimized by thoughtful laziness: this code is not made to be reused as is in other applications, and if this is the case, the code will be reviewed and optimized. Thanks for your understanding.
