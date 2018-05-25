@@ -57,8 +57,8 @@ std::cout (...)
 ###### Result
 <div style="text-align:center">
 <p align="center">
-  <img height="300" src="/media/compressed/capture1_1.png">
-  <img height="200" src="/media/compressed/capture1_2.png">
+  <img style="height : 300px;" src="/media/compressed/capture1_1.png">
+  <img style="height : 200px;" src="/media/compressed/capture1_2.png">
 </p>
 </div>
 
@@ -108,8 +108,8 @@ std::cout (...)
 ###### Result
 <div style="text-align:center">
 <p align="center">
-  <img height="300" src="/media/compressed/capture2_1.png">
-  <img height="200" src="/media/compressed/capture2_2.png">
+  <img style="height : 300px;" src="/media/compressed/capture2_1.png">
+  <img style="height : 200px;" src="/media/compressed/capture2_2.png">
 </p>
 </div>
 
@@ -188,22 +188,22 @@ std::cout (...)
 ###### Result
 <div style="text-align:center">
 <p align="center">
-  <img width="250" src="/media/compressed/cube_1.png">
-  <img width="300" src="/media/compressed/cube_2.png">
+  <img style="width : 250px;" src="/media/compressed/cube_1.png">
+  <img style="width : 300px;" src="/media/compressed/cube_2.png">
 </p>
 </div>
 
 <div style="text-align:center">
 <p align="center">
-  <img width="250" src="/media/compressed/coffe_1.png">
-  <img width="300" src="/media/compressed/coffe_2.png">
+  <img style="width : 250px;" src="/media/compressed/coffe_1.png">
+  <img style="width : 300px;" src="/media/compressed/coffe_2.png">
 </p>
 </div>
 
 <div style="text-align:center">
 <p align="center">
-  <img width="250" src="/media/compressed/honda_1.png">
-  <img width="300" src="/media/compressed/honda_2.png">
+  <img style="width : 250px;" src="/media/compressed/honda_1.png">
+  <img style="width : 300px;" src="/media/compressed/honda_2.png">
 </p>
 </div>
 
@@ -301,9 +301,9 @@ We create new vertices, we create new faces, we put these new data in the final 
 ###### Result
 <div style="text-align:center">
 <p align="center">
-  <img height="300" src="/media/compressed/CubeSpeed.gif">
-  <img height="300" src="/media/compressed/CoffeSpeed.gif">
-  <img height="300" src="/media/compressed/hondaSpeed.gif">
+  <img style="height : 300px;" src="/media/compressed/CubeSpeed.gif">
+  <img style="height : 300px;" src="/media/compressed/CoffeSpeed.gif">
+  <img style="height : 300px;" src="/media/compressed/hondaSpeed.gif">
 </p>
 </div>
 
@@ -406,19 +406,19 @@ We then create the new faces generated due to the extrusion, that we link in a c
 ###### Result
 <div style="text-align:center">
 <p align="center">
-  <img width="250" src="/media/compressed/EasyExtrusionCoffe.gif">
-  <img width="250" src="/media/compressed/EasyExtrusionCube.gif">
+  <img style="width : 250px;" src="/media/compressed/EasyExtrusionCoffe.gif">
+  <img style="width : 250px;" src="/media/compressed/EasyExtrusionCube.gif">
 </p>
 </div>
 <div style="text-align:center">
 <p align="center">
-  <img width="250" src="/media/compressed/HardExtrusionCoffee.gif">
-  <img width="250" src="/media/compressed/HardExtrusionCube.gif">
+  <img style="width : 250px;" src="/media/compressed/HardExtrusionCoffee.gif">
+  <img style="width : 250px;" src="/media/compressed/HardExtrusionCube.gif">
 </p>
 </div>
 <div style="text-align:center">
 <p align="center">
-  <img width="250" src="/media/compressed/HondaExtrusion.gif">
+  <img style="width : 250px;" src="/media/compressed/HondaExtrusion.gif">
 </p>
 </div>
 
