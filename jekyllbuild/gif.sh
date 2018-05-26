@@ -15,12 +15,12 @@ do
     # DEBUG # echo "file name : ${b%.*} " 
     
     # We can resize pictures
-    #gifsicle -b $my_path/$line -O3 --resize 450x450 -o ./media/compressed/crops/450x450/${b%.*}-450x450.gif
-    #gifsicle -b $my_path/$line -O3 --resize 450x253 -o ./media/compressed/crops/450x253/${b%.*}-450x253.gif
+    gifsicle -b $my_path/$line -O3 --resize-fit 450x450 -o ./media/compressed/crops/450x450/${b%.*}-450x450.gif
+    gifsicle -b $my_path/$line -O3 --resize-fit 450x253 -o ./media/compressed/crops/450x253/${b%.*}-450x253.gif
     
     # We can crop picture instead of resizing (deformation free :) )
-    gifsicle -b $my_path/$line -O3 --crop 0,0+450x450 -o ./media/compressed/crops/450x450/${b%.*}-450x450.gif
-    gifsicle -b $my_path/$line -O3 --crop 0,0+450x253 -o ./media/compressed/crops/450x253/${b%.*}-450x253.gif
-    
+    #gifsicle -b $my_path/$line -O3 --crop 0,0-450,450 -o ./media/compressed/crops/450x450/${b%.*}-450x450.gif
+    #gifsicle -b $my_path/$line -O3 --crop 0,0-450,253 -o ./media/compressed/crops/450x253/${b%.*}-450x253.gif
+
     echo "Done! writen to : ./media/compressed/crops/450x253/${b%.*}-450xXXX.gif "
 done <<< "$all_files"

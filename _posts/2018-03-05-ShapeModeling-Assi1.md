@@ -7,7 +7,10 @@ title: Shape Modeling IGL Library
 tags: [Shape, Modeling]
 category: [Shape Modeling]
 ---
-
+##### TL;DR
+This project was linked to a lecture about Shape Modeling. This project presents primitives to manipulate data with the IGL and Eigen libraries.
+These librairies are not well documented and therefore understand the implementation of some trivial operations might be time-consuming. This project try to show some basics with the library. It leads to a very basic blender-like real-time mesh editor.
+<br/>
 
 ##### Table of Contents  
 [1. Neighboorhood computations](#Neighboorhood)  <br/>
@@ -18,6 +21,8 @@ category: [Shape Modeling]
 [4. Mesh extrude](#extrusion)  <br/>
 [5. My wonderful design](#designMaster)  <br/>
 
+<br/>
+
 <a name="Neighboorhood"/>
 
 ### 1. Neighboorhood computations
@@ -25,11 +30,12 @@ category: [Shape Modeling]
 <a name="Vertex2Face"/>
 
 #### 1. Vertex To Face relations
-```
-Given V and F, generate an adjacency list which contains, for each
-vertex, the faces adjacent to it. The ordering of the faces incident on a vertex does not matter. Your
-program should print out the vertex-to-face relations in text form when key ’1’ is pressed.
-```
+
+V is the matrix representing the vertices of the mesh
+F is the matrix representing the triangular faces of the mesh, as references to V.
+
+As a first step, we can represent the relation between vertices and faces as an adjacency list.
+By pressing '1' we get a text output of the vertex-to-face relation
 
 ###### Documentation informations
 We can use the following function : 
