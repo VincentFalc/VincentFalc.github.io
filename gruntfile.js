@@ -208,7 +208,7 @@ const {execFile} = require('child_process');
 
         shell: {
             jekyllServe: {
-                command: "jekyll serve  --no-watch"
+                command: "jekyll serve  --watch"//
             },
             jekyllBuild: {
                 command: "jekyll build"

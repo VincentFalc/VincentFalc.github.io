@@ -203,7 +203,12 @@
                         </div>
                         
                         <div class="post-content">
-                            <h5 id="table-of-contents">Table of Contents</h5>
+                            <h5 id="tldr">TL;DR</h5>
+<p>This project was linked to a lecture about Shape Modeling. This project presents primitives to manipulate data with the IGL and Eigen libraries.
+These librairies are not well documented and therefore understand the implementation of some trivial operations might be time-consuming. This project try to show some basics with the library. It leads to a very basic blender-like real-time mesh editor.
+<br /></p>
+
+<h5 id="table-of-contents">Table of Contents</h5>
 <p><a href="#Neighboorhood">1. Neighboorhood computations</a>  <br />
 <a href="#Vertex2Face">1.1. Vertex To Face relations</a>  <br />
 <a href="#Vertex2Vertex">1.2. Vertex To Vertex relations</a>  <br />
@@ -212,23 +217,34 @@
 <a href="#extrusion">4. Mesh extrude</a>  <br />
 <a href="#designMaster">5. My wonderful design</a>  <br /></p>
 
+<p><br /></p>
+
 <p><a name="Neighboorhood"></a></p>
 
-<h3 id="1-neighboorhood-computations">1. Neighboorhood computations</h3>
+<h4 id="1-neighboorhood-computations">1. Neighboorhood computations</h4>
 
 <p><a name="Vertex2Face"></a></p>
 
-<h4 id="1-vertex-to-face-relations">1. Vertex To Face relations</h4>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Given V and F, generate an adjacency list which contains, for each
-vertex, the faces adjacent to it. The ordering of the faces incident on a vertex does not matter. Your
-program should print out the vertex-to-face relations in text form when key ’1’ is pressed.
-</code></pre></div></div>
+<h4 id="11-vertex-to-face-relations">1.1 Vertex To Face relations</h4>
+
+<p>V is the matrix representing the vertices of the mesh
+F is the matrix representing the triangular faces of the mesh, as references to V.</p>
+
+<p>As a first step, we can represent the relation between vertices and faces as an adjacency list.
+By pressing ‘1’ we get a text output of the vertex-to-face relation</p>
 
 <h6 id="documentation-informations">Documentation informations</h6>
-<p>We can use the following function : 
-    <b>igl::vertex_triangle_adjacency();</b></p>
 
-<p>This function construct the vertx-face topology of a mesh defined by (V,F) (described below). <br />Informations about the function : https://github.com/libigl/libigl/blob/master/include/igl/vertex_triangle_adjacency.h</p>
+<p>Information about function of IGL Library can be found directly in the header files of the git repository.</p>
+
+<p>We can use the following function :</p>
+<ul>
+  <li><strong>igl::vertex_triangle_adjacency()</strong>
+This function construct the vertx-face topology of a mesh defined by (V,F) (described below). <br />
+Informations about the function : <a href="https://github.com/libigl/libigl/blob/master/include/igl/vertex_triangle_adjacency.h">-&gt; Documentation</a></li>
+</ul>
+
+<p>An over-view on how to use this function is following.</p>
 
 <p><strong>Inputs</strong> :</p>
 <ul>
@@ -245,15 +261,14 @@ program should print out the vertex-to-face relations in text form when key ’1
 
 <h6 id="usage">Usage</h6>
 <p>We want, for each vertex, the adjacent faces. We call the function that build the adjacent list and print the VF list.</p>
+
 <pre><code class="language-C++">igl::vertex_triangle_adjacency(V.rows(), F,VF,VFi);
-std::cout (...)
 </code></pre>
 
 <h6 id="result">Result</h6>
 <div style="text-align:center">
 <p align="center">
-  <img style="height : 300px;" src="/media/compressed/capture1_1.png" />
-  <img style="height : 200px;" src="/media/compressed/capture1_2.png" />
+  <img style="height : 600px;" src="/media/compressed/capture1_1.png" />
 </p>
 </div>
 
@@ -273,17 +288,20 @@ Vertex ID	 Faces associated
 
 <p><a name="Vertex2Vertex"></a></p>
 
-<h4 id="2-vertex-to-vertex-relations">2. Vertex To Vertex relations</h4>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Given V and F, generate an adjacency list which contains, for each
-vertex, the vertices connected with it. Two vertices are connected if there exists an edge between them,
-i.e., if the two vertices appear in the same row of F.
-</code></pre></div></div>
+<h4 id="12-vertex-to-vertex-relations">1.2. Vertex To Vertex relations</h4>
+
+<p>As a second step, we can represent the relation between vertices as an adjacency list, as we did between vertices and faces.
+By pressing ‘2’ we get a text output of the vertex-to-vertex relation</p>
 
 <h6 id="documentation-informations-1">Documentation informations</h6>
-<p>We can use the following function : 
-    <b>igl::adjacency list;</b></p>
 
-<p>This function construct the graph adjacency list of a mesh defined by (V,F). <br /> Informations about the function : https://github.com/libigl/libigl/blob/master/include/igl/adjacency_list.h</p>
+<p>We can use the following function :</p>
+<ul>
+  <li><strong>igl::adjacency list</strong></li>
+</ul>
+
+<p>This function construct the graph adjacency list of a mesh defined by (V,F). <br /> Informations about the function : 
+<a href="https://github.com/libigl/libigl/blob/master/include/igl/adjacency_list.h">-&gt; Documentation</a></p>
 
 <p><strong>Inputs</strong> :</p>
 <ul>
@@ -298,14 +316,12 @@ i.e., if the two vertices appear in the same row of F.
 <h6 id="usage-1">Usage</h6>
 <p>We want, for each vertex, the adjacent vertices. We call the function that build the adjacent list and print the VV list.</p>
 <pre><code class="language-C++">igl::adjacency_list(F,VV);
-std::cout (...)
 </code></pre>
 
 <h6 id="result-1">Result</h6>
 <div style="text-align:center">
 <p align="center">
-  <img style="height : 300px;" src="/media/compressed/capture2_1.png" />
-  <img style="height : 200px;" src="/media/compressed/capture2_2.png" />
+  <img style="height : 600px;" src="/media/compressed/capture2_1.png" />
 </p>
 </div>
 
@@ -319,27 +335,31 @@ Vertex ID	 Vertices associated
 5		0 1 4 6 
 6		1 2 4 5 7 
 7		2 3 4 6 
-
 </code></pre></div></div>
 
 <hr />
 
 <p><a name="Connected"></a></p>
 
-<h3 id="2-connected-components">2. Connected components</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Using the neighborhood connectivity, it is possible to separate a mesh into separated connected com-
-ponents, where each mesh face only belongs to a single component. Fill in the appropriate source
-code sections (inside the keyboard callback, key ’3’) of the ex1 cmake project to display the mesh
-with faces of the various connected components colored differently for each component. For coloring
-the components you can use the jet colormap provided with libigl, or you can implement your own
-colormap.
-</code></pre></div></div>
+<h3 id="21-connected-components">2.1 Connected components</h3>
+
+<p>A mesh can be divided in independants smaller meshes, not connected, that we call separated connected components. Each mesh face only belongs to a single component. We can color differently each component.</p>
+
+<p>By pressing ‘3’ we get a text output of the connected components list.</p>
 
 <h6 id="documentation-informations-2">Documentation informations</h6>
-<p>We can use the following function : 
-    <b>igl::facet components();</b>
+
+<p>We can use the following function :</p>
+<ul>
+  <li><strong>igl::facet components()</strong>
 This function compute a list of the connected components, based on adjacency of edges.<br />
-Informations about the function : https://github.com/libigl/libigl/blob/master/include/igl/facet_components.h</p>
+<a href="https://github.com/libigl/libigl/blob/master/include/igl/facet_components.h">-&gt; Documentation</a></li>
+  <li><strong>igl::jet()</strong>
+This function compute a list colors [r,g,b] from a list of factor [0-1]. <br />
+<a href="https://github.com/libigl/libigl/blob/master/include/igl/jet.h">-&gt; Documentation</a></li>
+</ul>
+
+<p>For <strong>igl::facet components()</strong> we have :</p>
 
 <p><strong>Inputs</strong> :</p>
 <ul>
@@ -352,10 +372,7 @@ Informations about the function : https://github.com/libigl/libigl/blob/master/i
   <li>(overload : Cnb = A list of number of facets in each components )</li>
 </ul>
 
-<p>We can also use the following function : 
-<b>igl::jet();</b>
-This function compute a list colors [r,g,b] from a list of factor [0-1]. <br />
-Informations about the function : https://github.com/libigl/libigl/blob/master/include/igl/jet.h</p>
+<p>For <strong>igl::jet()</strong> we have :</p>
 
 <p><strong>Inputs</strong> :</p>
 <ul>
@@ -369,7 +386,7 @@ Informations about the function : https://github.com/libigl/libigl/blob/master/i
 </ul>
 
 <h6 id="usage-2">Usage</h6>
-<p>We compute each component. Then we compute a color for each component. Then we extract the number of component. Then we calcul the number of faces for each component.</p>
+<p>We compute each component by a call to IGL library. Then we compute a color for each component. Then we extract the number of component. Then we calcul the number of faces for each component.</p>
 <pre><code class="language-C++">igl::facet_components(F,cid);
 igl::jet(cid,true,colors_per_face);
 
@@ -388,23 +405,17 @@ for(int i =0 ; i&lt;cid.size() ; i++){
 <h6 id="result-2">Result</h6>
 <div style="text-align:center">
 <p align="center">
-  <img style="width : 250px;" src="/media/compressed/cube_1.png" />
+  <img style="height : 300px;" src="/media/compressed/cube_1.png" />
+  <img style="height : 300px;" src="/media/compressed/coffe_1.png" />
+  <img style="height : 300px;" src="/media/compressed/honda_1.png" />
+</p>
+</div>
+
+<div style="text-align:center">
+<p align="center">
   <img style="width : 300px;" src="/media/compressed/cube_2.png" />
-</p>
-</div>
-
-<div style="text-align:center">
-<p align="center">
-  <img style="width : 250px;" src="/media/compressed/coffe_1.png" />
   <img style="width : 300px;" src="/media/compressed/coffe_2.png" />
-</p>
-</div>
-
-<div style="text-align:center">
-<p align="center">
-  <img style="width : 250px;" src="/media/compressed/honda_1.png" />
-  <img style="width : 300px;" src="/media/compressed/honda_2.png" />
-</p>
+  <img style="width : 300px;" src="/media/compressed/honda_2.png" /></p>
 </div>
 
 <hr />
@@ -412,32 +423,36 @@ for(int i =0 ; i&lt;cid.size() ; i++){
 <p><a name="subdivision"></a></p>
 
 <h3 id="3-a-simple-subdivision-scheme">3. A simple subdivision scheme</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>For this task you will implement the subdivision scheme described in [1] (https://www.graphics.
-rwth-aachen.de/media/papers/sqrt31.pdf) to iterative create √ finer meshes from a given, coarse
-one. According to the paper, given a given mesh (V,F), the 3-subdivision scheme creates a new
-meshes (V’,F’) by using the following rules (...)
-</code></pre></div></div>
+
+<p>We can implement a subdivision scheme to iteratively create a denser grid of triangle representing the same mesh. The subdivision scheme used is described there : 
+<a href="https://www.graphics.rwth-aachen.de/media/papers/sqrt31.pdf">-&gt; Description</a></p>
+
+<p align="center">
+<img style="height : 400px;" src="/media/compressed/subdivision.png" /><br />
+Extracted from the cited paper - RWTH Aachen
+</p>
+
+<p>This operation shrink and smooth the mesh during the process.</p>
 
 <h6 id="documentation-informations-3">Documentation informations</h6>
-<p>We can use the following function : 
-igl::adjacency list : give adjacent vertices <br />
-See : https://github.com/libigl/libigl/blob/master/include/igl/adjacency_list.h</p>
 
-<p>igl::triangle triangle adjacency : give a list for topological adjacency of triangles <br />
-See : https://github.com/libigl/libigl/blob/master/include/igl/triangle_triangle_adjacency.h</p>
-
-<p>igl::edge topology : give topological relations of edges <br />
-See : https://github.com/libigl/libigl/blob/master/include/igl/edge_topology.h</p>
-
-<p>igl::barycenter : Computes the barycenter of every simplex <br />
-See : https://github.com/libigl/libigl/blob/master/include/igl/barycenter.h</p>
-
-<p>igl::viewer.data.clear() : already implemented,
-viewer.data.set mesh(.,.) : idem</p>
-
-<p>The implementation follow exactly the instructions. Thanks to Rabinovich Michael for his help, as I was trying to implement my own (wrong? We’ll never know) solution.</p>
-
-<p>If you want to see what was this solution, explanation are available there : “/media/compressed/Logic_Vertices.png” and “/media/compressed/Logic_Faces.png”</p>
+<p>We can use the following function :</p>
+<ul>
+  <li><strong>igl::adjacency list</strong>
+Give adjacent vertices.<br />
+<a href="https://github.com/libigl/libigl/blob/master/include/igl/adjacency_list.h">-&gt; Documentation</a></li>
+  <li><strong>igl::triangle triangle adjacency</strong>
+Give a list for topological adjacency of triangles.<br />
+<a href="https://github.com/libigl/libigl/blob/master/include/igl/triangle_triangle_adjacency.h">-&gt; Documentation</a></li>
+  <li><strong>igl::edge topology</strong>
+Give topological relations of edges .<br />
+<a href="https://github.com/libigl/libigl/blob/master/include/igl/edge_topology.h">-&gt; Documentation</a></li>
+  <li><strong>igl::barycenter</strong>
+Computes the barycenter of every simplex.<br />
+<a href="https://github.com/libigl/libigl/blob/master/include/igl/barycenter.h">-&gt; Documentation</a></li>
+  <li><strong>igl::viewer.data.clear()</strong>
+Clean the data displayed on the screen<br /></li>
+</ul>
 
 <h6 id="usage-3">Usage</h6>
 <p>We create new vertices, we create new faces, we put these new data in the final V,F.
@@ -498,9 +513,9 @@ viewer.data.set mesh(.,.) : idem</p>
 <h6 id="result-3">Result</h6>
 <div style="text-align:center">
 <p align="center">
-  <img style="height : 300px;" src="/media/compressed/CubeSpeed.gif" />
-  <img style="height : 300px;" src="/media/compressed/CoffeSpeed.gif" />
-  <img style="height : 300px;" src="/media/compressed/hondaSpeed.gif" />
+  <img style="height : 500px;" src="/media/compressed/CubeSpeed.gif" />
+  <img style="height : 500px;" src="/media/compressed/CoffeSpeed.gif" />
+  <img style="height : 500px;" src="/media/compressed/hondaSpeed.gif" />
 </p>
 </div>
 
@@ -509,27 +524,33 @@ viewer.data.set mesh(.,.) : idem</p>
 <p><a name="extrusion"></a></p>
 
 <h3 id="4-mesh-extrude">4. Mesh extrude</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In this task you will implement a basic mesh editing operation. The code supplied already has a built-in
-support for a few operations: selecting faces, translating faces, and selecting/translating a single vertex (...)
-</code></pre></div></div>
+
+<p>A basic mesh editing operation are implemented : selecting faces, translating faces, … Here is the code concerning the extrusion.</p>
 
 <h6 id="documentation-informations-4">Documentation informations</h6>
-<p>We can use the following function : 
-igl::vertex triangle adjacency : constructs the vertex-face topology of a given mesh <br />
-See : https://github.com/libigl/libigl/blob/master/include/igl/vertex_triangle_adjacency.h</p>
 
-<p>igl::is edge manifold : return if mesh is edge manifold <br />
-See : https://github.com/libigl/libigl/blob/master/include/igl/is_edge_manifold.h</p>
-
-<p>igl::is vertex manifold : checks whether the faces incident on each vertex form exactly one connected component.<br />
-See : https://github.com/libigl/libigl/blob/master/include/igl/is_vertex_manifold.h</p>
+<p>We can use the following function :</p>
+<ul>
+  <li><strong>igl::vertex triangle adjacency</strong>
+Constructs the vertex-face topology of a given mesh<br />
+<a href="https://github.com/libigl/libigl/blob/master/include/igl/vertex_triangle_adjacency.h">-&gt; Documentation</a></li>
+  <li><strong>igl::is edge manifold</strong>
+Return if mesh is edge manifold<br />
+<a href="https://github.com/libigl/libigl/blob/master/include/igl/is_edge_manifold.h">-&gt; Documentation</a></li>
+  <li><strong>igl::is vertex manifold</strong>
+Checks whether the faces incident on each vertex form exactly one connected component.<br />
+<a href="https://github.com/libigl/libigl/blob/master/include/igl/is_vertex_manifold.h">-&gt; Documentation</a></li>
+</ul>
 
 <p>std::set, std::set difference are part of the STL lib.<br /></p>
 
 <h6 id="usage-4">Usage</h6>
-<p>The first steps of the work are already implemented. 
-We get the faces containing old boundary vertices, without considering the selected faces, and we update their vertices with the new created ones.
-We then create the new faces generated due to the extrusion, that we link in a consistent way.
+
+<p>We select a set of faces, and we want to extrude the mesh from these faces.</p>
+
+<p>We get a list of the faces having at least on vertice of the set of faces we want to extrude. 
+We update these vertices, as new faces are created during the process to make a link between the “old boundary” (vertices which didn’t move) and the “new boundary” (vertices newly created, which will be moved). 
+We then create the new faces generated due to the extrusion, that we link in a consistent way between the old and new vertices.
 (Only essentials parts are displayed, such code doesn’t compile)</p>
 
 <pre><code class="language-C++">    // 5) Update Fout 
@@ -600,24 +621,26 @@ We then create the new faces generated due to the extrusion, that we link in a c
 <h6 id="result-4">Result</h6>
 <div style="text-align:center">
 <p align="center">
-  <img style="width : 250px;" src="/media/compressed/EasyExtrusionCoffe.gif" />
-  <img style="width : 250px;" src="/media/compressed/EasyExtrusionCube.gif" />
+  <img style="width : 600px;" src="/media/compressed/EasyExtrusionCoffe.gif" />
+  <img style="width : 600px;" src="/media/compressed/EasyExtrusionCube.gif" />
 </p>
 </div>
 <div style="text-align:center">
 <p align="center">
-  <img style="width : 250px;" src="/media/compressed/HardExtrusionCoffee.gif" />
-  <img style="width : 250px;" src="/media/compressed/HardExtrusionCube.gif" />
+  <img style="width : 600px;" src="/media/compressed/HardExtrusionCoffee.gif" />
+  <img style="width : 600px;" src="/media/compressed/HardExtrusionCube.gif" />
 </p>
 </div>
 <div style="text-align:center">
 <p align="center">
-  <img style="width : 250px;" src="/media/compressed/HondaExtrusion.gif" />
+  <img style="width : 600px;" src="/media/compressed/HondaExtrusion.gif" />
 </p>
 </div>
 
-<p>For more information, see : https://github.com/VincentFalc/ShapeModeling_1_BasicIGL
-Note that the code is not optimized by thoughtful laziness: this code is not made to be reused as is in other applications, and if this is the case, the code will be reviewed and optimized. Thanks for your understanding.</p>
+<p>For more information, see : 
+<a href="https://github.com/VincentFalc/ShapeModeling_1_BasicIGL">-&gt; Repository</a></p>
+
+<p>Note that the code is not optimized by thoughtful laziness: this code is not made to be reused as is in other applications, and if this is the case, the code will be reviewed and optimized. Thanks for your understanding.</p>
 
                         </div>
                         

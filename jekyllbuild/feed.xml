@@ -10,14 +10,10 @@
 				<title>Shape Modeling IGL Library</title>
 				
 				
-					<description>&lt;h5 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&quot;#Neighboorhood&quot;&gt;1. Neighboorhood computations&lt;/a&gt;  &lt;br /&gt;
-&lt;a href=&quot;#Vertex2Face&quot;&gt;1.1. Vertex To Face relations&lt;/a&gt;  &lt;br /&gt;
-&lt;a href=&quot;#Vertex2Vertex&quot;&gt;1.2. Vertex To Vertex relations&lt;/a&gt;  &lt;br /&gt;
-&lt;a href=&quot;#Connected&quot;&gt;2. Connected components&lt;/a&gt;  &lt;br /&gt;
-&lt;a href=&quot;#subdivision&quot;&gt;3. A simple subdivision scheme&lt;/a&gt;  &lt;br /&gt;
-&lt;a href=&quot;#extrusion&quot;&gt;4. Mesh extrude&lt;/a&gt;  &lt;br /&gt;
-&lt;a href=&quot;#designMaster&quot;&gt;5. My wonderful design&lt;/a&gt;  &lt;br /&gt;&lt;/p&gt;
+					<description>&lt;h5 id=&quot;tldr&quot;&gt;TL;DR&lt;/h5&gt;
+&lt;p&gt;This project was linked to a lecture about Shape Modeling. This project presents primitives to manipulate data with the IGL and Eigen libraries.
+These librairies are not well documented and therefore understand the implementation of some trivial operations might be time-consuming. This project try to show some basics with the library. It leads to a very basic blender-like real-time mesh editor.
+&lt;br /&gt;&lt;/p&gt;
 
 </description>
 				
