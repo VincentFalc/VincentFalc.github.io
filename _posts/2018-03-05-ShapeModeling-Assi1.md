@@ -4,7 +4,7 @@ layout: post-full
 type: image
 featimg: HardExtrusionCoffee.gif
 title: Shape Modeling IGL Library
-tags: [Shape, Modeling]
+tags: [Shape Modeling, IGL, Eigen, Subdivision, Extrusion, Basic computation]
 category: [Shape Modeling]
 ---
 ##### TL;DR

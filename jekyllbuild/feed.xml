@@ -7,6 +7,26 @@
 		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Shape Modeling Surface reconstruction</title>
+				
+				
+					<description>&lt;h5 id=&quot;tldr&quot;&gt;TL;DR&lt;/h5&gt;
+&lt;p&gt;This project was linked to a lecture about Shape Modeling. This project presents a way to compute the surface of a point cloud, with normals.
+Note that without normals, we would need preprocess the point cloud by creating local plan, to produce normals ; and by using a spanning tree, to propagate one global direction (ext/int) to all normals.
+&lt;br /&gt;
+The goal to find a function, which has a 0-value on the surface. It has a positive value outside the mesh, a negative value inside the mesh.
+&lt;br /&gt;
+This problem is similar to an interpolation problem, and therefore we need to create a constraint system to solve (the value the function should have at each known point).
+&lt;br /&gt;&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Tue, 20 Mar 2018 00:00:00 +0100</pubDate>
+				<link>http://localhost:4000/ShapeModeling-Assi2/</link>
+				<guid isPermaLink="true">http://localhost:4000/ShapeModeling-Assi2/</guid>
+			</item>
+		
+			<item>
 				<title>Shape Modeling IGL Library</title>
 				
 				
