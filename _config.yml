@@ -1,6 +1,6 @@
 full_rebuild: true
-name: Gridster
-description: the material experience for jekyll
+name: Vincent F.
+description: Projects list
 destination: jekyllbuild
 url: http://VincentFalc.github.io
 baseurl: 

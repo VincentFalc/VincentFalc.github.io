@@ -1,5 +1,8 @@
 module.exports = function (grunt) {
 
+const {execFile} = require('child_process');
+//Prefer to launch it manually : execFile('./gif.sh');
+
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),

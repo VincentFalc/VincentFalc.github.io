@@ -8,6 +8,7 @@ tags: [Shape, Modeling]
 category: [Shape Modeling]
 ---
 
+
 ##### Table of Contents  
 [1. Neighboorhood computations](#Neighboorhood)  <br/>
 [1.1. Vertex To Face relations](#Vertex2Face)  <br/>

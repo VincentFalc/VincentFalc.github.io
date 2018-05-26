@@ -31,6 +31,9 @@
                     {% elsif post.featimg contains '.jpg'%}
                     {% assign thumb = post.featimg | replace: '.jpg', '' %}
                         <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.jpg' }}" alt="{{ thumb }}">
+                    {% elsif post.featimg contains '.gif'%}
+                    {% assign thumb = post.featimg | replace: '.gif', '' %}
+                        <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.gif' }}" alt="{{ thumb }}">
                     {% endif %}
                 </a>
             {% endif %}
@@ -44,6 +47,9 @@
                     {% elsif post.featimg contains '.jpg'%}
                     {% assign thumb = post.featimg | replace: '.jpg', '' %}
                         <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.jpg' }}" alt="{{ thumb }}">
+                    {% elsif post.featimg contains '.gif'%}
+                    {% assign thumb = post.featimg | replace: '.gif', '' %}
+                        <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/crops/450x253/{{ thumb | append: '-450x253.gif' }}" alt="{{ thumb }}">
                     {% endif %}
                 </a>
         {% endif %}

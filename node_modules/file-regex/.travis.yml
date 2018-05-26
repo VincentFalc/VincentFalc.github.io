@@ -1,0 +1,26 @@
+language: node_js
+
+node_js: 
+  - "6"
+  - "7"
+  - "8"
+  - "9"
+
+branches:
+  only:
+    - master
+
+matrix: 
+  allow_failures:
+    - node_js: "8"
+    - node_js: "9"
+
+install:
+  - npm install
+
+script: npm test
+
+notifications:
+  email: 
+    on_success: change
+    on_failure: always

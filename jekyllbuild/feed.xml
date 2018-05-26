@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 	<channel>
-		<title>Gridster</title>
-		<description>the material experience for jekyll</description>
-		<link>http://VincentFalc.github.io</link>
-		<atom:link href="http://VincentFalc.github.io/feed.xml" rel="self" type="application/rss+xml" />
+		<title>Vincent F.</title>
+		<description>Projects list</description>
+		<link>http://localhost:4000</link>
+		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
 				<title>Shape Modeling IGL Library</title>
@@ -22,8 +22,8 @@
 </description>
 				
 				<pubDate>Mon, 05 Mar 2018 00:00:00 +0100</pubDate>
-				<link>http://VincentFalc.github.io/ShapeModeling-Assi1/</link>
-				<guid isPermaLink="true">http://VincentFalc.github.io/ShapeModeling-Assi1/</guid>
+				<link>http://localhost:4000/ShapeModeling-Assi1/</link>
+				<guid isPermaLink="true">http://localhost:4000/ShapeModeling-Assi1/</guid>
 			</item>
 		
 	</channel>
