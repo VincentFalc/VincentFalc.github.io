@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+<title>Vincent F. - Shape Modeling Deformation and editing </title>
+
+<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
+<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:500,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" id="color-change" href="">
+<link rel="stylesheet" id="switch-style" href="/css/grid.css">
+<link rel="alternate" type="application/rss+xml" title="Vincent F." href="http:/localhost:4000/feed.xml">
+
+    </head>
+
+    <body>
+        <header class="head">
+            <div class="row">
+    <a href="/" class="logo noline">
+        <!-- full logo version with slogan, icon and text, add the class .ts-full if you want to work with some of the existing CSS -->
+   <svg version="1.1" viewBox="0 0 850.61096 179.54858" class="ts-full">
+    <g transform="translate(-49.00717,-350.11674)">
+        <g transform="matrix(0.65068572,0,0,0.65068572,11.104727,118.00494)" class="icon">
+            <path d="m 101.39622,391.43518 191.99569,0 c 5.04555,0 9.10749,46.87698 9.10749,105.10533 0,58.22836 -4.06194,105.10533 -9.10749,105.10533 l -191.99569,0 c -5.045545,0 -9.107486,-46.87697 -9.107486,-105.10533 0,-58.22835 4.061941,-105.10533 9.107486,-105.10533 z" class="rectangle" />
+            <path d="m 165.8125,358.21875 -5.1875,99.21875 -100.875,0 0,7.625 100.46875,0 -3.28125,62.59375 -97.1875,0 0,7.59375 96.78125,0 -5,95.5 7.625,0.40625 5.03125,-95.90625 62.5625,0 -5,95.5 7.59375,0.40625 5.03125,-95.90625 98.28125,0 0,-7.59375 -97.875,0 3.28125,-62.59375 94.59375,0 0,-7.625 -94.1875,0 5.15625,-98.84375 -7.59375,-0.375 -5.1875,99.21875 -62.5625,0 5.15625,-98.84375 -7.625,-0.375 z m 2.0625,106.84375 62.5625,0 -3.28125,62.59375 -62.5625,0 3.28125,-62.59375 z" class="lines" />
+        </g>
+        <text x="235.15662" y="477.12143" class="gridster">
+            <tspan x="235.15662" y="477.12143">VFProjects</tspan>
+        </text>
+        <text x="304.80173" y="512.31683" class="slogan">
+            <tspan x="304.80173" y="512.31683">Personal and professional work</tspan>
+        </text>
+    </g>
+</svg>
+        <!-- logo version without slogan, add the class .ts-no-slogan if you want to work with some of the existing CSS -->
+<svg version="1.1" viewBox="0 0 677.61096 179.54858" class="ts-no-slogan">
+    <g transform="translate(-49.00717,-350.11674)">
+        <g transform="matrix(0.65068572,0,0,0.65068572,11.104727,118.00494)" class="icon">
+            <path d="m 101.39622,391.43518 191.99569,0 c 5.04555,0 9.10749,46.87698 9.10749,105.10533 0,58.22836 -4.06194,105.10533 -9.10749,105.10533 l -191.99569,0 c -5.045545,0 -9.107486,-46.87697 -9.107486,-105.10533 0,-58.22835 4.061941,-105.10533 9.107486,-105.10533 z" class="rectangle" />
+            <path d="m 165.8125,358.21875 -5.1875,99.21875 -100.875,0 0,7.625 100.46875,0 -3.28125,62.59375 -97.1875,0 0,7.59375 96.78125,0 -5,95.5 7.625,0.40625 5.03125,-95.90625 62.5625,0 -5,95.5 7.59375,0.40625 5.03125,-95.90625 98.28125,0 0,-7.59375 -97.875,0 3.28125,-62.59375 94.59375,0 0,-7.625 -94.1875,0 5.15625,-98.84375 -7.59375,-0.375 -5.1875,99.21875 -62.5625,0 5.15625,-98.84375 -7.625,-0.375 z m 2.0625,106.84375 62.5625,0 -3.28125,62.59375 -62.5625,0 3.28125,-62.59375 z" class="lines" />
+        </g>
+        <text x="235.15662" y="477.12143" class="gridster">
+            <tspan x="235.15662" y="477.12143">Projects</tspan>
+        </text>
+    </g>
+</svg>
+        <!-- icon logo version, add the class .ts-icon if you want to work with some of the existing CSS -->
+<svg version="1.1" viewBox="0 0 179.52826 179.54858" class="ts-icon">
+    <g transform="translate(-49.00717,-350.11674)">
+        <g transform="matrix(0.65068572,0,0,0.65068572,11.104727,118.00494)" class="icon">
+            <path d="m 101.39622,391.43518 191.99569,0 c 5.04555,0 9.10749,46.87698 9.10749,105.10533 0,58.22836 -4.06194,105.10533 -9.10749,105.10533 l -191.99569,0 c -5.045545,0 -9.107486,-46.87697 -9.107486,-105.10533 0,-58.22835 4.061941,-105.10533 9.107486,-105.10533 z" class="rectangle" />
+            <path d="m 165.8125,358.21875 -5.1875,99.21875 -100.875,0 0,7.625 100.46875,0 -3.28125,62.59375 -97.1875,0 0,7.59375 96.78125,0 -5,95.5 7.625,0.40625 5.03125,-95.90625 62.5625,0 -5,95.5 7.59375,0.40625 5.03125,-95.90625 98.28125,0 0,-7.59375 -97.875,0 3.28125,-62.59375 94.59375,0 0,-7.625 -94.1875,0 5.15625,-98.84375 -7.59375,-0.375 -5.1875,99.21875 -62.5625,0 5.15625,-98.84375 -7.625,-0.375 z m 2.0625,106.84375 62.5625,0 -3.28125,62.59375 -62.5625,0 3.28125,-62.59375 z" class="lines" />
+        </g>
+    </g>
+</svg>
+    </a>
+</div>
+
+            <!-- menu, we did go with a static one, you can build a dynamic one, just google a little around -->
+<div class="main-menu">
+    <div class="content">
+        <nav id="menu">
+            <a class="toggle-link noline"><i class="fa fa-close fa-lg"></i></a>
+            <ul>
+                <li>
+                    <a class="homelink" href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/archive">Archive</a>
+                </li>
+                <!--
+                <li>
+                    <a href="/typography">Typography</a>
+                </li>
+                <li><a class="dropdown-button" href="#" data-activates='drop-example'>Page Layouts&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
+                </li>
+                <div id="drop-example" class="dropdown-content">
+                    <li>
+                        <a href="/page-full">page-full</a>
+                    </li>
+                    <li>
+                        <a href="/page-classic-sidebar-right">page classic sidebar right</a>
+                    </li>
+                    <li>
+                        <a href="/page-classic-sidebar-left">page classic sidebar left</a>
+                    </li>
+                    <li>
+                        <a href="/page-material-sidebar-right">page material sidebar right</a>
+                    </li>
+                    <li>
+                        <a href="/page-material-sidebar-left">page material sidebar left</a>
+                    </li>
+                </div>
+                <li>
+                    <a href="#colorswitch" class="modal-trigger">Change Colors <i class="fa fa-cog"></i></a>
+                </li>
+                -->
+            </ul>
+        </nav>
+        <nav class="iconnav">
+            <ul>
+                <li class="sicon">
+                    <a href='#search'><i class='fa fa-search'></i></a>
+                </li>
+                <!--
+                
+                <li class="social">
+                    <a href="" class="tumblr"><i class="fa fa-tumblr"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="pinterest"><i class="fa fa-pinterest"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="instagram"><i class="fa fa-instagram"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="twitter"><i class="fa fa-twitter"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="facebook"><i class="fa fa-facebook"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="youtube"><i class="fa fa-youtube"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="vimeo"><i class="fa fa-vimeo-square"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="soundcloud"><i class="fa fa-soundcloud"></i></a>
+                </li>
+                
+                -->
+            </ul>
+        </nav>
+        <a href='#menu' class="toggle-link noline">
+            <i class="fa fa-navicon"></i>
+        </a>
+    </div>
+</div>
+
+
+
+
+<div id="colorswitch" class="modal color-change">
+    <div class="modal-content">
+      <h4>Change Color Palette</h4>
+      <p>
+      <img id="indigo" alt="color palette preview indigo" src="/media/compressed/indigo.jpg">
+      <img id="brown" alt="color palette preview brown" src="/media/compressed/brown.jpg">
+      <img id="green" alt="color palette preview green" src="/media/compressed/green.jpg">
+      <img id="teal" alt="color palette preview teal" src="/media/compressed/teal.jpg">
+      </p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">close</a>
+    </div>
+  </div>
+        </header>
+        <div id="search">
+    <form role="search" id="searchform">
+        <input type="search" placeholder="Search"/>
+    </form>
+</div>
+
+        <div class="margin">
+            <div class="content full">
+                <div class="content-container">
+                    <article>
+                        
+                            
+                                <img class="featimg" src="/media/compressed/hand.gif" alt="hand.gif">
+                            
+                        
+
+                        <h1 class="post-title">
+                            Shape Modeling Deformation and editing
+                        </h1>
+                        <div class="meta">
+                            
+
+    <span class="author">Posted by
+        
+        
+            <a href="/author/VF">
+                
+                    Vincent F.
+                
+            </a>
+        
+    </span>
+
+ &bull;
+                            <span class="date">
+                                Published on April 25, 2018
+                            </span>
+                        </div>
+                        
+                        <div class="post-content">
+                            <h5 id="tldr">TL;DR</h5>
+<p>This project was linked to a lecture about Shape Modeling. This project presents a method to deform meshs, based on high frequency details conservation and low frequency forms deformation, to keep a good integrity of the mesh during the edition.
+<br />
+The editing method is real-time for small to medium meshes on a medium-class laptop computer.
+<br /></p>
+
+<p align="center">
+<img style="height : 450px;" src="/media/compressed/multiresMethod.png" />
+<br />Overview of the method - [Source]( http://graphics.uni-bielefeld.de )<br />
+</p>
+
+<h5 id="table-of-contents">Table of Contents</h5>
+<p><a href="#Multiresolution">1. Multiresolution mesh editing</a>  <br />
+<a href="#Selecting">1.1. Selecting the handles</a>  <br />
+<a href="#Removal">1.2. Removal of high-frequency details</a>  <br />
+<a href="#Deforming">1.3. Deforming the smooth mesh</a>  <br />
+<a href="#Transferring">1.4. Transferring high-frequency details to the deformed surface</a>  <br />
+<a href="#Real">1.5. Real-time performance</a>  <br />
+<a href="#Optional">2. Optional tasks</a>  <br /></p>
+
+<p><a name="Multiresolution"></a></p>
+
+<h4 id="1-multiresolution-mesh-editing">1. Multiresolution mesh editing</h4>
+
+<p><a name="Selecting"></a></p>
+
+<h4 id="11-selecting-the-handles">1.1. Selecting the handles</h4>
+
+<p>The first step to deform a mesh is to select which part will move and which won’t.
+Therefore, you can use the GUI to select handle over the mesh.</p>
+
+<hr />
+
+<p><a name="Removal"></a></p>
+
+<h4 id="12-removal-of-high-frequency-details">1.2. Removal of high-frequency details</h4>
+
+<p>The next processing step is to remove, and store, high frequency details of the mesh.
+To proceed, we create a copy of the mesh, that we heavily smooth, by minimizing the thing-plate energy. <a href="https://en.wikipedia.org/wiki/Thin_plate_energy_functional">Information on this energy</a></p>
+
+<p>We will have to build and solve a system, to represent the minimization of this energy.</p>
+
+<h6 id="documentation-informations">Documentation informations</h6>
+<p>We can use the following function :</p>
+<ul>
+  <li><strong>igl::invert_diag()</strong></li>
+  <li><strong>igl::massmatrix()</strong></li>
+  <li><strong>igl::cotmatrix()</strong></li>
+  <li><strong>igl::adjacency_list()</strong></li>
+  <li><strong>igl::per_vertex_normals()</strong></li>
+</ul>
+
+<p>Informations on these functions were already provided for previous assignements. The others were not specified in the assignement.</p>
+
+<h6 id="usage">Usage</h6>
+<p>The goal is to store the details of the original mesh, by storing the differences between the smoothed mesh and the original mesh.</p>
+
+<p>First we smooth the mesh.</p>
+<ul>
+  <li>We create the LML matrix (once for each mesh except if you change an option in the interface).</li>
+  <li>We extract Aff and Afc from this matrix.</li>
+  <li>We use a solver to obtain the smoothed positions of the free vertices.</li>
+</ul>
+
+<p>We obtained the smoothed version of the mesh. Then we want to compute and store the difference between the original and smoothed mesh.</p>
+
+<p>So we compute a local basis for each vertex, thanks to the Gram-Schmidt orthonormalization process applied to a 3-dimensions basis.
+So, we will have 3 vectors :</p>
+<ul>
+  <li>First vector : we get the normal of each vertex of the mesh</li>
+  <li>Second vector : we find the farest vertex-neighboor of the current vertex and we compute the projection on the plan of the vector between the current point and this neighboor</li>
+  <li>Third vector :we get a third vector thanks to a cross product.</li>
+</ul>
+
+<p align="center">
+<img style="height : 600px;" src="/media/compressed/Gram-Schmidt_orthonormalization_process.gif" />
+<br />Gram Schmidt orthonormalization process (Public domain)<br />
+</p>
+
+<p>We then calculate the displacement vector between the original and the smoothed mesh, by an easy soustraction. We project this vector on the three axis on the basis created, by dot product.
+We store the 3 factors for later use.</p>
+
+<pre><code class="language-C++">
+// == Save Old positions of vertices ==
+  igl::slice(V, handle_vertices, 1, Handles_BeforeMove);
+  igl::slice(V, free_vertices_indexes, 1, free_BeforeSmooth_Pos);
+
+  (...)
+  // == We compute the LML matrix (global variable)  ==
+
+  //CREATION OF Lw
+  igl::cotmatrix(V, F, L);
+  igl::massmatrix(V, F, massMatrixType, M);
+  igl::invert_diag(M, Minvert);
+
+  LML = L * Minvert * L;
+
+  // == Division of the Bilaplacian ==
+  igl::slice(LML, free_vertices_indexes, free_vertices_indexes, Aff);
+  igl::slice(LML, free_vertices_indexes, handle_vertices, Afc);
+
+  solverCholesky.compute(Aff);
+
+  //Creation of B (right side)
+  RightSide = -1 * Afc * Handles_BeforeMove_Sparse;
+
+  //Solving of the system
+  Eigen::SparseMatrix&lt;double&gt; free_AfterSmooth_Pos_Sparse;
+
+  free_AfterSmooth_Pos_Sparse = solverCholesky.solve(RightSide);
+
+  (...)
+
+  //Complete the base for each vertex
+  Eigen::MatrixXd NormalsPerVertex;
+  Eigen::MatrixXd T1;
+  Eigen::MatrixXd T2;
+  computeBasis(NormalsPerVertex, T1, T2, true); // true = creation mode of the basis
+
+  // == Get the details  ==
+  int index_currentFreeVertex = 0;
+
+  for (int i = 0; i &lt; free_vertices_indexes.rows(); i++)
+  {
+    index_currentFreeVertex = free_vertices_indexes[i];
+
+    TMP_Diff = free_BeforeSmooth_Pos.row(i) - free_AfterSmooth_Pos.row(i);
+
+    Difference.row(i)[0] = TMP_Diff.dot(NormalsPerVertex.row(index_currentFreeVertex));
+    Difference.row(i)[1] = TMP_Diff.dot(T1.row(index_currentFreeVertex));
+    Difference.row(i)[2] = TMP_Diff.dot(T2.row(index_currentFreeVertex));
+  }
+
+  (...)
+
+  static void computeBasis(Eigen::MatrixXd &amp;NormalsPerVertex, Eigen::MatrixXd &amp;T1, Eigen::MatrixXd &amp;T2, bool modeCreation)
+{
+  //Compute the normal of each vertex
+  igl::per_vertex_normals(V, F, NormalsPerVertex);
+
+  if (!CreatedAdjacency)
+  {
+    igl::adjacency_list(F, AdjacencyList);
+    CreatedAdjacency = true;
+  }
+
+  //We create the basis
+  for (int i = 0; i &lt; free_vertices_indexes.rows(); i++)
+  {
+    int curFreePtsIndex = free_vertices_indexes[i];
+
+    //Get the first vector
+    Eigen::Matrix&lt;double, 1, 3&gt; x = NormalsPerVertex.row(curFreePtsIndex).normalized();
+    int neighboorVertexID = -1;
+
+    if (modeCreation)
+    {
+      //Take the "best" neighboor
+      double maxDist = 0;
+      int indexMaxDist = AdjacencyList[curFreePtsIndex][0]; //possible to blow up here if the vertex is alone
+
+      for (int j = 0; j &lt; AdjacencyList[curFreePtsIndex].size(); j++)
+      {
+        Eigen::Matrix&lt;double, 1, 3&gt; vectorToNeighboor = (V.row(AdjacencyList[curFreePtsIndex][j]) - V.row(curFreePtsIndex));
+        Eigen::Matrix&lt;double, 1, 3&gt; projectionNeighboorOnX = (vectorToNeighboor).dot(x) * x; //X has a norm = 1
+        double tempDist = (vectorToNeighboor - projectionNeighboorOnX).squaredNorm();
+
+        if (maxDist &lt; tempDist)
+        {
+          maxDist = tempDist;
+          indexMaxDist = AdjacencyList[curFreePtsIndex][j];
+        }
+      }
+
+      neighboorVertexID = indexMaxDist;
+      //We store it for later use
+      indiceNeighboor[curFreePtsIndex] = neighboorVertexID;
+
+    }
+    else
+    {
+      //We pick up consistenly
+      neighboorVertexID = indiceNeighboor[curFreePtsIndex];
+    }
+
+    Eigen::Matrix&lt;double, 1, 3&gt; vectorToNeighboor = (V.row(neighboorVertexID) - V.row(curFreePtsIndex));
+    Eigen::Matrix&lt;double, 1, 3&gt; projectionNeighboorOnX = (vectorToNeighboor.dot(x) / x.dot(x)) * x;
+    Eigen::Matrix&lt;double, 1, 3&gt; y = (vectorToNeighboor - projectionNeighboorOnX).normalized();
+
+    //Get the third vector
+    Eigen::Matrix&lt;double, 1, 3&gt; z = x.cross(y).normalized(); // Or X Cross Y ?
+
+    //Store the vectors
+    NormalsPerVertex.row(curFreePtsIndex) = x.normalized();
+    T1.row(curFreePtsIndex) = y.normalized();
+    T2.row(curFreePtsIndex) = z.normalized();
+  }
+
+}
+
+</code></pre>
+
+<h6 id="result">Result</h6>
+<div style="text-align:center">
+<p align="center">
+  <img style="height : 300px;" src="/media/compressed/woody_low-1.png" />
+  <img style="height : 300px;" src="/media/compressed/woody_low-2.png" /><br />
+  <img style="height : 300px;" src="/media/compressed/woody-hi-1.png" />
+  <img style="height : 300px;" src="/media/compressed/woody-hi-2.png" /><br />
+  <img style="width : 600px;" src="/media/compressed/bar-1.png" />
+  <img style="width : 600px;" src="/media/compressed/bar-2.png" /><br />
+  <img style="height : 300px;" src="/media/compressed/plan-1.png" />
+  <img style="height : 300px;" src="/media/compressed/plan-2.png" /><br />
+  <img style="height : 300px;" src="/media/compressed/camel-1.png" />
+  <img style="height : 300px;" src="/media/compressed/camel-2.png" /><br />
+  <img style="height : 300px;" src="/media/compressed/cactus-1.png" />
+  <img style="height : 300px;" src="/media/compressed/cactus-2.png" /><br />
+  <img style="height : 300px;" src="/media/compressed/cylinder-1.png" />
+  <img style="height : 300px;" src="/media/compressed/cylinder-2.png" /><br />
+  <img style="height : 300px;" src="/media/compressed/hand-1.png" />
+  <img style="height : 300px;" src="/media/compressed/hand-2.png" />
+</p>
+</div>
+
+<hr />
+
+<p><a name="Deforming"></a></p>
+
+<h4 id="13-deforming-the-smooth-mesh">1.3. Deforming the smooth mesh</h4>
+
+<p>Deforming the mesh is pretty straighforward, as it is similar to the previous smoothing operation, only with different constrained positions.</p>
+
+<h6 id="usage-1">Usage</h6>
+
+<p>To deform the mesh, we apply the new positions of the handles moved by the user, and we solve again a system, to obtain the smoothed positions of the free vertices.</p>
+
+<pre><code class="language-C++">
+  (...)
+  (Saving high frequency details)
+  (...)
+
+  //Move the handle
+  igl::slice_into(handle_vertex_positions, handle_vertices, 1, V);
+
+  //Creation of B (right side)
+  RightSide = -1 * Afc * handle_vertex_positionsSparse;
+
+  //Solving of the system
+  free_AfterSmooth_Pos_Sparse = solverCholesky.solve(RightSide);
+  free_AfterSmooth_Pos = MatrixXd(free_AfterSmooth_Pos_Sparse);
+
+  //Put the positions of free_AfterSmooth_Pos in view
+  igl::slice_into(free_AfterSmooth_Pos, free_vertices_indexes, 1, V);
+
+  (...)
+</code></pre>
+
+<h6 id="result-1">Result</h6>
+<div style="text-align:center">
+<p align="center">
+  <img style="height : 300px;" src="/media/compressed/woody_low-3.png" /> 
+  <img style="height : 300px;" src="/media/compressed/woody-hi-3.png" /><br />
+  <img style="height : 300px;" src="/media/compressed/bar-3.png" />
+  <img style="height : 300px;" src="/media/compressed/plan-3.png" /><br />
+  <img style="height : 300px;" src="/media/compressed/cactus-3.png" />
+  <img style="height : 300px;" src="/media/compressed/camel-3.png" /><br />
+  <img style="height : 300px;" src="/media/compressed/cylinder-3.png" />
+  <img style="height : 300px;" src="/media/compressed/hand-3.png" /><br />
+</p>
+</div>
+
+<hr />
+
+<p><a name="Transferring"></a></p>
+
+<h4 id="14-transferring-high-frequency-details-to-the-deformed-surface">1.4. Transferring high-frequency details to the deformed surface</h4>
+
+<p>We then want to mesh to have all the details it had at the begining of the process. 
+We will transfer high-frequency details previously stored to the deformed surface. As these details were encoded in local basis, we have to recompute these local basis in a consistent way.</p>
+
+<h6 id="usage-2">Usage</h6>
+
+<p>So we want to put back the details, captured in each local basis of the smooth meshed,  in the smoothed deformed mesh.
+<br />
+We recompute (same function) the local basis for each vertex of the mesh. Note, this time, we pick the same neighboor we choosed the first time and do not recalculate the farest one. This is the only difference.
+The main reason is, that due to the deformation, the farest neighboor might have changed, and this may leads to inconsistencies.
+<br />
+We then add to the actual position of each vertex of the deformed smoothed mesh, the displacement stored, projected in the local basis.</p>
+
+<pre><code class="language-C++">
+  (...)
+  //Complete the base for each vertex
+  computeBasis(NormalsPerVertex, T1, T2, false);
+
+  // == Add back the details ==
+  for (int i = 0; i &lt; free_vertices_indexes.rows(); i++)
+  {
+    index_currentFreeVertex = free_vertices_indexes[i];
+
+    // Calculate the addition (T1 = Y, T2 = Z, Normals = X), consistent with basis
+    V.row(index_currentFreeVertex) =
+        V.row(index_currentFreeVertex) +
+        Difference.row(i)[0] * NormalsPerVertex.row(index_currentFreeVertex) +
+        Difference.row(i)[1] * T1.row(index_currentFreeVertex) +
+        Difference.row(i)[2] * T2.row(index_currentFreeVertex);
+  }
+
+  (...)
+
+</code></pre>
+
+<h6 id="result-2">Result</h6>
+<div style="text-align:center">
+<p align="center">
+  <img style="height : 300px;" src="/media/compressed/woody_low-4.png" />
+  <img style="height : 300px;" src="/media/compressed/woody-hi-4.png" /><br />
+  <img style="height : 300px;" src="/media/compressed/bar-4.png" />
+  <img style="height : 300px;" src="/media/compressed/plan-4.png" /><br />
+  <img style="height : 300px;" src="/media/compressed/camel-4.png" />
+  <img style="height : 300px;" src="/media/compressed/cactus-4.png" /><br />
+  <img style="height : 300px;" src="/media/compressed/cylinder-4.png" />
+  <img style="height : 300px;" src="/media/compressed/hand-4.png" /><br />
+
+</p>
+</div>
+
+<hr />
+
+<p><a name="Real"></a></p>
+
+<h4 id="15-real-time-performance">1.5. Real-time performance</h4>
+
+<p>To acheive real-time perfomance (10+ fps) , we need the solving step of the system to be as fast as possible. An easy solution is to prefactor fixed part of the system, to avoid recomputation of static parts.
+<br />
+We use the Cholesky factorization provided by Eigen.</p>
+
+<h6 id="usage-3">Usage</h6>
+
+<p>To allow better performances, some more modifications are made :</p>
+<ul>
+  <li>Instead of specified function, only one “big” function solve is used. It saves some time for copies, and allow to reuse previous data structures. (same kind of optimization that we can find in videogames-industry : dirty and hard to maintain code, but efficient)</li>
+  <li>Time-counting functions were added to follow were the time is spend during the computation. This does have an negative influence on the performance ! I decided to keep it to allow evaluation of the code.</li>
+</ul>
+
+<p>Exemple of trace :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Solve iteration (total 1 pass) time : 0.236447  // Total time spend to solve the current move
+Solve timeTOsolveCompute : 0.043758             // Time before the call to .compute() of the solver, construting Aff, etc.
+Solve compute time : 0.162786                   // Time to process the .compute() of the solver
+Solve timeTOsolve1 : 0.000236                   // Time between the .compute() of the solver and the first .solve() of the system. Create some data structures
+Solve old position time : 0.007828              // Time of the first solve of the system (old positions of handles) to get the smoothed old version of the mesh
+Solve timeTOsolve2 : 0.004818                   // Time between the first and the second solve of the system, some data structure manipulation and save of the details.
+Solve new position time : 0.013654              // Time of the second solve of the system, to get the new positins of the free vertices, with new positions of the handles
+Solve timeTOEnd : 0.003366                      // Time to the end of the function, manipulating data structure
+FrameRate : 4.22928                             // Framerate calculated from total elapsed time.
+Note : this trace is from an old version of the application, before some optimisation.
+
+</code></pre></div></div>
+<ul>
+  <li>The Aff/Afc, LML calculations were moved into the onNewHandleID function, and are only calculated once during the selection of the handles. It allows 2 things : save approximately 50% of the calculation time (see previous trace, before this update) and make the deformations “reversibles”, without artifact. (We can do a deformation and make it back without “blowing up” behaviors)</li>
+  <li>Another optimization (called “Booster” in the interface) espace in time the new calculation. It’s does not changed the calculation time but make the animation “look smoother”. The gif of this report are not taken with this option activated. This is a visual improvement only.</li>
+</ul>
+
+<pre><code class="language-C++">  (...)
+  if (showTime)
+  {
+    printTime();
+  }
+
+  if (showFrameRate)
+  {
+    printFrameRate();
+  }
+  (...)
+
+  void printTime()
+{
+  std::cout &lt;&lt; "Solve iteration (total 1 pass) time : " &lt;&lt; timeTotal.getElapsedTime() &lt;&lt; endl;
+  std::cout &lt;&lt; "Solve timeTOsolveCompute : " &lt;&lt; timeTOsolveCompute.getElapsedTime() &lt;&lt; endl;
+  std::cout &lt;&lt; "Solve compute time : " &lt;&lt; timesolveCompute.getElapsedTime() &lt;&lt; endl;
+  std::cout &lt;&lt; "Solve timeTOsolve1 : " &lt;&lt; timeTOsolve1.getElapsedTime() &lt;&lt; endl;
+  std::cout &lt;&lt; "Solve old position time : " &lt;&lt; timesolve1.getElapsedTime() &lt;&lt; endl;
+  std::cout &lt;&lt; "Solve timeTOsolve2 : " &lt;&lt; timeTOsolve2.getElapsedTime() &lt;&lt; endl;
+  std::cout &lt;&lt; "Solve new position time : " &lt;&lt; timesolve2.getElapsedTime() &lt;&lt; endl;
+  std::cout &lt;&lt; "Solve timeTOEnd : " &lt;&lt; timeTOEnd.getElapsedTime() &lt;&lt; endl;
+}
+
+void printFrameRate()
+{
+  std::cout &lt;&lt; "FrameRate : " &lt;&lt; 1 / timeTotal.getElapsedTime() &lt;&lt; endl;
+}
+  (...)
+</code></pre>
+
+<h6 id="result-3">Result</h6>
+<p>Note : timing are valid on a Intel Core i5 6300HQ 3.2 Ghz.</p>
+
+<div style="text-align:center">
+<p align="center">
+  <img style="height : 300px;" src="/media/compressed/woody-low.gif" />
+</p>
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>woody-low
+FrameRate : 1960.78
+Solve iteration (total 1 pass) time : 0.00051
+Solve timeTOsolveCompute : 1.9e-05
+Solve compute time : 0
+Solve timeTOsolve1 : 7.6e-05
+Solve old position time : 6.7e-05
+Solve timeTOsolve2 : 0.000189
+Solve new position time : 5.3e-05
+Solve timeTOEnd : 0.000104
+</code></pre></div></div>
+
+<p align="center">
+  <img style="height : 300px;" src="/media/compressed/woody-hi.gif" />
+</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>woody-high
+FrameRate : 315.06
+Solve iteration (total 1 pass) time : 0.003174
+Solve timeTOsolveCompute : 1.8e-05
+Solve compute time : 0
+Solve timeTOsolve1 : 4.6e-05
+Solve old position time : 0.000801
+Solve timeTOsolve2 : 0.000867
+Solve new position time : 0.000799
+Solve timeTOEnd : 0.000643
+
+</code></pre></div></div>
+
+<p align="center">
+  <img style="height : 300px;" src="/media/compressed/bar.gif" />
+</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bar
+FrameRate : 90.1226
+Solve iteration (total 1 pass) time : 0.011096
+Solve timeTOsolveCompute : 4.7e-05
+Solve compute time : 0
+Solve timeTOsolve1 : 7.4e-05
+Solve old position time : 0.00384
+Solve timeTOsolve2 : 0.001847
+Solve new position time : 0.003857
+Solve timeTOEnd : 0.001431
+</code></pre></div></div>
+
+<p align="center">
+  <img style="height : 300px;" src="/media/compressed/plan.gif" />
+</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bumpy plan
+FrameRate : 11.5867
+Solve iteration (total 1 pass) time : 0.086306
+Solve timeTOsolveCompute : 0.000315
+Solve compute time : 0
+Solve timeTOsolve1 : 0.00033
+Solve old position time : 0.031813
+Solve timeTOsolve2 : 0.011801
+Solve new position time : 0.031935
+Solve timeTOEnd : 0.010111
+</code></pre></div></div>
+
+<p align="center">
+  <img style="height : 300px;" src="/media/compressed/cactus.gif" />
+</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cactus
+FrameRate : 86.1995
+Solve iteration (total 1 pass) time : 0.011601
+Solve timeTOsolveCompute : 0.000166
+Solve compute time : 0
+Solve timeTOsolve1 : 9.9e-05
+Solve old position time : 0.006307
+Solve timeTOsolve2 : 0.001841
+Solve new position time : 0.002008
+Solve timeTOEnd : 0.00118
+</code></pre></div></div>
+
+<p align="center">
+  <img style="height : 300px;" src="/media/compressed/camel.gif" />
+</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>camel
+FrameRate : 52.1349
+Solve iteration (total 1 pass) time : 0.019181
+Solve timeTOsolveCompute : 0.000103
+Solve compute time : 1e-06
+Solve timeTOsolve1 : 0.000306
+Solve old position time : 0.006273
+Solve timeTOsolve2 : 0.003633
+Solve new position time : 0.006251
+Solve timeTOEnd : 0.002614
+
+</code></pre></div></div>
+
+<p align="center">
+  <img style="height : 300px;" src="/media/compressed/cylinder.gif" />
+</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cylinder
+FrameRate : 117.343
+Solve iteration (total 1 pass) time : 0.008522
+Solve timeTOsolveCompute : 2.9e-05
+Solve compute time : 0
+Solve timeTOsolve1 : 4.7e-05
+Solve old position time : 0.002948
+Solve timeTOsolve2 : 0.001443
+Solve new position time : 0.002918
+Solve timeTOEnd : 0.001137
+</code></pre></div></div>
+
+<p align="center">
+  <img style="height : 300px;" src="/media/compressed/hand.gif" />
+</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hand
+FrameRate : 42.6185
+Solve iteration (total 1 pass) time : 0.023464
+Solve timeTOsolveCompute : 0.000141
+Solve compute time : 1e-06
+Solve timeTOsolve1 : 0.000183
+Solve old position time : 0.007935
+Solve timeTOsolve2 : 0.00409
+Solve new position time : 0.007923
+Solve timeTOEnd : 0.003191
+</code></pre></div></div>
+<hr />
+
+<p>For more information, see : 
+<a href="https://github.com/VincentFalc/ShapeModeling_4_Deformation">-&gt; Repository</a></p>
+
+<p>Note that the code is not optimized by thoughtful laziness: this code is not made to be reused as is in other applications, and if this is the case, the code will be reviewed and optimized. Thanks for your understanding.</p>
+
+                        </div>
+                        
+                        <div class="catsandtags">
+                            
+                            <span class="category">
+                                <span class="name">categories:</span>
+                                Shape Modeling
+                            </span>
+                            
+                            
+                                &bull;
+                            
+                            
+                            <span class="tags">
+                                <span class="name">tags:</span>
+                                
+                                    <a href="/tag/Shape Modeling">Shape Modeling</a>
+                                
+                                    <a href="/tag/IGL">IGL</a>
+                                
+                                    <a href="/tag/Eigen">Eigen</a>
+                                
+                                    <a href="/tag/Deformation">Deformation</a>
+                                
+                                    <a href="/tag/Editing">Editing</a>
+                                
+                            </span>
+                            
+                        </div>
+                        
+                    </article>
+                    <div class="post-nav">
+                        
+                        <a class="btn prev" href="/ShapeModeling-Assi3/"><i class="fa fa-angle-left"></i><span class="short"> prev</span><span class="long">ious post</span></a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+    <div class="content">
+        <span>Vincent F. powered by &copy; gridster</span>
+        <span class="backtotop">Back to top</span>
+    </div>
+</footer>
+<script src="/js/build/global.min.js"></script>
+<!-- analytics -->
+<script>
+
+  ga('create', 'UA-50358022-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+        
+    </body>
+</html>
