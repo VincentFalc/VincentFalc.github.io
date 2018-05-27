@@ -2,7 +2,7 @@
 author: VF
 layout: post-full
 type: image
-featimg: square.gif
+featimg: squareCropped.gif
 title: Shape Modeling Shape Optimization
 tags: [Shape Modeling, IGL, Eigen, Shape, Optimization]
 category: [Shape Modeling]
