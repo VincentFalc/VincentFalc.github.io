@@ -2,7 +2,7 @@
 author: VF
 layout: post-full
 type: image
-featimg: GradientDescent.gif
+featimg: GradientDescent.gif 
 title: Shape Modeling Forces simulation
 tags: [Shape Modeling, IGL, Eigen, Simulation, Forces]
 category: [Shape Modeling]
@@ -49,7 +49,7 @@ We do compute the value as a simple function evaluation.
 We do calculate the gradient of the function anaticaly and then compute it at one specific point. We get the two directional derivative of this function at that point.
 
 <p align="center">
-  <img height="200" src="/media/compressed/Gradient.png">
+  <img style="height : 200px;" src="/media/compressed/Gradient.png">
 </p>
 
 We do compute the search direction as the opposite of the gradient.
@@ -213,8 +213,8 @@ The calculated value is stored in the gradient Vector, at the place of each node
 ###### Result
 <div style="text-align:center">
 <p align="center">
-<img height="300" src="/media/compressed/GradientDescent.png">
-<img height="300" src="/media/compressed/GradientDescent.gif">
+<img style="height : 300px;" src="/media/compressed/GradientDescent.png">
+<img style="height : 300px;" src="/media/compressed/GradientDescent.gif">
 <br/>
   Result of "Test" button - Gradient Descent - Spring - Default max stress (0.02)
 </p>
@@ -247,7 +247,7 @@ We will write several function :
 We calculate analytically the hessian, and we compute it directly.
 
 <p align="center">
-  <img height="500" src="/media/compressed/hessian.jpg">
+  <img style="height : 500px;" src="/media/compressed/hessian.jpg">
 </p>
 
 We then solve the system to get the dx value.
@@ -327,7 +327,7 @@ We compute analytically the Hessian and implement it the same way. The dispositi
 
 The manual computation is verified automatically : 
 <p align="center">
-  <img height="700" src="/media/compressed/Hessian.png">
+  <img style="height : 700px;" src="/media/compressed/Hessian.png">
 </p>
 
 ###### Usage
@@ -389,8 +389,8 @@ virtual void addHessianEntriesTo(std::vector<Tripletd> &hessianEntries, const Ve
 ###### Result
 <div style="text-align:center">
 <p align="center">
-  <img height="300" src="/media/compressed/NewtonDescent.png">
-  <img height="300" src="/media/compressed/NewtonDescent.gif">
+  <img style="height : 300px;" src="/media/compressed/NewtonDescent.png">
+  <img style="height : 300px;" src="/media/compressed/NewtonDescent.gif">
 </p>
 </div>
 
@@ -466,7 +466,7 @@ We then compute the Gradient, with finite differences, as the difference of ener
 ###### Result
 <div style="text-align:center">
 <p align="center">
-  <img height="300" src="/media/compressed/FEM_GradientDescent.png">
+  <img style="height : 300px;" src="/media/compressed/FEM_GradientDescent.png">
 </p>
 </div>
 
@@ -554,7 +554,7 @@ virtual void addEnergyHessianTo(const VectorXd &x, const VectorXd &X, std::vecto
 ###### Result
 <div style="text-align:center">
 <p align="center">
-  <img height="300" src="/media/compressed/FEM_Newton.png">
+  <img style="height : 300px;" src="/media/compressed/FEM_Newton.png">
 </p>
 </div>
 

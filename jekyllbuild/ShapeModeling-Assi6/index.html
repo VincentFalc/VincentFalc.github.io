@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+<title>Vincent F. - Shape Modeling Shape Optimization </title>
+
+<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
+<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:500,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" id="color-change" href="">
+<link rel="stylesheet" id="switch-style" href="/css/grid.css">
+<link rel="alternate" type="application/rss+xml" title="Vincent F." href="http:/localhost:4000/feed.xml">
+
+    </head>
+
+    <body>
+        <header class="head">
+            <div class="row">
+    <a href="/" class="logo noline">
+        <!-- full logo version with slogan, icon and text, add the class .ts-full if you want to work with some of the existing CSS -->
+   <svg version="1.1" viewBox="0 0 850.61096 179.54858" class="ts-full">
+    <g transform="translate(-49.00717,-350.11674)">
+        <g transform="matrix(0.65068572,0,0,0.65068572,11.104727,118.00494)" class="icon">
+            <path d="m 101.39622,391.43518 191.99569,0 c 5.04555,0 9.10749,46.87698 9.10749,105.10533 0,58.22836 -4.06194,105.10533 -9.10749,105.10533 l -191.99569,0 c -5.045545,0 -9.107486,-46.87697 -9.107486,-105.10533 0,-58.22835 4.061941,-105.10533 9.107486,-105.10533 z" class="rectangle" />
+            <path d="m 165.8125,358.21875 -5.1875,99.21875 -100.875,0 0,7.625 100.46875,0 -3.28125,62.59375 -97.1875,0 0,7.59375 96.78125,0 -5,95.5 7.625,0.40625 5.03125,-95.90625 62.5625,0 -5,95.5 7.59375,0.40625 5.03125,-95.90625 98.28125,0 0,-7.59375 -97.875,0 3.28125,-62.59375 94.59375,0 0,-7.625 -94.1875,0 5.15625,-98.84375 -7.59375,-0.375 -5.1875,99.21875 -62.5625,0 5.15625,-98.84375 -7.625,-0.375 z m 2.0625,106.84375 62.5625,0 -3.28125,62.59375 -62.5625,0 3.28125,-62.59375 z" class="lines" />
+        </g>
+        <text x="235.15662" y="477.12143" class="gridster">
+            <tspan x="235.15662" y="477.12143">VFProjects</tspan>
+        </text>
+        <text x="304.80173" y="512.31683" class="slogan">
+            <tspan x="304.80173" y="512.31683">Personal and professional work</tspan>
+        </text>
+    </g>
+</svg>
+        <!-- logo version without slogan, add the class .ts-no-slogan if you want to work with some of the existing CSS -->
+<svg version="1.1" viewBox="0 0 677.61096 179.54858" class="ts-no-slogan">
+    <g transform="translate(-49.00717,-350.11674)">
+        <g transform="matrix(0.65068572,0,0,0.65068572,11.104727,118.00494)" class="icon">
+            <path d="m 101.39622,391.43518 191.99569,0 c 5.04555,0 9.10749,46.87698 9.10749,105.10533 0,58.22836 -4.06194,105.10533 -9.10749,105.10533 l -191.99569,0 c -5.045545,0 -9.107486,-46.87697 -9.107486,-105.10533 0,-58.22835 4.061941,-105.10533 9.107486,-105.10533 z" class="rectangle" />
+            <path d="m 165.8125,358.21875 -5.1875,99.21875 -100.875,0 0,7.625 100.46875,0 -3.28125,62.59375 -97.1875,0 0,7.59375 96.78125,0 -5,95.5 7.625,0.40625 5.03125,-95.90625 62.5625,0 -5,95.5 7.59375,0.40625 5.03125,-95.90625 98.28125,0 0,-7.59375 -97.875,0 3.28125,-62.59375 94.59375,0 0,-7.625 -94.1875,0 5.15625,-98.84375 -7.59375,-0.375 -5.1875,99.21875 -62.5625,0 5.15625,-98.84375 -7.625,-0.375 z m 2.0625,106.84375 62.5625,0 -3.28125,62.59375 -62.5625,0 3.28125,-62.59375 z" class="lines" />
+        </g>
+        <text x="235.15662" y="477.12143" class="gridster">
+            <tspan x="235.15662" y="477.12143">Projects</tspan>
+        </text>
+    </g>
+</svg>
+        <!-- icon logo version, add the class .ts-icon if you want to work with some of the existing CSS -->
+<svg version="1.1" viewBox="0 0 179.52826 179.54858" class="ts-icon">
+    <g transform="translate(-49.00717,-350.11674)">
+        <g transform="matrix(0.65068572,0,0,0.65068572,11.104727,118.00494)" class="icon">
+            <path d="m 101.39622,391.43518 191.99569,0 c 5.04555,0 9.10749,46.87698 9.10749,105.10533 0,58.22836 -4.06194,105.10533 -9.10749,105.10533 l -191.99569,0 c -5.045545,0 -9.107486,-46.87697 -9.107486,-105.10533 0,-58.22835 4.061941,-105.10533 9.107486,-105.10533 z" class="rectangle" />
+            <path d="m 165.8125,358.21875 -5.1875,99.21875 -100.875,0 0,7.625 100.46875,0 -3.28125,62.59375 -97.1875,0 0,7.59375 96.78125,0 -5,95.5 7.625,0.40625 5.03125,-95.90625 62.5625,0 -5,95.5 7.59375,0.40625 5.03125,-95.90625 98.28125,0 0,-7.59375 -97.875,0 3.28125,-62.59375 94.59375,0 0,-7.625 -94.1875,0 5.15625,-98.84375 -7.59375,-0.375 -5.1875,99.21875 -62.5625,0 5.15625,-98.84375 -7.625,-0.375 z m 2.0625,106.84375 62.5625,0 -3.28125,62.59375 -62.5625,0 3.28125,-62.59375 z" class="lines" />
+        </g>
+    </g>
+</svg>
+    </a>
+</div>
+
+            <!-- menu, we did go with a static one, you can build a dynamic one, just google a little around -->
+<div class="main-menu">
+    <div class="content">
+        <nav id="menu">
+            <a class="toggle-link noline"><i class="fa fa-close fa-lg"></i></a>
+            <ul>
+                <li>
+                    <a class="homelink" href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/archive">Archive</a>
+                </li>
+                <!--
+                <li>
+                    <a href="/typography">Typography</a>
+                </li>
+                <li><a class="dropdown-button" href="#" data-activates='drop-example'>Page Layouts&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
+                </li>
+                <div id="drop-example" class="dropdown-content">
+                    <li>
+                        <a href="/page-full">page-full</a>
+                    </li>
+                    <li>
+                        <a href="/page-classic-sidebar-right">page classic sidebar right</a>
+                    </li>
+                    <li>
+                        <a href="/page-classic-sidebar-left">page classic sidebar left</a>
+                    </li>
+                    <li>
+                        <a href="/page-material-sidebar-right">page material sidebar right</a>
+                    </li>
+                    <li>
+                        <a href="/page-material-sidebar-left">page material sidebar left</a>
+                    </li>
+                </div>
+                <li>
+                    <a href="#colorswitch" class="modal-trigger">Change Colors <i class="fa fa-cog"></i></a>
+                </li>
+                -->
+            </ul>
+        </nav>
+        <nav class="iconnav">
+            <ul>
+                <li class="sicon">
+                    <a href='#search'><i class='fa fa-search'></i></a>
+                </li>
+                <!--
+                
+                <li class="social">
+                    <a href="" class="tumblr"><i class="fa fa-tumblr"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="pinterest"><i class="fa fa-pinterest"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="instagram"><i class="fa fa-instagram"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="twitter"><i class="fa fa-twitter"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="facebook"><i class="fa fa-facebook"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="youtube"><i class="fa fa-youtube"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="vimeo"><i class="fa fa-vimeo-square"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="soundcloud"><i class="fa fa-soundcloud"></i></a>
+                </li>
+                
+                -->
+            </ul>
+        </nav>
+        <a href='#menu' class="toggle-link noline">
+            <i class="fa fa-navicon"></i>
+        </a>
+    </div>
+</div>
+
+
+
+
+<div id="colorswitch" class="modal color-change">
+    <div class="modal-content">
+      <h4>Change Color Palette</h4>
+      <p>
+      <img id="indigo" alt="color palette preview indigo" src="/media/compressed/indigo.jpg">
+      <img id="brown" alt="color palette preview brown" src="/media/compressed/brown.jpg">
+      <img id="green" alt="color palette preview green" src="/media/compressed/green.jpg">
+      <img id="teal" alt="color palette preview teal" src="/media/compressed/teal.jpg">
+      </p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">close</a>
+    </div>
+  </div>
+        </header>
+        <div id="search">
+    <form role="search" id="searchform">
+        <input type="search" placeholder="Search"/>
+    </form>
+</div>
+
+        <div class="margin">
+            <div class="content full">
+                <div class="content-container">
+                    <article>
+                        
+                            
+                                <img class="featimg" src="/media/compressed/square.gif" alt="square.gif">
+                            
+                        
+
+                        <h1 class="post-title">
+                            Shape Modeling Shape Optimization
+                        </h1>
+                        <div class="meta">
+                            
+
+    <span class="author">Posted by
+        
+        
+            <a href="/author/VF">
+                
+                    Vincent F.
+                
+            </a>
+        
+    </span>
+
+ &bull;
+                            <span class="date">
+                                Published on May 25, 2018
+                            </span>
+                        </div>
+                        
+                        <div class="post-content">
+                            <h5 id="tldr">TL;DR</h5>
+<p>This project was linked to a lecture about Shape Modeling. This project presents a method to optimize shapes by automatic deformation, according to arbitrary constraints.
+<br />
+The followed constraint is to make the input mesh to stand in equilibrium on some chosen vertices, as if we wanted to 3D-print it, and make it stand by itself.
+<br />
+We would like to add constraints, for example if the user want to impose the position of some vertices of the mesh in space.
+<br /></p>
+
+<h5 id="table-of-contents">Table of Contents</h5>
+<p><a href="#Sequential">1. Sequential Quadratic Programming</a>  <br />
+<a href="#Minimizer">1.1. Minimizer Implementeation</a>  <br />
+<a href="#Editor">2. ”Make It Stand” - Editor</a>  <br />
+<a href="#Equality">2.1. Equality Constraint</a>  <br />
+<a href="#Inequality">2.2. Inequality Constraint</a>  <br />
+<a href="#amazing">2.3. The most amazing balancing object!</a>  <br /></p>
+
+<p><a name="Sequential"></a></p>
+
+<p>###” 1. Sequential Quadratic Programming</p>
+
+<p><a name="Minimizer"></a></p>
+
+<h4 id="11-minimizer-implementation">1.1. Minimizer Implementation</h4>
+
+<p>Again, the problem is an optimization problem. We are trying to fit to an objective function and to fit to some constraint.
+<br />
+The whole problem can be solved by constructing a constrained system, and so by building a system-equivalent matrix.
+As a first step, we can try our function on a simple problem : We <strong>minimize the sum of the square of 2 values</strong>, whereas we want the two values to validate the equation <strong>x1 + 2*x2 = 3</strong>
+<br />
+We use SQPMinimizer, a child of the class ObjectiveFunction to build the related system.</p>
+
+<h6 id="usage">Usage</h6>
+<p>We compute the value of expression to minimze, its gradient and its hessian anatically, and evaluate it on the provided coordinates.
+<br />
+We consider the constraints system as following :</p>
+<ul>
+  <li>B is 3 (left hand side of the constraints system).</li>
+  <li>eqConstraintVals is the evaluation of the left hand side of the system, at given coordinates.</li>
+  <li>jacobianEntries is the evaluation of the gradient of the left hand side of the system, at given coordinates.</li>
+  <li>l and u are not constrained in this configuration, and so are set at low/high values respectively.</li>
+</ul>
+
+<pre><code class="language-C++">
+    (...)
+
+	virtual double computeValue(const VectorXd&amp; x){
+		const double &amp;x1 = x[0];
+		const double &amp;x2 = x[1];
+		return std::pow(x1,2.0) + std::pow(x2, 2.0);
+	}
+
+	virtual void addGradientTo(VectorXd&amp; grad, const VectorXd&amp; x) {
+		const double &amp;x1 = x[0];
+		const double &amp;x2 = x[1];
+		grad[0] += 2*x1;
+		grad[1] += 2*x2;
+	}
+
+
+	virtual void addHessianEntriesTo(std::vector&lt;Tripletd&gt;&amp; hessianEntries, const VectorXd&amp; x) {
+		const double &amp;x1 = x[0];
+		const double &amp;x2 = x[1];
+		hessianEntries.push_back(Tripletd(0, 0, 2));
+		hessianEntries.push_back(Tripletd(1, 1, 2));
+	}
+
+    (...)
+
+	// Returns b of A(p) = b.
+	virtual const VectorXd&amp; getEqualityConstraintsTargetValues() {
+		b.resize(1);
+		b[0] = 3;
+		return b;
+	}
+
+	// Returns A(p) of A(p) = b.
+	// Derive from this to compute A(p). Fill `eqConstraintsVals` and return it.
+	virtual const VectorXd&amp; getEqualityConstraintValues(const VectorXd&amp; p) {
+		const double &amp;x1 = p[0];
+		const double &amp;x2 = p[1];
+		eqConstraintVals.resize(1);
+		eqConstraintVals[0] = x1 + 2 * x2;
+
+		return eqConstraintVals;
+	}
+
+	// Computes the Jacobian dA/dp of the equality constraints A.
+	virtual void addEqualityConstraintsJacobianEntriesTo(std::vector&lt;Tripletd&gt;&amp; jacobianEntries, const VectorXd&amp; p) {
+		const double &amp;x1 = p[0];
+		const double &amp;x2 = p[1];
+		jacobianEntries.push_back(Tripletd(0, 0, 1)); // 2*x1 ? 
+		jacobianEntries.push_back(Tripletd(0, 1, 2)); // 2*x2 ? 
+	}
+
+	// Returns l of constraint l &lt;= p &lt;= u
+	virtual const VectorXd&amp; getBoundConstraintsMinValues() {
+		l.resize(2);
+		l[0] = -100; // ??? 
+		l[1] = -100; // ??? 
+		return l;
+	}
+
+	// Returns u of constraint l &lt;= p &lt;= u
+	virtual const VectorXd&amp; getBoundConstraintsMaxValues() {
+		u.resize(2);
+		u[0] = 100; // ??? 
+		u[1] = 100; // ??? 
+		return u;
+	}
+</code></pre>
+
+<h6 id="result">Result</h6>
+
+<p>The result converge in only one iteration : We are in a Quadratic programming situation.
+Therefore, grad_f(x) is linear to x ; grad_C(x) is constant ; C(x) is linear to x. So the global system has an order of 1, and can be “directly” solved.
+<br />
+The solution found effectively validate the objective function (minimization of the square of the two function, noted f(x)) and validate the constraint (affine equation equal 3, noted c(x)).
+<br /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x              = 0.6 1.2
+f(x)           = 1.8
+c(x)           = 3
+# iterations   = 1
+</code></pre></div></div>
+
+<hr />
+
+<p><a name="Editor"></a></p>
+
+<h3 id="2-make-it-stand---editor">2. ”Make It Stand” - Editor</h3>
+
+<p><a name="Equality"></a></p>
+
+<h4 id="21-equality-constraint">2.1. Equality Constraint</h4>
+
+<p>We want to maximize the stability of the mesh, which can be interpreted as placing the center of mass of the mesh exactly in the middle of the vertices acting as support.
+<br />
+These vertices, the support, are fixed in space. The user can change the shape of the object by fixing the position of other vertices, without being part of the support.</p>
+
+<h6 id="usage-1">Usage</h6>
+<p>We want to compute the different parts of the constraint system.
+<br />
+We compute the position of the middle of the support points. This is where we expect the center of mass to be. This is calculated by a simple min/max search and a mean computation.
+We get the total mass by simply looping on each vertice of the mesh and summing the local mass values.
+<br />
+Then we construct b (left side of the system), by putting the values of the constrained positions in the mesh points order. We finnally add one constraint at the end of the vector : the coordinates of the middle of the support points previously calculated.
+<br />
+We construct A to allow to calcul A(p) and the jacobian easily. A is constructed as a diagonal of 1, on the coordinates we want to constrain, and a final row, composed of the local mass of points divided by the total mass of all points.
+<br /></p>
+
+<pre><code class="language-C++">
+	//Get the expected position of the Center Of Mass
+	getAvgCoordsSupport()
+	{
+		(...)
+		//Get the min max of the support points
+		for (std::set&lt;int&gt;::iterator it = this-&gt;simParent-&gt;supportNodes.begin(); it != this-&gt;simParent-&gt;supportNodes.end(); ++it)
+		{
+			int indice = *it;
+			double xPos = this-&gt;simParent-&gt;x[2*indice];
+
+			(...)
+
+			//Get the max and the min
+			if (xPos &gt; maxX)
+			{
+				maxX = xPos;
+			}
+			if (xPos &lt; minX)
+			{
+				minX = xPos;
+			}
+		}
+
+		double averageCoords = 0.5 * (maxX + minX);
+
+		//Final calculus of the right hand side constraint
+		return averageCoords;
+	}
+
+	virtual const double getTotalMass()
+	{
+		//Get the min max of the support points
+		for (int i = 0; i &lt; nbMeshPoints; i++)
+		{
+			totalMass += this-&gt;simParent-&gt;m[2*i]; // mass of the point
+		}
+
+		(...)
+		return totalMass;
+	}
+
+	// Returns b of A(p) = b.
+	virtual const VectorXd &amp;getEqualityConstraintsTargetValues()
+	{
+		(...)
+
+		//ADD "x = xi_traget" constraints
+		for (std::map&lt;int, Vector2d&gt;::iterator it = this-&gt;simParent-&gt;constraintNodes.begin(); it != this-&gt;simParent-&gt;constraintNodes.end(); ++it)
+		{
+			int indice = it-&gt;first;
+
+			coefficients.push_back(Tripletd(2 * indice, 0, it-&gt;second[0]));		//Store the x constrained value
+			coefficients.push_back(Tripletd(2 * indice + 1, 0, it-&gt;second[1])); //Store the y constrained value
+		}
+
+		// ADD Right side of the constraint system (0.5 * (xMax+XMin))
+		double averageCoords = getAvgCoordsSupport();
+
+		//Storage of the last constraint
+		coefficients.push_back(Tripletd(sizeB - 1, 0, averageCoords)); //Store the y constrained value in the last cell
+
+		(...)
+		//Transform triplet into SparseMatrix
+		b.setFromTriplets(coefficients.begin(), coefficients.end());
+		(...)
+
+		return b;
+	}
+
+	virtual const std::vector&lt;Tripletd&gt; getATriplet(std::vector&lt;Tripletd&gt; &amp;coefficients, const VectorXd &amp;p)
+	{
+		(...)
+
+		//ADD "x = xi_traget" left values
+		for (std::map&lt;int, Vector2d&gt;::iterator it = this-&gt;simParent-&gt;constraintNodes.begin(); it != this-&gt;simParent-&gt;constraintNodes.end(); ++it)
+		{
+			int indice = it-&gt;first;
+			coefficients.push_back(Tripletd(2 * indice, 2 * indice, 1));		 //xi/dxi = 1 in the "good" cell
+			coefficients.push_back(Tripletd(2 * indice + 1, 2 * indice + 1, 1)); //xi/dxi = 1 in the "good" cell
+		}
+
+		//Get the Total mass of the system (for division)
+		double totalMass = getTotalMass();
+
+		//ADD XCom(x)
+		for (int i = 0; i &lt; nbMeshPoints; i++)
+		{
+			coefficients.push_back(Tripletd(nbMeshPoints * 2, 2 * i, this-&gt;simParent-&gt;m[2*i] / totalMass)); //(mi)/M attributed to x components
+		}
+
+		return coefficients;
+	}
+
+	virtual const Eigen::SparseMatrix&lt;double&gt; getA(const VectorXd &amp;p)
+	{
+		(...)
+		//Transform triplet into SparseMatrix
+		getATriplet(coefficients, p); //Get the A List of triplet
+		A.setFromTriplets(coefficients.begin(), coefficients.end());
+
+		return A;
+	}
+
+	// Returns A(p) of A(p) = b.
+	virtual const VectorXd &amp;getEqualityConstraintValues(const VectorXd &amp;p)
+	{
+		Eigen::SparseMatrix&lt;double&gt; A = getA(p);
+		eqConstraintVals.resize(A.rows());
+		eqConstraintVals = A * p; //Compute A(p)
+		return eqConstraintVals;
+	}
+
+	// Computes the Jacobian dA/dp of the equality constraints A.
+	virtual void addEqualityConstraintsJacobianEntriesTo(std::vector&lt;Tripletd&gt; &amp;jacobianEntries, const VectorXd &amp;p)
+	{
+		getATriplet(jacobianEntries, p);
+	}
+
+</code></pre>
+
+<h6 id="result-1">Result</h6>
+<div style="text-align:center">
+<p align="center">
+  <img style="height : 300px;" src="/media/compressed/woody-low.png" /> 
+  <img style="height : 300px;" src="/media/compressed/woody-low-1iter.png" /> <br />
+  Left : Woody-low original | Right : Woody-low after one iteration<br />
+  <img style="height : 300px;" src="/media/compressed/woody-low-withConstraints.png" />
+  <img style="height : 300px;" src="/media/compressed/woody-high.gif" /><br />
+  Left : Woody-low after iterations with constraints | Right : Woody-high evolution without and then with constraints (gif)<br />
+  <img style="height : 300px;" src="/media/compressed/square-1iter.png" />
+  <img style="height : 300px;" src="/media/compressed/square-withConstraints.png" /><br />
+  Left : Square after one iteration | Right : Square with some constraints <br />
+  <img style="height : 300px;" src="/media/compressed/square-withConstraints-lot.png" />
+  <img style="height : 300px;" src="/media/compressed/square.gif" /><br />
+  Left : Square with a lot of constraints | Right : Square evolution with and then with constraints (gif)<br />
+</p>
+</div>
+
+<p>We see that the center of mass position (xCOM) is aligned with the center of the support (AVG).</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Square :
+AVG : -0.75
+Max : -0.5
+Min : -1
+xCOM : -0.75
+
+Woody-low : 
+AVG : 112.61
+Max : 135.514
+Min : 89.7069
+xCOM : 112.61
+
+</code></pre></div></div>
+<hr />
+
+<p><a name="Inequality"></a></p>
+
+<h4 id="22-inequality-constraint">2.2. Inequality Constraint</h4>
+
+<p>Forcing the center of mass to be exactly aligned with the center of the support may be too strong. We would like the center of mass to be, at least “inside” the support, which is enough to guarantee the stand of the object.
+<br />
+We can translate it with inequality constraints.</p>
+
+<h6 id="usage-2">Usage</h6>
+
+<p>If the inequality is selected, the matrix A is  computed in a slightly different manner : without the last line, corresponding to the equality constraint.
+<br />
+Then, we add the inequality constraint as 2 “equality constraint” with d and f. These vector will be handled in a way (out of the code presneted below) that will correspond to an inequality constraint.
+<br /></p>
+
+<pre><code class="language-C++">
+	// Returns d of d &lt;= C(p) &lt;= f
+	virtual const VectorXd&amp; getInequalityConstraintsMinValues() {
+		(...)
+
+		// ADD Right side of the constraint system (XMin)
+		double minCoords = getMinSupport();
+
+		//Storage of the last constraint
+		coefficients.push_back(Tripletd(sizeD - 1, 0, minCoords)); //Store the y constrained value in the last cell
+
+		Eigen::SparseMatrix&lt;double&gt; Dtmp(sizeD, 1);
+		d.resize(sizeD);
+		//Transform triplet into SparseMatrix
+		Dtmp.setFromTriplets(coefficients.begin(), coefficients.end());
+		d = VectorXd(Dtmp);
+
+		return d;
+	}
+
+	// Returns f of d &lt;= C(p) &lt;= f
+	virtual const VectorXd&amp; getInequalityConstraintsMaxValues() {
+		(...)
+
+		// ADD Right side of the constraint system (XMin)
+		double maxCoords = getMaxSupport();
+
+		//Storage of the last constraint
+		coefficients.push_back(Tripletd(sizeF - 1, 0, maxCoords)); //Store the y constrained value in the last cell
+
+		Eigen::SparseMatrix&lt;double&gt; Ftmp(sizeF, 1);
+		f.resize(sizeF);
+		//Transform triplet into SparseMatrix
+		Ftmp.setFromTriplets(coefficients.begin(), coefficients.end());
+		f = VectorXd(Ftmp);
+
+		return f;
+	}
+
+	// Computes the Jacobian dA/dp of the inequality constraints C.
+	virtual void addInequalityConstraintsJacobianEntriesTo(std::vector&lt;Tripletd&gt;&amp; jacobianEntries, const VectorXd&amp; p) {
+		(...)
+		
+		//ADD XCom(x)
+		for (int i = 0; i &lt; nbMeshPoints; i++)
+		{
+			jacobianEntries.push_back(Tripletd(0, 2 * i, this-&gt;simParent-&gt;m[2*i] / totalMass)); //(mi)/M attributed to x components
+		}
+	}
+
+</code></pre>
+
+<h6 id="result-2">Result</h6>
+<div style="text-align:center">
+<p align="center">
+  <img style="height : 300px;" src="/media/compressed/square-inequal-iter1.png" />
+  <img style="height : 300px;" src="/media/compressed/square-inequal-stable.png" /><br />
+  Left : Square after 1 iteration | Right : Square in stable state<br />
+  <img style="height : 300px;" src="/media/compressed/woody-low-inequality-iter1.png" />
+  <img style="height : 300px;" src="/media/compressed/woody-low-inequality-constraints.png" /><br />
+  Left : Woody after 1 iteration (stable) | Right : Woody stable with constraints<br />
+</p>
+</div>
+
+<p>We see that the center of mass position (xCOM) is “inside” the support (between Max and Min).</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Square : 
+AVG : -0.8
+Max : -0.6
+Min : -1
+xCOM : -0.6
+
+Woody-low :
+AVG : 112.61
+Max : 135.514
+Min : 89.7069
+xCOM : 135.514
+
+</code></pre></div></div>
+
+<hr />
+
+<p><a name="amazing"></a></p>
+
+<h4 id="23-the-most-amazing-balancing-object">2.3. The most amazing balancing object!</h4>
+
+<p>The whole code is effective for 2D Meshes. But we can use it with 3D meshes, if the mesh is not “too thick”. 
+<br />
+For example, an octopod would not works, as it is heavily dispersed in the 3D space. Whereas a mesh of a character, approximatively flat, could be deformed successfully.
+<br /></p>
+
+<h6 id="result-3">Result</h6>
+<div style="text-align:center">
+<p align="center">
+  <img style="height : 600px;" src="/media/compressed/Danseuse2.png" />
+  <img style="height : 600px;" src="/media/compressed/printed.jpg" />
+</p>
+</div>
+
+<p>The second picture is a 3D print it, but it was too small to really stay on his foot as expected. However, we can feel that it does has a equilbrium point.</p>
+
+<hr />
+
+<p>For more information, see : 
+<a href="https://github.com/VincentFalc/ShapeModeling_6_ComputationalDesign">-&gt; Repository</a></p>
+
+<p>Note that the code is not optimized by thoughtful laziness: this code is not made to be reused as is in other applications, and if this is the case, the code will be reviewed and optimized. Thanks for your understanding.</p>
+
+                        </div>
+                        
+                        <div class="catsandtags">
+                            
+                            <span class="category">
+                                <span class="name">categories:</span>
+                                Shape Modeling
+                            </span>
+                            
+                            
+                                &bull;
+                            
+                            
+                            <span class="tags">
+                                <span class="name">tags:</span>
+                                
+                                    <a href="/tag/Shape Modeling">Shape Modeling</a>
+                                
+                                    <a href="/tag/IGL">IGL</a>
+                                
+                                    <a href="/tag/Eigen">Eigen</a>
+                                
+                                    <a href="/tag/Shape">Shape</a>
+                                
+                                    <a href="/tag/Optimization">Optimization</a>
+                                
+                            </span>
+                            
+                        </div>
+                        
+                    </article>
+                    <div class="post-nav">
+                        
+                        <a class="btn prev" href="/ShapeModeling-Assi5/"><i class="fa fa-angle-left"></i><span class="short"> prev</span><span class="long">ious post</span></a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+    <div class="content">
+        <span>Vincent F. powered by &copy; gridster</span>
+        <span class="backtotop">Back to top</span>
+    </div>
+</footer>
+<script src="/js/build/global.min.js"></script>
+<!-- analytics -->
+<script>
+
+  ga('create', 'UA-50358022-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+        
+    </body>
+</html>

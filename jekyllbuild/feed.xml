@@ -3,8 +3,27 @@
 	<channel>
 		<title>Vincent F.</title>
 		<description>Projects list</description>
-		<link>http://VincentFalc.github.io</link>
-		<atom:link href="http://VincentFalc.github.io/feed.xml" rel="self" type="application/rss+xml" />
+		<link>http://localhost:4000</link>
+		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Shape Modeling Shape Optimization</title>
+				
+				
+					<description>&lt;h5 id=&quot;tldr&quot;&gt;TL;DR&lt;/h5&gt;
+&lt;p&gt;This project was linked to a lecture about Shape Modeling. This project presents a method to optimize shapes by automatic deformation, according to arbitrary constraints.
+&lt;br /&gt;
+The followed constraint is to make the input mesh to stand in equilibrium on some chosen vertices, as if we wanted to 3D-print it, and make it stand by itself.
+&lt;br /&gt;
+We would like to add constraints, for example if the user want to impose the position of some vertices of the mesh in space.
+&lt;br /&gt;&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Fri, 25 May 2018 00:00:00 +0200</pubDate>
+				<link>http://localhost:4000/ShapeModeling-Assi6/</link>
+				<guid isPermaLink="true">http://localhost:4000/ShapeModeling-Assi6/</guid>
+			</item>
 		
 			<item>
 				<title>Shape Modeling Forces simulation</title>
@@ -21,8 +40,8 @@ We have choices on the Spring modelisation and the optimization method. We will 
 </description>
 				
 				<pubDate>Mon, 07 May 2018 00:00:00 +0200</pubDate>
-				<link>http://VincentFalc.github.io/ShapeModeling-Assi5/</link>
-				<guid isPermaLink="true">http://VincentFalc.github.io/ShapeModeling-Assi5/</guid>
+				<link>http://localhost:4000/ShapeModeling-Assi5/</link>
+				<guid isPermaLink="true">http://localhost:4000/ShapeModeling-Assi5/</guid>
 			</item>
 		
 			<item>
@@ -38,8 +57,8 @@ The editing method is real-time for small to medium meshes on a medium-class lap
 </description>
 				
 				<pubDate>Wed, 25 Apr 2018 00:00:00 +0200</pubDate>
-				<link>http://VincentFalc.github.io/ShapeModeling-Assi4/</link>
-				<guid isPermaLink="true">http://VincentFalc.github.io/ShapeModeling-Assi4/</guid>
+				<link>http://localhost:4000/ShapeModeling-Assi4/</link>
+				<guid isPermaLink="true">http://localhost:4000/ShapeModeling-Assi4/</guid>
 			</item>
 		
 			<item>
@@ -63,8 +82,8 @@ We will see 4 methods :&lt;/p&gt;
 </description>
 				
 				<pubDate>Thu, 05 Apr 2018 00:00:00 +0200</pubDate>
-				<link>http://VincentFalc.github.io/ShapeModeling-Assi3/</link>
-				<guid isPermaLink="true">http://VincentFalc.github.io/ShapeModeling-Assi3/</guid>
+				<link>http://localhost:4000/ShapeModeling-Assi3/</link>
+				<guid isPermaLink="true">http://localhost:4000/ShapeModeling-Assi3/</guid>
 			</item>
 		
 			<item>
@@ -83,8 +102,8 @@ This problem is similar to an interpolation problem, and therefore we need to cr
 </description>
 				
 				<pubDate>Tue, 20 Mar 2018 00:00:00 +0100</pubDate>
-				<link>http://VincentFalc.github.io/ShapeModeling-Assi2/</link>
-				<guid isPermaLink="true">http://VincentFalc.github.io/ShapeModeling-Assi2/</guid>
+				<link>http://localhost:4000/ShapeModeling-Assi2/</link>
+				<guid isPermaLink="true">http://localhost:4000/ShapeModeling-Assi2/</guid>
 			</item>
 		
 			<item>
@@ -99,8 +118,8 @@ These librairies are not well documented and therefore understand the implementa
 </description>
 				
 				<pubDate>Mon, 05 Mar 2018 00:00:00 +0100</pubDate>
-				<link>http://VincentFalc.github.io/ShapeModeling-Assi1/</link>
-				<guid isPermaLink="true">http://VincentFalc.github.io/ShapeModeling-Assi1/</guid>
+				<link>http://localhost:4000/ShapeModeling-Assi1/</link>
+				<guid isPermaLink="true">http://localhost:4000/ShapeModeling-Assi1/</guid>
 			</item>
 		
 	</channel>
