@@ -7,6 +7,31 @@
 		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Shape Modeling Texture mapping</title>
+				
+				
+					<description>&lt;h5 id=&quot;tldr&quot;&gt;TL;DR&lt;/h5&gt;
+&lt;p&gt;This project was linked to a lecture about Shape Modeling. This project presents different parametization methods : we map 3D points in a 2D space, to apply modification (Especially when it’s simpler in 2D, like texture mapping, etc.), to get back to 3D space.
+&lt;br /&gt;
+Mapping 3D meshs to 2D (“flat”) space involved stretching, shrinking, … and so globally, deformations. When we proceed to such process, we try to reduce this deformation. Assuming we try to reduce deformation, the parametization will depend on the way we compute deformation.
+&lt;br /&gt;
+We will see 4 methods :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring energy (uniform Laplacian)&lt;/li&gt;
+  &lt;li&gt;Dirichlet/harmonic energy (cotangent Laplacian)&lt;/li&gt;
+  &lt;li&gt;Least Squares Conformal Maps (LSCM)&lt;/li&gt;
+  &lt;li&gt;As-Rigid-As-Possible (ARAP)
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+				
+				<pubDate>Thu, 05 Apr 2018 00:00:00 +0200</pubDate>
+				<link>http://localhost:4000/ShapeModeling-Assi3/</link>
+				<guid isPermaLink="true">http://localhost:4000/ShapeModeling-Assi3/</guid>
+			</item>
+		
+			<item>
 				<title>Shape Modeling Surface reconstruction</title>
 				
 				

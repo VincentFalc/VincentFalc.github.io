@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+<title>Vincent F. - Shape Modeling Texture mapping </title>
+
+<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
+<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:500,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" id="color-change" href="">
+<link rel="stylesheet" id="switch-style" href="/css/grid.css">
+<link rel="alternate" type="application/rss+xml" title="Vincent F." href="http:/localhost:4000/feed.xml">
+
+    </head>
+
+    <body>
+        <header class="head">
+            <div class="row">
+    <a href="/" class="logo noline">
+        <!-- full logo version with slogan, icon and text, add the class .ts-full if you want to work with some of the existing CSS -->
+   <svg version="1.1" viewBox="0 0 850.61096 179.54858" class="ts-full">
+    <g transform="translate(-49.00717,-350.11674)">
+        <g transform="matrix(0.65068572,0,0,0.65068572,11.104727,118.00494)" class="icon">
+            <path d="m 101.39622,391.43518 191.99569,0 c 5.04555,0 9.10749,46.87698 9.10749,105.10533 0,58.22836 -4.06194,105.10533 -9.10749,105.10533 l -191.99569,0 c -5.045545,0 -9.107486,-46.87697 -9.107486,-105.10533 0,-58.22835 4.061941,-105.10533 9.107486,-105.10533 z" class="rectangle" />
+            <path d="m 165.8125,358.21875 -5.1875,99.21875 -100.875,0 0,7.625 100.46875,0 -3.28125,62.59375 -97.1875,0 0,7.59375 96.78125,0 -5,95.5 7.625,0.40625 5.03125,-95.90625 62.5625,0 -5,95.5 7.59375,0.40625 5.03125,-95.90625 98.28125,0 0,-7.59375 -97.875,0 3.28125,-62.59375 94.59375,0 0,-7.625 -94.1875,0 5.15625,-98.84375 -7.59375,-0.375 -5.1875,99.21875 -62.5625,0 5.15625,-98.84375 -7.625,-0.375 z m 2.0625,106.84375 62.5625,0 -3.28125,62.59375 -62.5625,0 3.28125,-62.59375 z" class="lines" />
+        </g>
+        <text x="235.15662" y="477.12143" class="gridster">
+            <tspan x="235.15662" y="477.12143">VFProjects</tspan>
+        </text>
+        <text x="304.80173" y="512.31683" class="slogan">
+            <tspan x="304.80173" y="512.31683">Personal and professional work</tspan>
+        </text>
+    </g>
+</svg>
+        <!-- logo version without slogan, add the class .ts-no-slogan if you want to work with some of the existing CSS -->
+<svg version="1.1" viewBox="0 0 677.61096 179.54858" class="ts-no-slogan">
+    <g transform="translate(-49.00717,-350.11674)">
+        <g transform="matrix(0.65068572,0,0,0.65068572,11.104727,118.00494)" class="icon">
+            <path d="m 101.39622,391.43518 191.99569,0 c 5.04555,0 9.10749,46.87698 9.10749,105.10533 0,58.22836 -4.06194,105.10533 -9.10749,105.10533 l -191.99569,0 c -5.045545,0 -9.107486,-46.87697 -9.107486,-105.10533 0,-58.22835 4.061941,-105.10533 9.107486,-105.10533 z" class="rectangle" />
+            <path d="m 165.8125,358.21875 -5.1875,99.21875 -100.875,0 0,7.625 100.46875,0 -3.28125,62.59375 -97.1875,0 0,7.59375 96.78125,0 -5,95.5 7.625,0.40625 5.03125,-95.90625 62.5625,0 -5,95.5 7.59375,0.40625 5.03125,-95.90625 98.28125,0 0,-7.59375 -97.875,0 3.28125,-62.59375 94.59375,0 0,-7.625 -94.1875,0 5.15625,-98.84375 -7.59375,-0.375 -5.1875,99.21875 -62.5625,0 5.15625,-98.84375 -7.625,-0.375 z m 2.0625,106.84375 62.5625,0 -3.28125,62.59375 -62.5625,0 3.28125,-62.59375 z" class="lines" />
+        </g>
+        <text x="235.15662" y="477.12143" class="gridster">
+            <tspan x="235.15662" y="477.12143">Projects</tspan>
+        </text>
+    </g>
+</svg>
+        <!-- icon logo version, add the class .ts-icon if you want to work with some of the existing CSS -->
+<svg version="1.1" viewBox="0 0 179.52826 179.54858" class="ts-icon">
+    <g transform="translate(-49.00717,-350.11674)">
+        <g transform="matrix(0.65068572,0,0,0.65068572,11.104727,118.00494)" class="icon">
+            <path d="m 101.39622,391.43518 191.99569,0 c 5.04555,0 9.10749,46.87698 9.10749,105.10533 0,58.22836 -4.06194,105.10533 -9.10749,105.10533 l -191.99569,0 c -5.045545,0 -9.107486,-46.87697 -9.107486,-105.10533 0,-58.22835 4.061941,-105.10533 9.107486,-105.10533 z" class="rectangle" />
+            <path d="m 165.8125,358.21875 -5.1875,99.21875 -100.875,0 0,7.625 100.46875,0 -3.28125,62.59375 -97.1875,0 0,7.59375 96.78125,0 -5,95.5 7.625,0.40625 5.03125,-95.90625 62.5625,0 -5,95.5 7.59375,0.40625 5.03125,-95.90625 98.28125,0 0,-7.59375 -97.875,0 3.28125,-62.59375 94.59375,0 0,-7.625 -94.1875,0 5.15625,-98.84375 -7.59375,-0.375 -5.1875,99.21875 -62.5625,0 5.15625,-98.84375 -7.625,-0.375 z m 2.0625,106.84375 62.5625,0 -3.28125,62.59375 -62.5625,0 3.28125,-62.59375 z" class="lines" />
+        </g>
+    </g>
+</svg>
+    </a>
+</div>
+
+            <!-- menu, we did go with a static one, you can build a dynamic one, just google a little around -->
+<div class="main-menu">
+    <div class="content">
+        <nav id="menu">
+            <a class="toggle-link noline"><i class="fa fa-close fa-lg"></i></a>
+            <ul>
+                <li>
+                    <a class="homelink" href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/archive">Archive</a>
+                </li>
+                <!--
+                <li>
+                    <a href="/typography">Typography</a>
+                </li>
+                <li><a class="dropdown-button" href="#" data-activates='drop-example'>Page Layouts&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
+                </li>
+                <div id="drop-example" class="dropdown-content">
+                    <li>
+                        <a href="/page-full">page-full</a>
+                    </li>
+                    <li>
+                        <a href="/page-classic-sidebar-right">page classic sidebar right</a>
+                    </li>
+                    <li>
+                        <a href="/page-classic-sidebar-left">page classic sidebar left</a>
+                    </li>
+                    <li>
+                        <a href="/page-material-sidebar-right">page material sidebar right</a>
+                    </li>
+                    <li>
+                        <a href="/page-material-sidebar-left">page material sidebar left</a>
+                    </li>
+                </div>
+                <li>
+                    <a href="#colorswitch" class="modal-trigger">Change Colors <i class="fa fa-cog"></i></a>
+                </li>
+                -->
+            </ul>
+        </nav>
+        <nav class="iconnav">
+            <ul>
+                <li class="sicon">
+                    <a href='#search'><i class='fa fa-search'></i></a>
+                </li>
+                <!--
+                
+                <li class="social">
+                    <a href="" class="tumblr"><i class="fa fa-tumblr"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="pinterest"><i class="fa fa-pinterest"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="instagram"><i class="fa fa-instagram"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="twitter"><i class="fa fa-twitter"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="facebook"><i class="fa fa-facebook"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="youtube"><i class="fa fa-youtube"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="vimeo"><i class="fa fa-vimeo-square"></i></a>
+                </li>
+                 
+                <li class="social">
+                    <a href="" class="soundcloud"><i class="fa fa-soundcloud"></i></a>
+                </li>
+                
+                -->
+            </ul>
+        </nav>
+        <a href='#menu' class="toggle-link noline">
+            <i class="fa fa-navicon"></i>
+        </a>
+    </div>
+</div>
+
+
+
+
+<div id="colorswitch" class="modal color-change">
+    <div class="modal-content">
+      <h4>Change Color Palette</h4>
+      <p>
+      <img id="indigo" alt="color palette preview indigo" src="/media/compressed/indigo.jpg">
+      <img id="brown" alt="color palette preview brown" src="/media/compressed/brown.jpg">
+      <img id="green" alt="color palette preview green" src="/media/compressed/green.jpg">
+      <img id="teal" alt="color palette preview teal" src="/media/compressed/teal.jpg">
+      </p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">close</a>
+    </div>
+  </div>
+        </header>
+        <div id="search">
+    <form role="search" id="searchform">
+        <input type="search" placeholder="Search"/>
+    </form>
+</div>
+
+        <div class="margin">
+            <div class="content full">
+                <div class="content-container">
+                    <article>
+                        
+                            
+                                <img class="featimg" src="/media/compressed/octo_LSCM_8Points_all_all.gif" alt="octo_LSCM_8Points_all_all.gif">
+                            
+                        
+
+                        <h1 class="post-title">
+                            Shape Modeling Texture mapping
+                        </h1>
+                        <div class="meta">
+                            
+
+    <span class="author">Posted by
+        
+        
+            <a href="/author/VF">
+                
+                    Vincent F.
+                
+            </a>
+        
+    </span>
+
+ &bull;
+                            <span class="date">
+                                Published on April 05, 2018
+                            </span>
+                        </div>
+                        
+                        <div class="post-content">
+                            <h5 id="tldr">TL;DR</h5>
+<p>This project was linked to a lecture about Shape Modeling. This project presents different parametization methods : we map 3D points in a 2D space, to apply modification (Especially when it’s simpler in 2D, like texture mapping, etc.), to get back to 3D space.
+<br />
+Mapping 3D meshs to 2D (“flat”) space involved stretching, shrinking, … and so globally, deformations. When we proceed to such process, we try to reduce this deformation. Assuming we try to reduce deformation, the parametization will depend on the way we compute deformation.
+<br />
+We will see 4 methods :</p>
+<ul>
+  <li>Spring energy (uniform Laplacian)</li>
+  <li>Dirichlet/harmonic energy (cotangent Laplacian)</li>
+  <li>Least Squares Conformal Maps (LSCM)</li>
+  <li>As-Rigid-As-Possible (ARAP)
+<br /></li>
+</ul>
+
+<h5 id="table-of-contents">Table of Contents</h5>
+<p><a href="#boundary">1. Setting up the boundary conditions</a>  <br />
+<a href="#fixedVertices">1.1. Finding the fixed vertex indices and their positions</a>  <br />
+<a href="#linear">1.2. Convert the boundary conditions to linear constraints</a>  <br />
+<a href="#matrix">2. Write the parameterization problem in matrix form and construct the matrix</a>  <br />
+<a href="#Laplacian">2.1. Uniform and cotangent Laplacian</a>  <br />
+<a href="#LSCM">2.2. LSCM</a>  <br />
+<a href="#ARAP">2.3. ARAP</a>  <br />
+<a href="#results">3. Construct the system and display the results</a>  <br />
+<a href="#parameterization">3.1. Solve and show the parameterization.</a>  <br />
+<a href="#distortion">3.2. Visualize the distortion</a>  <br /></p>
+
+<p><a name="boundary"></a></p>
+
+<h4 id="1-setting-up-the-boundary-conditions">1. Setting up the boundary conditions</h4>
+
+<p><a name="fixedVertices"></a></p>
+
+<h4 id="11-creating-the-constraints">1.1. Creating the constraints</h4>
+
+<p>An easy solution to map points in a 2D space is to shrink the whole mesh in a single dot. It’s equivalent to a null-function solution. To avoid this problem, we have to fix points of the 3D mesh in the 2D space, as anchors to map the rest of the mesh.
+<br />
+A first solution is to find the vertices which constitue the boundary of the mesh (if the mesh has such a “border”) and map them to a 2D circle.
+<br />
+A second soltion is to find the boundary of the mesh, as previously, but only take a chosen “n” number of vertices, equally spaced, and map them to a 2D circle. In this configuration, we can for example take 2 points, and map them to a line. Idem with 3 points for a triangle, etc.
+<br />
+Depending on the parametization, one or both of the solution will be usable.
+<br /></p>
+
+<h6 id="documentation-informations">Documentation informations</h6>
+<p>We can use the following function :</p>
+<ul>
+  <li><strong>igl::boundary loop</strong>
+This function construct the list of indices of vertices of the external boundary loop
+<br />
+<a href="https://github.com/libigl/libigl/blob/master/include/igl/boundary_loop.h">-&gt; Documentation</a></li>
+</ul>
+
+<h6 id="usage">Usage</h6>
+<p>The first idea, create a circle boundary, is straightforward, as the <strong>IGL function</strong> is doing everything.</p>
+
+<pre><code class="language-C++">  (...)
+	if (!freeBoundary)
+	{
+		igl::map_vertices_to_circle(V, fixed_UV_indices, fixed_UV_positions);
+	}
+  (...)
+</code></pre>
+
+<p><strong>The second idea is to have only 2 constrainted points</strong>.</p>
+
+<ul>
+  <li>
+    <p>The first approach is to calculate all distances between all points of the mesh (per pair) and keep the two most distants points. But <strong>distants points on the mesh may be not distants points on a 2D surface</strong>. So this idea conduct to “bad” parametization, mainly because we don’t consider the topological distance, but the euclidian distance only.</p>
+  </li>
+  <li>
+    <p>The second approach, is a variant of the circle boundary : we only <strong>keep some (two for example) extreme points of the circle boundary</strong>. It conduct to much better results with the provided meshs, as the distance is “implicity” calculated as the path <strong>on</strong> the mesh, the topological distance.</p>
+  </li>
+</ul>
+
+<p>Note that, we may want to choose the coordinates in the 2D space of the fixed points to try to <strong>reduce the area distortion</strong> of the triangles of the mesh.
+But, in our case, as we can and will change the texture size as needed (+/- buttons) we don’t need to scale the boundary to optimize the area distortion. It will only vary from a factor, homogenous for the whole mesh.
+It won’t change the distortion color either, for the same reason (homogenous for the whole mesh).</p>
+
+<p>Therefore, we can distinguish a <strong>“good” from “bad” parametization</strong>, thanks to the <strong>homogeneousity of the distortion values.</strong>
+So, for pictures showing the distortion, if there is areas in red and area in white, the parametization is not adapted.
+So, if all areas are approximatly the same color (all light pink) we can consider the parametization as adapated.</p>
+
+<pre><code class="language-C++">  (...)
+	if (freeBoundary)
+	{
+		igl::map_vertices_to_circle(V, fixed_UV_indices, fixed_UV_positions);
+
+		for (int i = 0; i &lt; nbPointsBordure &amp;&amp; i &lt; fixed_UV_positions.rows(); i++)
+		{
+			int indicePointCurr = round(i * fixed_UV_positions.rows() / nbPointsBordure); //0, and 1/n mov each time
+
+			// Fix two points on the boundary
+			fixed_UV_positions.row(nbOfNewPoints) &lt;&lt; fixed_UV_positions.row(indicePointCurr);
+			fixed_UV_indices[nbOfNewPoints] = fixed_UV_indices[indicePointCurr];
+
+			nbOfNewPoints++;
+		}
+
+		//We reformat originals for the positions and indices.
+		fixed_UV_positions.conservativeResize(nbOfNewPoints, 3);
+		fixed_UV_indices.conservativeResize(nbOfNewPoints, 1);
+
+    (...)
+  }
+  (...)
+</code></pre>
+
+<h6 id="result">Result</h6>
+<div style="text-align:center">
+<p align="center">
+<img style="height : 300px;" src="/media/compressed/bunny_CircleBoundary.gif" />
+<img style="height : 300px;" src="/media/compressed/bunny_CircleBoundary.png" />
+<br />Mesh = bunny / Boundary = circle <br />
+
+<img style="height : 300px;" src="/media/compressed/catHead_CircleBoundary.gif" />
+<img style="height : 300px;" src="/media/compressed/catHead_CircleBoundary.png" />
+<br />Mesh = cat / Boundary = circle <br />
+
+<img style="height : 300px;" src="/media/compressed/obj_uni_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/obj_uni_circle_texture_plan.png" />
+<br />Left : Mesh = cow / Boundary = circle <br />
+
+<img style="height : 300px;" src="/media/compressed/gargoyle__uni_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/gargoyle__uni_circle_texture_plan.png" />
+<br />Left : Mesh = gargoyle / Boundary = circle <br />
+
+<img style="height : 300px;" src="/media/compressed/hemisphere_uni_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemisphere_uni_circle_texture_plan.png" />
+<br />Left : Mesh = hemisphere / Boundary = circle <br />
+
+<img style="height : 300px;" src="/media/compressed/hemispherNC_uni_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_uni_circle_texture_plan.png" />
+<br />Left : Mesh = hemisphereNC / Boundary = circle <br />
+
+<img style="height : 300px;" src="/media/compressed/off_uni_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/off_uni_circle_texture_plan.png" />
+<br />Left : Mesh = max / Boundary = circle <br />
+
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_uni_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_uni_circle_texture_plan.png" />
+<br />Left : Mesh = octo / Boundary = circle <br />
+
+</p>
+</div>
+
+<hr />
+
+<p><a name="linear"></a></p>
+
+<h4 id="12-convert-the-boundary-conditions-to-linear-constraints">1.2. Convert the boundary conditions to linear constraints</h4>
+
+<p>We have to construct a constraint system, that will be added to the system we’re going to solve, to get the new 2D positions of all the mesh’s points.</p>
+
+<h6 id="usage-1">Usage</h6>
+
+<p>The system will be of the form :</p>
+<ul>
+  <li>x_point_1 = x_forced_2DPosition_point1</li>
+  <li>y_point_1 = y_forced_2DPosition_point1</li>
+  <li>…</li>
+  <li>x_point_i = x_forced_2DPosition_pointi</li>
+  <li>y_point_i = y_forced_2DPosition_pointi</li>
+</ul>
+
+<p>Which can be displayed under a matrix formatting, as C * Positions = D 
+<br />
+We create a C matrix, which is not a diagonal matrix, but a sparse matrix, with only 1 where this particular (u,v) has to match with this particular (x,y) values of d.
+And we create a D matrix constitued by the 2D fixed coordinates of the boundary.
+<br />
+The function works with all cases/types of boundaries conditions, circle or not.</p>
+
+<p align="center">
+<img style="height : 500px;" src="/media/compressed/schema_4.jpg" />
+</p>
+
+<pre><code class="language-C++">void ConvertConstraintsToMatrixForm(VectorXi indices, MatrixXd positions, Eigen::SparseMatrix&lt;double&gt; &amp;C, VectorXd &amp;d)
+{
+	// Convert the list of fixed indices and their fixed positions to a linear system
+
+	//Resize to the correct structure
+	C.conservativeResize(2 * indices.rows(), 2 * V.rows());
+	d.conservativeResize(2 * indices.rows(), 1);
+  (...)
+
+	int tailleV = V.rows();
+	int tailleB = positions.rows();
+
+	//Construct of C
+	for (int i = 0; i &lt; indices.rows(); i++)
+	{
+		C.insert(i, indices[i]) = 1;
+		C.insert(tailleB + i, tailleV + indices[i]) = 1;
+	}
+
+	//Construct d as all U constraints, and then all V constraints
+	for (int i = 0; i &lt; positions.rows(); i++)
+	{
+		d[i] = positions.row(i)[0];
+		d[tailleB + i] = positions.row(i)[1];
+	}
+
+  (...)
+}
+</code></pre>
+
+<h6 id="result-1">Result</h6>
+<p>Exemple of system (cathead, Harmonic uniform)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  * u? = 1
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  * u? = 0.838304
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  * u? = 0.48517
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  * u? = 0.122623
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  * u? = -0.401705
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  * u? = -0.784592
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  * u? = -0.988038
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  * u? = -0.89542
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  * u? = -0.278918
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  * u? = 0.201572
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  * u? = 0.637168
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  * u? = 0.938674
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  * u? = 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  * u? = 0.545202
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0  * u? = 0.87442
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0  * u? = 0.992453
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0  * u? = 0.915769
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0  * u? = 0.620013
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0  * u? = 0.154211
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0  * u? = -0.445223
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  * u? = -0.960315
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  * u? = -0.979474
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  * u? = -0.770725
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  * u? = -0.344806
+</code></pre></div></div>
+
+<hr />
+
+<p><a name="matrix"></a></p>
+
+<h4 id="2-write-the-parameterization-problem-in-matrix-form-and-construct-the-matrix">2. Write the parameterization problem in matrix form and construct the matrix</h4>
+
+<p><a name="Laplacian"></a></p>
+
+<h4 id="21-uniform-and-cotangent-laplacian">2.1. Uniform and cotangent Laplacian</h4>
+
+<p>We will solve a system for the parametization with all points.
+The left part of system is composed of A - a matrix that will represent the kind of distortion we measure - and C - previously explained and computed, the constraints.
+<br />
+First of the possible parametization, we compute the Laplacian (uniform and cotangent), which should be null (right side).
+<br /></p>
+
+<h6 id="documentation-informations-1">Documentation informations</h6>
+<p>We can use the following function :</p>
+
+<ul>
+  <li><strong>igl::adjencency matrix()</strong>
+Construct the graph of adjacency of a mesh
+<br />
+<a href="https://github.com/libigl/libigl/blob/master/include/igl/adjacency_matrix.h">-&gt; Documentation</a></li>
+  <li><strong>igl::cotmatrix</strong>
+Construct the cotangent matrix of a mesh, equivalent to the discrete Laplacian.
+<br />
+<a href="https://github.com/libigl/libigl/blob/master/include/igl/cotmatrix.h">-&gt; Documentation</a></li>
+</ul>
+
+<p>For igl::adjencency matrix() :</p>
+
+<p><strong>Inputs</strong> :</p>
+<ul>
+  <li>F = #Fx3 list of mesh faces</li>
+</ul>
+
+<p><strong>Outputs</strong> :</p>
+<ul>
+  <li>A  = max(F)x max(F) // = #Vx#V ? cotangent matrix, One row i represent the adjacents neighboors of the vertice i</li>
+</ul>
+
+<p>For igl::cotmatrix :</p>
+
+<p><strong>Inputs</strong> :</p>
+<ul>
+  <li>V = #Vx3 : list of mesh vertex positions</li>
+  <li>F = #Fx3 (triangles) : list of mesh faces (must be triangles)</li>
+</ul>
+
+<p><strong>Outputs</strong> :</p>
+<ul>
+  <li>L = #V x #V cotangent matrix, each row i corresponding to the vertix N° i</li>
+</ul>
+
+<h6 id="usage-2">Usage</h6>
+<p>For the uniform Laplacian, we construct the A matrix by soustracting the adjacency matrix to the sum of each row of the same matrix, in diagonal.
+As results, when uniform “springs” are selected, all edges will try to keep their lengths. It will try to create equilateral triangles.</p>
+
+<pre><code class="language-C++">if (type == '1')
+	{
+  		(...)
+		igl::adjacency_matrix(F, Adj);
+
+		// sum each row
+		igl::sum(Adj, 1, Asum);
+
+		// Convert row sums into diagonal of sparse matrix
+		igl::diag(Asum, Adiag);
+
+		// Build uniform laplacian
+		U = Adj - Adiag;
+
+		(...)
+
+		//Construction of AT*A from Uniform Laplacian
+		for (int i = 0; i &lt; U.rows(); i++)
+		{
+			for (int j = 0; j &lt; U.row(0).size(); j++)
+			{
+				A.insert(i, j) = U.coeff(i, j);
+				A.insert(tailleV + i, tailleV + j) = U.coeff(i, j);
+			}
+		}
+
+	(...)
+
+	}
+</code></pre>
+
+<p>Idem for the cotangaent laplacian : We construct the A matrix by concatenating the cotmatrix twice, in diagonal, to create the A-matrix.
+The cotangent Laplacian results will be similar to the uniform Laplacian, but a bit smoother.</p>
+
+<pre><code class="language-C++">if (type == '2')
+	{
+		(...)
+		igl::cotmatrix(V, F, L);
+
+		//Construction of AT*A, thanks to Dirichlet minimization of energy.
+		for (int i = 0; i &lt; L.rows(); i++)
+		{
+			for (int j = 0; j &lt; L.row(0).size(); j++)
+			{
+				A.insert(i, j) = L.coeff(i, j);
+				A.insert(tailleV + i, tailleV + j) = L.coeff(i, j);
+			}
+		}
+		(...)
+
+	}
+</code></pre>
+
+<h6 id="result-2">Result</h6>
+<div style="text-align:center">
+<p align="center">
+
+<img style="height : 300px;" src="/media/compressed/bunny_uni_circle_all_all.gif" />
+<br />Mesh = bunny / Boundary = circle / Type : Uniform<br />
+
+<img style="height : 300px;" src="/media/compressed/bunny_uni_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/bunny_uni_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = bunny / Boundary = circle / Type : Uniform / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/off_uni_circle_colorsMAX25MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/off_uni_circle_colorsMAX25MIN0_Distortion_T0_plan.png" />
+<br />Left &amp; right: Mesh = bunny / Boundary = circle / Type : Uniform / Colored (Max = 25, Min = 0, distortion angle)<br />
+<img style="height : 300px;" src="/media/compressed/off_uni_circle_colorsMAX25MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/off_uni_circle_colorsMAX25MIN0_Distortion_T1_plan.png" />
+<br />Left &amp; right: Mesh = bunny / Boundary = circle / Type : Uniform / Colored (Max = 25, Min = 0, distortion length)<br />
+<img style="height : 300px;" src="/media/compressed/off_uni_circle_colorsMAX25MIN0_Distortion_T2_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/off_uni_circle_colorsMAX25MIN0_Distortion_T2_plan.png" />
+<br />Left &amp; right: Mesh = bunny / Boundary = circle / Type : Uniform / Colored (Max = 25, Min = 0, distortion area)<br />
+
+<img style="height : 300px;" src="/media/compressed/cathead_uni_circle_all_all.gif" />
+<br />Mesh = cathead / Boundary = circle / Type : Uniform<br />
+
+<img style="height : 300px;" src="/media/compressed/cathead_uni_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/cathead_uni_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = cat / Boundary = circle / Type : Uniform / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/o_uni_circle_colorsMAX10MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/o_uni_circle_colorsMAX10MIN0_Distortion_T0_plan.png" />
+<br />Left &amp; right: Mesh = cat / Boundary = circle / Type : Uniform / Colored (Max = 5, Min = 0, distortion angle)<br />
+<img style="height : 300px;" src="/media/compressed/o_uni_circle_colorsMAX10MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/o_uni_circle_colorsMAX10MIN0_Distortion_T1_plan.png" />
+<br />Left &amp; right: Mesh = cat / Boundary = circle / Type : Uniform / Colored (Max = 5, Min = 0, distortion length)<br />
+<img style="height : 300px;" src="/media/compressed/o_uni_circle_colorsMAX10MIN0_Distortion_T2_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/o_uni_circle_colorsMAX10MIN0_Distortion_T2_plan.png" />
+<br />Left &amp; right: Mesh = cat / Boundary = circle / Type : Uniform / Colored (Max = 5, Min = 0, distortion area)<br />
+
+  <img style="height : 300px;" src="/media/compressed/hemisphere_uni_circle_all_all.gif" />
+  <br />Mesh = hemisphere / Boundary = circle / Type : Uniform<br />
+<img style="height : 300px;" src="/media/compressed/hemisphere_uni_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemisphere_uni_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = hemisphere / Boundary = circle / Type : Uniform / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/hemispher_uni_circle_colorsMAX5MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispher_uni_circle_colorsMAX5MIN0_Distortion_T0_plan.png" />
+<br />Left &amp; right: Mesh = hemisphere / Boundary = circle / Type : Uniform / Colored (Max = 5, Min = 0, distortion angle)<br />
+Distortion (angle, circle) = Max : 2.33684 Min : 0.0212852<br />
+<img style="height : 300px;" src="/media/compressed/hemispher_uni_circle_colorsMAX5MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispher_uni_circle_colorsMAX5MIN0_Distortion_T1_plan.png" />
+<br />Left &amp; right: Mesh = hemisphere / Boundary = circle / Type : Uniform / Colored (Max = 5, Min = 0, distortion length)<br />
+<img style="height : 300px;" src="/media/compressed/hemispher_uni_circle_colorsMAX5MIN0_Distortion_T2_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispher_uni_circle_colorsMAX5MIN0_Distortion_T2_plan.png" />
+<br />Left &amp; right: Mesh = hemisphere / Boundary = circle / Type : Uniform / Colored (Max = 5, Min = 0, distortion area)<br />
+
+  <img style="height : 300px;" src="/media/compressed/hemisphereNC_uni_circle_all_all.gif" />
+  <br />Mesh = hemisphereNC / Boundary = circle / Type : Uniform<br />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_uni_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_uni_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = hemisphereNC / Boundary = circle / Type : Uniform / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/hemispherNC_uni_circle_colorsMAX5MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_uni_circle_colorsMAX5MIN0_Distortion_T0_plan.png" />
+<br />Left &amp; right: Mesh = hemisphereNCeNC / Boundary = circle / Type : Uniform / Colored (Max = 5, Min = 0, distortion angle)<br />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_uni_circle_colorsMAX5MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_uni_circle_colorsMAX5MIN0_Distortion_T1_plan.png" />
+<br />Left &amp; right: Mesh = hemisphereNCeNC / Boundary = circle / Type : Uniform / Colored (Max = 5, Min = 0, distortion length)<br />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_uni_circle_colorsMAX5MIN0_Distortion_T2_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_uni_circle_colorsMAX5MIN0_Distortion_T2_plan.png" />
+<br />Left &amp; right: Mesh = hemisphereNCeNC / Boundary = circle / Type : Uniform / Colored (Max = 5, Min = 0, distortion area)<br />
+
+  <img style="height : 300px;" src="/media/compressed/octo_uni_circle_all_all.gif" />
+  <br />Mesh = octo / Boundary = circle / Type : Uniform<br />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_uni_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_uni_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = Octo / Boundary = circle / Type : Uniform / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_uni_circle_colorsMAX150MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_uni_circle_colorsMAX150MIN0_Distortion_T0_plan.png" />
+<br />Left &amp; right: Mesh = Octo_cut2 / Boundary = circle / Type : Uniform / Colored (Max = 150, Min = 0, distortion angle)<br />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_uni_circle_colorsMAX150MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_uni_circle_colorsMAX150MIN0_Distortion_T1_plan.png" />
+<br />Left &amp; right: Mesh = Octo_cut2 / Boundary = circle / Type : Uniform / Colored (Max = 150, Min = 0, distortion length)<br />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_uni_circle_colorsMAX150MIN0_Distortion_T2_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_uni_circle_colorsMAX150MIN0_Distortion_T2_plan.png" />
+<br />Left &amp; right: Mesh = Octo_cut2 / Boundary = circle / Type : Uniform / Colored (Max = 150, Min = 0, distortion area)<br />
+
+  <img style="height : 300px;" src="/media/compressed/cow_uni_circle_all_all.gif" />
+<br />Mesh = cow / Boundary = circle / Type : Uniform<br />
+<img style="height : 300px;" src="/media/compressed/obj_uni_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/obj_uni_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = cow / Boundary = circle / Type : Uniform / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/cowobj_uni_circle_colorsMAX01MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/obj_uni_circle_colorsMAX0MIN0_Distortion_T0_plan.png" />
+<br />Left &amp; right: Mesh = cow / Boundary = circle / Type : Uniform / Colored (Max = 0.1, Min = 0, distortion angle)<br />
+<img style="height : 300px;" src="/media/compressed/obj_uni_circle_colorsMAX10MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/obj_uni_circle_colorsMAX10MIN0_Distortion_T1_plan.png" />
+<br />Left &amp; right: Mesh = cow / Boundary = circle / Type : Uniform / Colored (Max = 10, Min = 0, distortion length)<br />
+<img style="height : 300px;" src="/media/compressed/obj_uni_circle_colorsMAX5MIN0_Distortion_T2_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/obj_uni_circle_colorsMAX5MIN0_Distortion_T2_plan.png" />
+<br />Left &amp; right: Mesh = cow / Boundary = circle / Type : Uniform / Colored (Max = 5, Min = 0, distortion area)<br />
+
+
+  <img style="height : 300px;" src="/media/compressed/gargo_uni_circle_all_all.gif" />
+  <br />Mesh = gargo / Boundary = circle / Type : Uniform<br />
+  <img style="height : 300px;" src="/media/compressed/gargoyle__uni_circle_texture_mesh.png" />
+  <img style="height : 300px;" src="/media/compressed/gargoyle__uni_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = gargo / Boundary = circle / Type : Uniform / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/gargoyle__uni_circle_colorsMAX001MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/gargoyle__uni_circle_colorsMAX001MIN0_Distortion_T0_plan.png" />
+<br />Left &amp; right: Mesh = gargoyle / Boundary = circle / Type : Uniform / Colored (Max = 0.01, Min = 0, distortion angle)<br />
+<img style="height : 300px;" src="/media/compressed/gargoyle__uni_circle_colorsMAX5MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/gargoyle__uni_circle_colorsMAX5MIN0_Distortion_T1_plan.png" />
+<br />Left &amp; right: Mesh = gargoyle / Boundary = circle / Type : Uniform / Colored (Max = 5, Min = 0, distortion length)<br />
+<img style="height : 300px;" src="/media/compressed/gargoyle__uni_circle_colorsMAX5MIN0_Distortion_T2_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/gargoyle__uni_circle_colorsMAX5MIN0_Distortion_T2_plan.png" />
+<br />Left &amp; right: Mesh = gargoyle / Boundary = circle / Type : Uniform / Colored (Max = 5, Min = 0, distortion area)<br />
+
+
+<img style="height : 300px;" src="/media/compressed/max_uni_circle_all_all.gif" />
+<br />Mesh = max / Boundary = circle / Type : Uniform<br />
+<img style="height : 300px;" src="/media/compressed/off_uni_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/off_uni_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = max / Boundary = circle / Type : Uniform / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/off_uni_circle_colorsMAX0MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/off_uni_circle_colorsMAX0MIN0_Distortion_T0_plan.png" />
+<br />Left &amp; right: Mesh = max / Boundary = circle / Type : Uniform / Colored (Max = 0.0001, Min = 0, distortion angle)<br />
+<img style="height : 300px;" src="/media/compressed/off_uni_circle_colorsMAX10MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/off_uni_circle_colorsMAX10MIN0_Distortion_T1_plan.png" />
+<br />Left &amp; right: Mesh = max / Boundary = circle / Type : Uniform / Colored (Max = 10, Min = 0, distortion length)<br />
+<img style="height : 300px;" src="/media/compressed/off_uni_circle_colorsMAX10MIN0_Distortion_T2_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/off_uni_circle_colorsMAX10MIN0_Distortion_T2_plan.png" />
+<br />Left &amp; right: Mesh = max / Boundary = circle / Type : Uniform / Colored (Max = 10, Min = 0, distortion area)<br />
+
+</p>
+</div>
+
+<hr />
+
+<div style="text-align:center">
+<p align="center">
+
+<img style="height : 300px;" src="/media/compressed/bunny_cotan_circle_all_all.gif" />
+<br />Mesh = bunny / Boundary = circle / Type : cotan<br />
+<img style="height : 300px;" src="/media/compressed/off_cotan_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/off_cotan_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = bunny / Boundary = circle / Type : Cotan / Textured <br />
+Distortion (angle, circle) = Max : 345.252 Min : 0.122168 <br />
+
+<img style="height : 300px;" src="/media/compressed/off_cotan_circle_colorsMAX150MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/off_cotan_circle_colorsMAX150MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/off_cotan_circle_colorsMAX150MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = bunny / Boundary = circle / Type : Cotan / Colored (Max = 150, Min = 0, distortion angle)
+<br />Center: Mesh = bunny / Boundary = circle / Type : Cotan / Colored (Max = 150, Min = 0, distortion length)
+<br />Right: Mesh = bunny / Boundary = circle / Type : Cotan / Colored (Max = 150, Min = 0, distortion area)<br />
+
+<img style="height : 300px;" src="/media/compressed/cathead_cotan_circle_all_all.gif" />
+<br />Mesh = cathead / Boundary = circle / Type : cotan<br />
+<img style="height : 300px;" src="/media/compressed/cathead_cotan_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/cathead_cotan_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = cathead / Boundary = circle / Type : Cotan / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/o_cotan_circle_colorsMAX1MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/o_cotan_circle_colorsMAX1MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/o_cotan_circle_colorsMAX3MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = cathead / Boundary = circle / Type : Cotan / Colored (Max = 1, Min = 0, distortion angle)
+<br />Center: Mesh = cathead / Boundary = circle / Type : Cotan / Colored (Max = 1, Min = 0, distortion length)
+<br />Right: Mesh = cathead / Boundary = circle / Type : Cotan / Colored (Max = 3, Min = 0, distortion area)<br />
+
+<img style="height : 300px;" src="/media/compressed/hemisphere_cotan_circle_all_all.gif" />
+<br />Mesh = hemisphere / Boundary = circle / Type : cotan<br />
+<img style="height : 300px;" src="/media/compressed/hemispher_cotan_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispher_cotan_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = hemisphere / Boundary = circle / Type : Cotan / Textured <br />
+Distortion (angle, circle) = Max : 2.33684 Min : 0.0212852<br />
+
+<img style="height : 300px;" src="/media/compressed/hemispher_cotan_circle_colorsMAX1MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispher_cotan_circle_colorsMAX10MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispher_cotan_circle_colorsMAX10MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = hemisphere / Boundary = circle / Type : Cotan / Colored (Max = 1, Min = 0, distortion angle)
+<br />Center: Mesh = hemisphere / Boundary = circle / Type : Cotan / Colored (Max = 10, Min = 0, distortion length)
+<br />Right: Mesh = hemisphere / Boundary = circle / Type : Cotan / Colored (Max = 10, Min = 0, distortion area)<br />
+
+<img style="height : 300px;" src="/media/compressed/hemisphereNC_cotan_circle_all_all.gif" />
+<br />Mesh = hemisphereNC / Boundary = circle / Type : cotan<br />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_cotan_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_cotan_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = hemisphereNC / Boundary = circle / Type : Cotan / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/hemispherNC_cotan_circle_colorsMAX5MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_cotan_circle_colorsMAX5MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_cotan_circle_colorsMAX5MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = hemisphereNC / Boundary = circle / Type : Cotan / Colored (Max = 5, Min = 0, distortion angle)
+<br />Center: Mesh = hemisphereNC / Boundary = circle / Type : Cotan / Colored (Max = 5, Min = 0, distortion length)
+<br />Right: Mesh = hemisphereNC / Boundary = circle / Type : Cotan / Colored (Max = 5, Min = 0, distortion area)<br />
+
+  <img style="height : 300px;" src="/media/compressed/octo_cotan_circle_all_all.gif" />
+<br />Mesh = octo / Boundary = circle / Type : cotan<br />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_cotan_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_cotan_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = octo / Boundary = circle / Type : Cotan / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_cotan_circle_colorsMAX25MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_cotan_circle_colorsMAX25MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_cotan_circle_colorsMAX25MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = octo / Boundary = circle / Type : Cotan / Colored (Max = 25, Min = 0, distortion angle)
+<br />Center: Mesh = octo / Boundary = circle / Type : Cotan / Colored (Max = 25, Min = 0, distortion length)
+<br />Right: Mesh = octo / Boundary = circle / Type : Cotan / Colored (Max = 25, Min = 0, distortion area)<br />
+
+  <img style="height : 300px;" src="/media/compressed/cow_cotan_circle_all_all.gif" />
+<br />Mesh = cow / Boundary = circle / Type : cotan<br />
+<img style="height : 300px;" src="/media/compressed/obj_cotan_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/obj_cotan_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = cow / Boundary = circle / Type : Cotan / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/cowobj_cotan_circle_colorsMAX001MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/obj_cotan_circle_colorsMAX0MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/obj_cotan_circle_colorsMAX5MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = cow / Boundary = circle / Type : Cotan / Colored (Max = 0.01, Min = 0, distortion angle)
+<br />Center: Mesh = cow / Boundary = circle / Type : Cotan / Colored (Max = 0.01, Min = 0, distortion length)
+<br />Right: Mesh = cow / Boundary = circle / Type : Cotan / Colored (Max = 5, Min = 0, distortion area)<br />
+
+<img style="height : 300px;" src="/media/compressed/gargo_cotan_circle_all_all.gif" />
+<br />Mesh = gargo / Boundary = circle / Type : cotan<br />
+<img style="height : 300px;" src="/media/compressed/gargoyle__cotan_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/gargoyle__cotan_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = gargo / Boundary = circle / Type : Cotan / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/gargoyle__cotan_circle_colorsMAX0001MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/gargoyle__cotan_circle_colorsMAX5MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/gargoyle__cotan_circle_colorsMAX5MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = gargo / Boundary = circle / Type : Cotan / Colored (Max = 0.001, Min = 0, distortion angle)
+<br />Center: Mesh = gargo / Boundary = circle / Type : Cotan / Colored (Max = 5, Min = 0, distortion length)
+<br />Right: Mesh = gargo / Boundary = circle / Type : Cotan / Colored (Max = 5, Min = 0, distortion area)<br />
+
+  <img style="height : 300px;" src="/media/compressed/max_cotan_circle_all_all.gif" />
+<br />Mesh = max / Boundary = circle / Type : cotan<br />
+<img style="height : 300px;" src="/media/compressed/off_cotan_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/off_cotan_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = max / Boundary = circle / Type : Cotan / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/maxoff_cotan_circle_colorsMAX00001MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/off_cotan_circle_colorsMAX10MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/off_cotan_circle_colorsMAX5MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = max / Boundary = circle / Type : Cotan / Colored (Max = 0.001, Min = 0, distortion angle)
+<br />Center: Mesh = max / Boundary = circle / Type : Cotan / Colored (Max = 10, Min = 0, distortion length)
+<br />Right: Mesh = max / Boundary = circle / Type : Cotan / Colored (Max = 5, Min = 0, distortion area)<br />
+</p>
+</div>
+<p><br /><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<p><a name="LSCM"></a></p>
+
+<h4 id="22-lscm">2.2. LSCM</h4>
+
+<p><br />
+We can also use a Least Square Conformal Map to measure distortion. It is a conformal measure, and so it will try to preserve angles at the expense of scale and length conservation.
+<br />
+We will use the surface gradient, and weight them with triangle areas.</p>
+
+<h6 id="documentation-informations-2">Documentation informations</h6>
+
+<p>We can use the following function :</p>
+<ul>
+  <li><strong>igl::double area()</strong>
+Calculate the area of each triangle input * 2 
+<a href="https://github.com/libigl/libigl/blob/master/include/igl/doublearea.h">-&gt; Documentation</a></li>
+  <li><strong>igl::cat()</strong>
+Already defined.</li>
+</ul>
+
+<p><strong>Inputs</strong> :</p>
+<ul>
+  <li>V = #V x 3, list of mesh vertex positions</li>
+  <li>F = #F x 3, list of mesh faces (because triangles)</li>
+</ul>
+
+<p><strong>Outputs</strong> :</p>
+<ul>
+  <li>dblA = #F, list of triangle areas *2</li>
+</ul>
+
+<h6 id="usage-3">Usage</h6>
+<p>We can decompose from the expression of the LSCM as a system to solve, with a (u v) vector on the right - of the left side - of the system.</p>
+
+<p>Here are the calculus :</p>
+
+<p align="center">
+<img style="height : 500px;" src="/media/compressed/schema_3.jpg" />
+</p>
+
+<p>Then we just need to compute it from the double area and the gradient matrix.</p>
+<pre><code class="language-C++">	if (type == '3')
+	{
+		// Code for computing the system for LSCM parameterization
+		(...)
+
+		// We calculate the double area for each triangle.
+		igl::doublearea(V, F, AreasTMP);
+
+		// We transform it in a diagonal matrix
+		(...)
+
+		//We calcul the gradient for all triangles
+		computeSurfaceGradientMatrix(Du, Dv);
+		DuTrans = Du.transpose();
+		DvTrans = Dv.transpose();
+
+		//We calculate the parts of A
+		aTMP = DuTrans * Areas * Du;
+		bTMP = DvTrans * Areas * Dv;
+		cTMP = DvTrans * Areas * Du;
+		dTMP = DuTrans * Areas * Dv;
+
+		//Construction of A  : See explanations on report
+		Eigen::SparseMatrix&lt;double&gt; UpperPart;
+		Eigen::SparseMatrix&lt;double&gt; LowerPart;
+		Eigen::SparseMatrix&lt;double&gt; RightUp = cTMP - dTMP;
+		Eigen::SparseMatrix&lt;double&gt; LeftUp = aTMP + bTMP;
+		Eigen::SparseMatrix&lt;double&gt; RightDown = aTMP + bTMP;
+		Eigen::SparseMatrix&lt;double&gt; LeftDown = dTMP - cTMP;
+
+		//Concat small parts
+		igl::cat(2, LeftUp, RightUp, UpperPart);
+		igl::cat(2, LeftDown, RightDown, LowerPart);
+
+		igl::cat(1, UpperPart, LowerPart, result);
+
+		A = result;
+		(...)
+	}
+</code></pre>
+
+<h6 id="result-3">Result</h6>
+<div style="text-align:center">
+<p align="center">
+
+<img style="height : 300px;" src="/media/compressed/bunny_LSCM_circle_all_all.gif" />
+<br /> Mesh = bunny / Boundary = circle / Type : LSCM<br />
+
+<img style="height : 300px;" src="/media/compressed/bunny_LSCM_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/bunny_LSCM_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = bunny / Boundary = circle / Type : LSCM / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/off_lscm_circle_colorsMAX150MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/off_lscm_circle_colorsMAX150MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/off_lscm_circle_colorsMAX150MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = bunny / Boundary = circle / Type : Cotan / Colored (Max = 150, Min = 0, distortion angle)
+<br />Center: Mesh = bunny / Boundary = circle / Type : Cotan / Colored (Max = 150, Min = 0, distortion length)
+<br />Right: Mesh = bunny / Boundary = circle / Type : Cotan / Colored (Max = 150, Min = 0, distortion area)<br />
+
+<img style="height : 300px;" src="/media/compressed/bunny_LSCM_2points_all_all.gif" />
+<br />Right : Mesh = bunny / Boundary = 2 Points / Type : LSCM<br />
+
+<img style="height : 300px;" src="/media/compressed/bunny_LSCM_2points_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/bunny_LSCM_2points_texture_plan.png" />
+<br />Left &amp; right: Mesh = bunny / Boundary = 2 Points / Type : LSCM / Textured <br />
+<br />Distortion for 2 dots : Max : 246.76 Min : 0.0994094<br />
+
+<img style="height : 300px;" src="/media/compressed/off_lscm_freeP2_colorsMAX150MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/off_lscm_freeP2_colorsMAX150MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/off_lscm_freeP2_colorsMAX150MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = bunny / Boundary = 2 Points / Type : Cotan / Colored (Max = 150, Min = 0, distortion angle)
+<br />Center: Mesh = bunny / Boundary = 2 Points / Type : Cotan / Colored (Max = 150, Min = 0, distortion length)
+<br />Right: Mesh = bunny / Boundary = 2 Points / Type : Cotan / Colored (Max = 150, Min = 0, distortion area)<br />
+
+<img style="height : 300px;" src="/media/compressed/cathead_LSCM_circle_all_all.gif" />
+<br /> Mesh = cathead / Boundary = circle / Type : LSCM<br />
+
+<img style="height : 300px;" src="/media/compressed/cathead_LSCM_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/cathead_LSCM_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = cathead / Boundary = circle / Type : LSCM / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/o_lscm_circle_colorsMAX3MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/o_lscm_circle_colorsMAX3MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/o_lscm_circle_colorsMAX3MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = cathead / Boundary = circle / Type : LSCM / Colored (Max = 3, Min = 0, distortion angle)
+<br />Center: Mesh = cathead / Boundary = circle / Type : LSCM / Colored (Max = 3, Min = 0, distortion length)
+<br />Right: Mesh = cathead / Boundary = circle / Type : LSCM / Colored (Max = 3, Min = 0, distortion area)<br />
+
+<img style="height : 300px;" src="/media/compressed/cathead_LSCM_2points_all_all.gif" />
+<br />Right : Mesh = cathead / Boundary = 2 Points / Type : LSCM<br />
+
+<img style="height : 300px;" src="/media/compressed/o_lscm_freeP2_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/o_lscm_freeP2_texture_plan.png" />
+<br />Left &amp; right: Mesh = cathead / Boundary = 2 Points / Type : LSCM / Textured <br />
+<br />Distortion for 2 dots : Max : 0.895511 Min : 8.95423e-05<br />
+
+<img style="height : 300px;" src="/media/compressed/o_lscm_freeP2_colorsMAX3MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/o_lscm_freeP2_colorsMAX3MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/o_lscm_freeP2_colorsMAX3MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = cathead / Boundary = 2 Points / Type : LSCM / Colored (Max = 3, Min = 0, distortion angle)
+<br />Center: Mesh = cathead / Boundary = 2 Points / Type : LSCM / Colored (Max = 3, Min = 0, distortion length)
+<br />Right: Mesh = cathead / Boundary = 2 Points / Type : LSCM / Colored (Max = 3, Min = 0, distortion area)<br />
+
+<img style="height : 300px;" src="/media/compressed/hemisphere_LSCM_circle_all_all.gif" />
+<br /> Mesh = hemisphere / Boundary = circle / Type : LSCM<br />
+
+<img style="height : 300px;" src="/media/compressed/hemispher_lscm_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispher_lscm_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = hemisphere / Boundary = circle / Type : LSCM / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/hemispher_lscm_circle_colorsMAX5MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispher_lscm_circle_colorsMAX5MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispher_lscm_circle_colorsMAX5MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = hemisphere / Boundary = circle / Type : LSCM / Colored (Max = 5, Min = 0, distortion angle)
+<br />Center: Mesh = hemisphere / Boundary = circle / Type : LSCM / Colored (Max = 5, Min = 0, distortion length)
+<br />Right: Mesh = hemisphere / Boundary = circle / Type : LSCM / Colored (Max = 5, Min = 0, distortion area)<br />
+
+<img style="height : 300px;" src="/media/compressed/hemisphere_LSCM_2points_all_all.gif" />
+<br />Right : Mesh = hemisphere / Boundary = 2 Points / Type : LSCM<br />
+
+<img style="height : 300px;" src="/media/compressed/hemispher_lscm_freeP2_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispher_lscm_freeP2_texture_plan.png" />
+<br />Left &amp; right: Mesh = hemisphere / Boundary = 2 Points / Type : LSCM / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/hemispher_lscm_freeP2_colorsMAX1MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispher_lscm_freeP2_colorsMAX10MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispher_lscm_freeP2_colorsMAX10MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = hemisphere / Boundary = 2 Points / Type : LSCM / Colored (Max = 1, Min = 0, distortion angle)
+<br />Center: Mesh = hemisphere / Boundary = 2 Points / Type : LSCM / Colored (Max = 10, Min = 0, distortion length)
+<br />Right: Mesh = hemisphere / Boundary = 2 Points / Type : LSCM / Colored (Max = 10, Min = 0, distortion area)<br />
+
+<img style="height : 300px;" src="/media/compressed/hemisphereNC_LSCM_circle_all_all.gif" />
+<br /> Mesh = hemisphereNC / Boundary = circle / Type : LSCM<br />
+
+<img style="height : 300px;" src="/media/compressed/hemispherNC_lscm_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_lscm_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = hemisphereNC / Boundary = circle / Type : LSCM / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/hemispherNC_lscm_circle_colorsMAX5MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_lscm_circle_colorsMAX5MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_lscm_circle_colorsMAX5MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = hemisphereNC / Boundary = circle / Type : LSCM / Colored (Max = 5, Min = 0, distortion angle)
+<br />Center: Mesh = hemisphereNC / Boundary = circle / Type : LSCM / Colored (Max = 5, Min = 0, distortion length)
+<br />Right: Mesh = hemisphereNC / Boundary = circle / Type : LSCM / Colored (Max = 5, Min = 0, distortion area)<br />
+
+<img style="height : 300px;" src="/media/compressed/hemisphereNC_LSCM_2points_all_all.gif" />
+<br />Right : Mesh = hemisphereNC / Boundary = 2 Points / Type : LSCM<br />
+
+<img style="height : 300px;" src="/media/compressed/hemispherNC_lscm_freeP2_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_lscm_freeP2_texture_plan.png" />
+<br />Left &amp; right: Mesh = hemisphereNC / Boundary = 2 Points / Type : LSCM / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/hemispherNC_lscm_freeP2_colorsMAX5MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_lscm_freeP2_colorsMAX5MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_lscm_freeP2_colorsMAX5MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = hemisphereNC / Boundary = 2 Points / Type : LSCM / Colored (Max = 5, Min = 0, distortion angle)
+<br />Center: Mesh = hemisphereNC / Boundary = 2 Points / Type : LSCM / Colored (Max = 5, Min = 0, distortion length)
+<br />Right: Mesh = hemisphereNC / Boundary = 2 Points / Type : LSCM / Colored (Max = 5, Min = 0, distortion area)<br />
+
+
+<img style="height : 300px;" src="/media/compressed/octo_LSCM_circle_all_all.gif" />
+<br /> Mesh = Octo / Boundary = circle / Type : LSCM<br />
+
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_lscm_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_lscm_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = Octo / Boundary = circle / Type : LSCM / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_lscm_circle_colorsMAX40MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_lscm_circle_colorsMAX40MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_lscm_circle_colorsMAX40MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = Octo / Boundary = circle / Type : LSCM / Colored (Max = 40, Min = 0, distortion angle)
+<br />Center: Mesh = Octo / Boundary = circle / Type : LSCM / Colored (Max = 40, Min = 0, distortion length)
+<br />Right: Mesh = Octo / Boundary = circle / Type : LSCM / Colored (Max = 40, Min = 0, distortion area)<br />
+
+<img style="height : 300px;" src="/media/compressed/octo_LSCM_8Points_all_all.gif" />
+<br />Right : Mesh = Octo / Boundary = 8 Points / Type : LSCM<br />
+
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_lscm_freeP2_texture_mesh.png" />
+<img style="height : 150px;" src="/media/compressed/Octo_cut2_lscm_freeP2_texture_plan.png" />
+<br />Left &amp; right: Mesh = Octo / Boundary = 2 Points / Type : LSCM / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_lscm_freeP8_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_lscm_freeP8_texture_plan.png" />
+<br />Left &amp; right: Mesh = Octo / Boundary = 8 Points / Type : LSCM / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_lscm_freeP8_colorsMAX25MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_lscm_freeP8_colorsMAX25MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_lscm_freeP8_colorsMAX25MIN0_Distortion_T3_mesh.png" />
+<br />Left: Mesh = Octo / Boundary = 8 Points / Type : LSCM / Colored (Max = 25, Min = 0, distortion angle)
+<br />Center: Mesh = Octo / Boundary = 8 Points / Type : LSCM / Colored (Max = 25, Min = 0, distortion length)
+<br />Right: Mesh = Octo / Boundary = 8 Points / Type : LSCM / Colored (Max = 25, Min = 0, distortion area)<br />
+
+<img style="height : 300px;" src="/media/compressed/cow_LSCM_circle_all_all.gif" />
+<br /> Mesh = cow / Boundary = circle / Type : LSCM<br />
+
+<img style="height : 300px;" src="/media/compressed/obj_lscm_circle_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/obj_lscm_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = cow / Boundary = circle / Type : LSCM / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/cowobj_lscm_circle_colorsMAX001MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/obj_lscm_circle_colorsMAX5MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/obj_lscm_circle_colorsMAX5MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = cow / Boundary = circle / Type : LSCM / Colored (Max = 0.01, Min = 0, distortion angle)
+<br />Center: Mesh = cow / Boundary = circle / Type : LSCM / Colored (Max = 5, Min = 0, distortion length)
+<br />Right: Mesh = cow / Boundary = circle / Type : LSCM / Colored (Max = 5, Min = 0, distortion area)<br />
+
+<img style="height : 300px;" src="/media/compressed/cow_LSCM_8points_all_all.gif" />
+<br />Right : Mesh = cow / Boundary = 2 Points / Type : LSCM<br />
+
+<img style="height : 300px;" src="/media/compressed/obj_lscm_freeP2_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/obj_lscm_freeP2_texture_plan.png" />
+<br />Left &amp; right: Mesh = cow / Boundary = 2 Points / Type : LSCM / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/obj_lscm_freeP8_texture_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/obj_lscm_freeP8_texture_plan.png" />
+<br />Left &amp; right: Mesh = cow / Boundary = 8 Points / Type : LSCM / Textured <br />
+
+<img style="height : 300px;" src="/media/compressed/cowobj_lscm_freeP8_colorsMAX0001MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/obj_lscm_freeP8_colorsMAX10MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/obj_lscm_freeP8_colorsMAX5MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = cow / Boundary = 8 Points / Type : LSCM / Colored (Max = 0.001, Min = 0, distortion angle)
+<br />Center: Mesh = cow / Boundary = 8 Points / Type : LSCM / Colored (Max = 10, Min = 0, distortion length)
+<br />Right: Mesh = cow / Boundary = 8 Points / Type : LSCM / Colored (Max = 5, Min = 0, distortion area)<br />
+
+<img style="height : 400px;" src="/media/compressed/gargo_LSCM_circle_all_all.gif" />
+<br /> Mesh = gargo / Boundary = circle / Type : LSCM<br />
+
+<img style="height : 400px;" src="/media/compressed/gargoyle__lscm_circle_texture_mesh.png" />
+<img style="height : 400px;" src="/media/compressed/gargoyle__cotan_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = gargo / Boundary = circle / Type : LSCM / Textured <br />
+
+<img style="height : 400px;" src="/media/compressed/gargoyle__lscm_circle_colorsMAX0MIN0_Distortion_T0_mesh.png" />
+<img style="height : 400px;" src="/media/compressed/gargoyle__lscm_circle_colorsMAX5MIN0_Distortion_T1_mesh.png" />
+<img style="height : 400px;" src="/media/compressed/gargoyle__lscm_circle_colorsMAX5MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = gargo / Boundary = circle / Type : LSCM / Colored (Max = 0.01, Min = 0, distortion angle)
+<br />Center: Mesh = gargo / Boundary = circle / Type : LSCM / Colored (Max = 5, Min = 0, distortion length)
+<br />Right: Mesh = gargo / Boundary = circle / Type : LSCM / Colored (Max = 5, Min = 0, distortion area)<br />
+
+<img style="height : 400px;" src="/media/compressed/gargo_LSCM_2Points_all_all.gif" />
+<br />Right : Mesh = gargo / Boundary = 2 Points / Type : LSCM<br />
+
+<img style="height : 400px;" src="/media/compressed/gargoyle__lscm_freeP4_texture_mesh.png" />
+<img style="height : 400px;" src="/media/compressed/gargoyle__lscm_freeP4_texture_plan.png" />
+<br />Left &amp; right: Mesh = gargo / Boundary = 4 Points / Type : LSCM / Textured <br />
+
+<img style="height : 400px;" src="/media/compressed/gargoyle__lscm_freeP4_colorsMAX10MIN0_Distortion_T0_mesh.png" />
+<img style="height : 400px;" src="/media/compressed/gargoyle__lscm_freeP4_colorsMAX10MIN0_Distortion_T1_mesh.png" />
+<img style="height : 400px;" src="/media/compressed/gargoyle__lscm_freeP4_colorsMAX10MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = gargo / Boundary = 4 Points / Type : LSCM / Colored (Max = 10, Min = 0, distortion angle)
+<br />Center: Mesh = gargo / Boundary = 4 Points / Type : LSCM / Colored (Max = 10, Min = 0, distortion length)
+<br />Right: Mesh = gargo / Boundary = 4 Points / Type : LSCM / Colored (Max = 10, Min = 0, distortion area)<br />
+
+<img style="height : 400px;" src="/media/compressed/max_LSCM_circle_all_all.gif" />
+<br /> Mesh = max / Boundary = circle / Type : LSCM<br />
+
+<img style="height : 400px;" src="/media/compressed/off_lscm_circle_texture_mesh.png" />
+<img style="height : 400px;" src="/media/compressed/off_lscm_circle_texture_plan.png" />
+<br />Left &amp; right: Mesh = max / Boundary = circle / Type : LSCM / Textured <br />
+
+<img style="height : 400px;" src="/media/compressed/maxoff_lscm_circle_colorsMAX00001MIN0_Distortion_T0_mesh.png" />
+<img style="height : 400px;" src="/media/compressed/off_lscm_circle_colorsMAX10MIN0_Distortion_T1_mesh.png" />
+<img style="height : 400px;" src="/media/compressed/off_lscm_circle_colorsMAX5MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = max / Boundary = circle / Type : LSCM / Colored (Max = 0.0001, Min = 0, distortion angle)
+<br />Center: Mesh = max / Boundary = circle / Type : LSCM / Colored (Max = 10, Min = 0, distortion length)
+<br />Right: Mesh = max / Boundary = circle / Type : LSCM / Colored (Max = 5, Min = 0, distortion area)<br />
+
+<img style="height : 400px;" src="/media/compressed/max_LSCM_2Points_all_all.gif" />
+<br />Right : Mesh = max / Boundary = 2 Points / Type : LSCM<br />
+
+<img style="height : 400px;" src="/media/compressed/off_lscm_freeP2_texture_mesh.png" />
+<img style="height : 400px;" src="/media/compressed/off_lscm_freeP2_texture_plan.png" />
+<br />Left &amp; right: Mesh = max / Boundary = 2 Points / Type : LSCM / Textured <br />
+
+<img style="height : 400px;" src="/media/compressed/maxoff_lscm_freeP2_colorsMAX00001MIN0_Distortion_T0_mesh.png" />
+<img style="height : 400px;" src="/media/compressed/off_lscm_freeP2_colorsMAX5MIN0_Distortion_T1_mesh.png" />
+<img style="height : 400px;" src="/media/compressed/off_lscm_freeP2_colorsMAX5MIN0_Distortion_T2_mesh.png" />
+<br />Left: Mesh = max / Boundary = 2 Points / Type : LSCM / Colored (Max = 0.0001, Min = 0, distortion angle)
+<br />Center: Mesh = max / Boundary = 2 Points / Type : LSCM / Colored (Max = 5, Min = 0, distortion length)
+<br />Right: Mesh = max / Boundary = 2 Points / Type : LSCM / Colored (Max = 5, Min = 0, distortion area)<br />
+</p>
+</div>
+
+<hr />
+
+<p><a name="results"></a></p>
+
+<h4 id="3-construct-the-system-and-display-the-results">3. Construct the system and display the results</h4>
+
+<p><a name="parameterization"></a></p>
+
+<h4 id="31-solve-and-show-the-parameterization">3.1. Solve and show the parameterization.</h4>
+
+<p><a name="distortion"></a></p>
+
+<p>Once the system had been built, with the matrix C - the constraints - and the matrix A - the parametization mode - we can construct the final system to solve, and solve it.
+As matrices are mainly sparse one, we can use the Eigen::SparseLU solver. 
+<br />
+The parametization mode is chosen with keys ‘1’,’2’,’3’.
+The computation and visualisation of the parameterization is chosen by pressing spacebar. 
+You can use ’+’ and ’-’ to scale the texture to appropriate size.</p>
+
+<h6 id="documentation-informations-3">Documentation informations</h6>
+
+<ul>
+  <li><strong>Eigen solver named “Eigen::SparseLU”</strong></li>
+  <li><strong>igl::cat()</strong>
+Concatene sparse matrices.
+<a href="https://github.com/libigl/libigl/blob/master/include/igl/cat.h">-&gt; Documentation</a></li>
+</ul>
+
+<p><strong>Inputs</strong> :</p>
+<ul>
+  <li>A = first input matrix</li>
+  <li>B = second input matrix</li>
+  <li>dim = the dimension on which we want to concatenate (1 = vertical , 2 = horizontal )</li>
+</ul>
+
+<p><strong>Outputs</strong> :</p>
+<ul>
+  <li>C = the output concatenated matrices</li>
+</ul>
+
+<h6 id="usage-4">Usage</h6>
+<p>In this part, it is just question of solving the system constructed before.
+We concatenate A and C matrix in a good manner - with A in the upper left corner and C on the down left corner and its transposed matrix on the upper right corner - and we call SparseLU solver to get the solved coordinates vectors, that we store in global value, for the viewer.</p>
+
+<pre><code class="language-C++">  (...)
+	// Data structure necessary
+  (...)
+
+	// Construction of the linear system
+	igl::cat(2, A, Ct, TmpUp);
+	igl::cat(2, C, vide, TmpDown);
+	igl::cat(1, TmpUp, TmpDown, LeftSide);
+	igl::cat(1, b, d, RightSide);
+
+	// Solve the linear system.
+	Eigen::SparseLU&lt;Eigen::SparseMatrix&lt;double&gt;&gt; solver;
+
+	// Compute the ordering permutation vector from the structural pattern of A
+	solver.analyzePattern(LeftSide);
+  
+	// Compute the numerical factorization
+	solver.factorize(LeftSide);
+
+	//Use the factors to solve the linear system
+	solver.compute(LeftSide);
+
+  (...)
+	result = solver.solve(RightSide);
+
+	// The solver will output a vector
+	UV.resize(V.rows(), 2);
+
+	//Block of size (p,q), starting at (i,j) &lt;==&gt; matrix.block(i,j,p,q);
+	UV.col(0) = result.block(0, 0, tailleV, 1);
+	UV.col(1) = result.block(tailleV, 0, tailleV, 1);
+
+  (...)
+
+	calculateColorsDistortion(); //Color the calculated UV.
+  (...)
+}
+</code></pre>
+
+<h6 id="result-4">Result</h6>
+
+<p>No visual results. But a view of the solved system (cathead.obj, uniform) is displayed. (You can get this output in debug mode)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>System : 
+8.92974 -1.99509 -1.72084 0 0.844691 -2.83497 0 -1.78548 -1.43805 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.11022e-16 0 -2.22045e-16 0 -7.56158e-18 6.66134e-16 0 -2.45507e-16 -1.38778e-17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  = 0 
+-1.99509 8.3967 -1.89993 -2.12778 -2.3739 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.11022e-16 -2.22045e-16 -1.52084e-16 -1.11022e-16 -5.73427e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  = 0 
+-1.72084 -1.89993 8.40898 0.306844 0 0 0 0 -0.258949 -1.20742 -0.139668 -1.3879 0 0 -2.10112 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.22045e-16 1.52084e-16 -1.11022e-16 0 0 0 0 0 -3.33067e-16 2.22045e-16 -2.23035e-16 4.25387e-16 0 0 2.22045e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  = 0 
+0 -2.12778 0.306844 9.42551 -0.794423 0 0 0 0 -2.59077 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.7224 0 0 0 0 0 -1.19023 -1.30674 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.11022e-16 1.11022e-16 -2.22045e-16 6.66134e-16 0 0 0 0 5.55112e-17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6.48793e-17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  = 0 
+0.844691 -2.3739 0 -0.794423 7.70064 -1.73154 -1.2143 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.650007 -1.27378 -0.507379 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7.56158e-18 5.73427e-16 0 -6.66134e-16 0 5.56347e-17 -3.33067e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.11022e-16 -3.60822e-16 2.28194e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  = 0 
+-2.83497 0 0 0 -1.73154 8.69406 -2.029 -2.09855 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -7.77156e-16 0 0 0 -5.56347e-17 -4.44089e-16 3.33067e-16 -2.77575e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  = 0 
+0 0 0 0 -1.2143 -2.029 9.84172 0.451141 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.791492 -0.959929 -0.324802 -1.578 0 0 0 0 0 0 0 0 -3.39532 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.77556e-16 -5.55112e-16 -3.33067e-16 2.22045e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3.29888e-16 4.996e-16 8.1425e-18 -5.55112e-16 0 0 0 0 0 0 0 0 3.45171e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  = 0 
+-1.78548 0 0 0 0 -2.09855 0.451141 8.76827 -0.767912 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.107561 -1.04801 -1.54338 -0.0698428 -2.0138 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4.67552e-16 0 0 0 0 2.77575e-16 -2.22045e-16 0 1.82776e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3.80961e-16 3.03706e-17 5.55112e-17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  = 0 
+(...)
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.66715e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.63678e-16 0 0 0 0 0 0 0 0 0 0 0 0 -2.22045e-16 2.22045e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.31975 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.36604 0 0 0 0 0 0 0 0 0 0 0 9.5958 -0.7505 -4.15951 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  = 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.1802e-16 0 0 0 0 0 0 0 -5.55112e-16 0 0 0 2.22045e-16 0 -6.66134e-16 2.22045e-16 -1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0443259 0 0 0 0 0 0 0 -0.0756202 0 0 0 -0.7505 4.93786 -0.55525 -2.75185 -0.644474 -0.204494 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0  = 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.22045e-16 5.55112e-16 0 0 0 3.29199e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.6309e-16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.255436 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4.15951 -0.55525 12.0073 0 0 -5.39399 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.15395 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  = 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4.93563e-16 0 -2.22045e-16 0 0 -2.22045e-16 0 -4.44089e-16 3.43892e-17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.06441 0 -2.95136 0 0 -2.75185 0 9.85926 -2.09164 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  = 0 
+(...)
+ 
+LeftSide Non Zeros : 3596 elements.
+RightSide Non Zeros : 286 elements.
+
+Lignes à droites : 286 lignes.
+Cols à droites : 1 colonnes.
+
+Dimension de At.A : 262 lignes * 262 colonnes.
+Dimension de C : 24 lignes * 262 colonnes.
+Dimension de Ct : 262 lignes * 24 colonnes.
+Dimension de vide : 24 lignes * 24 colonnes.
+
+Lignes à gauche : 286 lignes.
+Cols à gauche : 286 colonnes.
+
+Dimension de b : 262 lignes * 1 colonnes.
+Dimension de d : 24 lignes * 1 colonnes.
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="32-visualize-the-distortion">3.2. Visualize the distortion</h4>
+
+<p>Finally, we can use a color code to show the distortion of each face of the mesh after the parametization and so infer the quality of the results.
+We consider 2 types of distortion :</p>
+<ul>
+  <li>angle distortion (Conformal, LSCM)</li>
+  <li>edge length distortion (Isometric, ARAP)</li>
+  <li>area distortion (Authalic)
+<br />
+Highly distorted triangles appear in red and undistorted triangles in white.</li>
+</ul>
+
+<h6 id="usage-5">Usage</h6>
+<p>So, we need to color face thanks to the distortion applied to them.
+<br />
+The method used is to calculate the jacobian of the transformation applied to a face, for each face. Then we can extract the distortion, depending of the chosen mode of the user (angle distortion, length distortion …)
+<br />
+If we want the “length distortion” we can compute the distortion that isometric method try to minimize. Same for angle, or area .. 
+So we have a solution, where we can compute the distortion (any kind, length, angle or area) whatever system we solved before (Harmonic, LSCM, …)
+<br />
+Then, for the coloration, two colorations are possibles :</p>
+<ul>
+  <li>First one, more automatic, not activated in the last version. From a threeshold defined by the user, we compute a gradient of color depending on the distorsion and the maximal distortion of the mesh. The problem is, even in case of “low distortion”, we still have red triangles on the final picture.</li>
+  <li>Second one, less automatic, activated in the last version. From a min/max value, we create a gradient of colors. We map the distortion values to this min/max color map. The tweaking is harder, but we can have more representative visualisation of the distortion.</li>
+</ul>
+
+<pre><code class="language-C++">
+void calculateColorsDistortion(){
+
+  	(...)
+
+	//Get Dx/Dy
+	computeSurfaceGradientMatrix(Dx, Dy);
+
+	//Get U and V
+  	(...)
+	uVectorTMP = uVector.sparseView();
+	vVectorTMP = vVector.sparseView();
+  	(...)
+
+	//We calcule a big "Jacobian" matrix, for all vertices
+	UpLeft = (Dx*uVectorTMP); // #Fx#V * #V*1 = #F * 1
+	UpRight = (Dy*uVectorTMP); // #Fx#V * #V*1 = #F * 1
+	DownLeft = (Dx*vVectorTMP); // #Fx#V * #V*1 = #F * 1
+	DownRight = (Dy*vVectorTMP); //#Fx#V * #V*1 = #F * 1
+
+  	(...)
+
+	//Create the big Jack Matrix
+	igl::cat(2, UpLeft, UpRight, tmpUp);
+	igl::cat(2, DownLeft, DownRight, tmpDown);
+	igl::cat(1, tmpUp, tmpDown, bigJac);
+
+  	(...)
+	
+	//Create a Gradient per face and not more per vertex
+	DxTMP = DxTMP.rowwise().sum();//(DxTMP.rowwise() &gt; 0).count();
+	DyTMP = DyTMP.rowwise().sum();
+
+  	(...)
+
+	//For each face, we have to calculate the distortion.
+	for(int i =0 ; i &lt;F.rows() ; i++){
+
+		//Represent the 4 values of the jacobian of the current face
+		double DxU =0;
+		double DxV =0;
+		double DyU =0;
+		double DyV =0;
+
+		for(int j = 0 ; j&lt;3 ; j++){
+			int indicePtcur = F.row(i)[j];
+
+			//We calculate the jacobian for each point of the face
+			DxU += bigJac.coeff(indicePtcur,0);
+			DxV += bigJac.coeff(tailleV+indicePtcur,0);
+			DyU += bigJac.coeff(indicePtcur,1);
+			DyV += bigJac.coeff(tailleV+indicePtcur,1);
+		}
+
+		//Take the mean
+		DxU /= 3;
+		DxV /= 3;
+		DyU /= 3;
+		DyV /= 3;
+
+		//Create the jacobian 
+		Eigen::Matrix2d J;
+		J.setZero();
+
+		//Set values of the jacobian
+		J.row(0)[0] = DxU;
+		J.row(0)[1] = DyU;
+		J.row(1)[0] = DxV;
+		J.row(1)[1] = DyV;
+
+  		(...)
+
+		// Extract Singular Value via SSVD (Signed Singular Value Decomposition)
+		SSVD2x2(J, Utmp, Stmp, Vtmp);
+
+  		(...)
+
+		//Compute the Distorsion, depending on the kind of distorsion computed
+		if(showAngleDistortion == 0){ // ANGLE
+			distorstionPerFace.row(i)[0] = ((sigmaUn-sigmaDeux)*(sigmaUn-sigmaDeux));
+		} else if(showAngleDistortion == 1){ // LENGTH
+			distorstionPerFace.row(i)[0]  = ((sigmaUn-1)*(sigmaUn-1) +(sigmaDeux-1)*(sigmaDeux-1));
+		} else if(showAngleDistortion == 2){ // AREA
+			distorstionPerFace.row(i)[0]  = ((sigmaUn*sigmaDeux-1)*(sigmaUn*sigmaDeux-1));
+		}
+
+	}
+
+	// Calculate color code
+	double maxCoef = distorstionPerFace.maxCoeff();
+	double minCoef = distorstionPerFace.minCoeff();
+
+	(...)
+	distorstionPerFace.rows());
+	for (int i = 0; i &lt; Colors.rows(); i++)
+	{
+		Colors(i, 0) = 1;
+		if (distorstionPerFace.row(i)[0] &lt; Colormin)
+		{
+			//Under the threeshold = White
+			Colors(i, 1) = 1;
+			Colors(i, 2) = 1;
+		}
+		else if (distorstionPerFace.row(i)[0] &gt; Colormax)
+		{
+			//Above the max = RED
+			Colors(i, 1) = 0;
+			Colors(i, 2) = 0;
+		}
+		else
+		{ // Between min and max values, we color "slowly"
+			double teinte = 1 - ((distorstionPerFace.row(i)[0] - Colormin) / ((double)(Colormax)));
+			Colors(i, 1) = teinte;
+			Colors(i, 2) = teinte;
+		}
+	}
+
+  	(...)
+}
+
+</code></pre>
+
+<h6 id="result-5">Result</h6>
+<p>Many examples were dislayed before.
+Some more examples are displayed here. (Min/max solution for presenting the distortion)</p>
+
+<div style="text-align:center">
+<p align="center">
+
+<img style="height : 300px;" src="/media/compressed/bunny_uni_circle_all_all.gif" />
+<br />Mesh = bunny / Boundary = circle / Type : Uniform<br />
+
+<img style="height : 300px;" src="/media/compressed/off_cotan_circle_colorsMAX150MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/o_lscm_circle_colorsMAX3MIN0_Distortion_T1_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/cowobj_lscm_circle_colorsMAX001MIN0_Distortion_T0_mesh.png" />
+<br />Left: Mesh = bunny / Boundary = circle / Type : cotan / Colored (Max = 15, Min = 0, distortion length)
+<br />Center: Mesh = cat / Boundary = circle / Type : LSCM / Colored (Max = 35, Min = 0, distortion length)
+<br />Right: Mesh = cow / Boundary = circle / Type : LSCM / Colored (Max = 0.01, Min = 0, distortion angle)<br />
+
+<img style="height : 300px;" src="/media/compressed/gargoyle__uni_circle_colorsMAX001MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispher_cotan_circle_colorsMAX1MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/hemispherNC_uni_circle_colorsMAX5MIN0_Distortion_T0_mesh.png" />
+<br />Left: Mesh = gargoyle / Boundary = circle / Type : uni / Colored (Max = 0.01, Min = 0, distortion angle)
+<br />Center: Mesh = hemisphere / Boundary = circle / Type : cotan / Colored (Max = 1, Min = 0, distortion angle)
+<br />Right: Mesh = hemisphereNC / Boundary = circle / Type : uni / Colored (Max = 5, Min = 0, distortion angle)<br />
+
+<img style="height : 300px;" src="/media/compressed/off_uni_circle_colorsMAX0MIN0_Distortion_T0_mesh.png" />
+<img style="height : 300px;" src="/media/compressed/Octo_cut2_uni_circle_colorsMAX150MIN0_Distortion_T0_mesh.png" />
+<br />Left: Mesh = max / Boundary = circle / Type : uni / Colored (Max = 0.0001, Min = 0, distortion angle)
+<br />Right: Mesh = octo / Boundary = circle / Type : uni / Colored (Max = 15, Min = 0, distortion angle)<br />
+</p>
+</div>
+
+<p>For more information, see : 
+<a href="https://github.com/VincentFalc/ShapeModeling_3_Parametization">-&gt; Repository</a></p>
+
+<p>Note that the code is not optimized by thoughtful laziness: this code is not made to be reused as is in other applications, and if this is the case, the code will be reviewed and optimized. Thanks for your understanding.</p>
+
+                        </div>
+                        
+                        <div class="catsandtags">
+                            
+                            <span class="category">
+                                <span class="name">categories:</span>
+                                Shape Modeling
+                            </span>
+                            
+                            
+                                &bull;
+                            
+                            
+                            <span class="tags">
+                                <span class="name">tags:</span>
+                                
+                                    <a href="/tag/Shape Modeling">Shape Modeling</a>
+                                
+                                    <a href="/tag/IGL">IGL</a>
+                                
+                                    <a href="/tag/Eigen">Eigen</a>
+                                
+                                    <a href="/tag/Texture">Texture</a>
+                                
+                                    <a href="/tag/Mapping">Mapping</a>
+                                
+                                    <a href="/tag/Surface">Surface</a>
+                                
+                            </span>
+                            
+                        </div>
+                        
+                    </article>
+                    <div class="post-nav">
+                        
+                        <a class="btn prev" href="/ShapeModeling-Assi2/"><i class="fa fa-angle-left"></i><span class="short"> prev</span><span class="long">ious post</span></a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+    <div class="content">
+        <span>Vincent F. powered by &copy; gridster</span>
+        <span class="backtotop">Back to top</span>
+    </div>
+</footer>
+<script src="/js/build/global.min.js"></script>
+<!-- analytics -->
+<script>
+
+  ga('create', 'UA-50358022-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+        
+    </body>
+</html>
